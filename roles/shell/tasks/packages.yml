@@ -75,6 +75,7 @@
       - clang
       - cloc
       - cmake
+      - cmake-curses-gui
       - cmark
       - context
       - cowsay
