@@ -1,0 +1,15 @@
+---
+- name: Setting up tc
+  user:
+    name: tc
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/tc
+- authorized_key:
+    user: tc
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAnul4pJQ/iVKN3G8oEJ2YczsPMpeVAMQDT0KKa5zRAZdrC7vX/sFfs85a7psrWCtROugEUlTNmWjPAkKaCSXAyjptLYWzxLyKSJhhx+qKWCSxp21bmX8L6HdEOnHjBJtPM++oVNsgahPxHYxSt3pM4LnhpcuO1JFUS96B/aU08EAtTsdAuPEf0QV57AAhxWtzrZl02SRzix6i5W6iX6D0QDBay+EQoRU7IpgLrEpnSPotmroDcTxWOK9Dkx3z7cQiycqG9SFT3LqcqSX/hscoE1w0FBIifhcHpEFvdk6DxXjbBG/xfyDxqpL2Vt6U6N2LxaOvZ+G5ISeoKjGdD/XmbQ== rsa-key-20201121"
