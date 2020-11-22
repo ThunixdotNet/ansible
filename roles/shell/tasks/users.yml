@@ -297,3 +297,4 @@
 - include: users/ialokin.yml
 - include: users/tc.yml
 - include: users/whyorean.yml
+- include: users/goring.yml
