@@ -35,22 +35,6 @@
       [Install]
       WantedBy=multi-user.target
 
-- name: Install znc_newaccount
-  copy:
-    src: ../files/var/lib/znc/znc_account.newconf
-    dest: /var/lib/znc/znc_account.newconf
-    owner: znc
-    group: root
-    mode: 0660
-
-- name: Install znc user script
-  copy:
-    src: ../files/var/lib/znc/create-znc_account.sh
-    dest: /var/lib/znc/create-znc_account.sh
-    owner: znc
-    group: root
-    mode: 0770
-
 - name: Install LE hook
   copy:
     src: ../files/etc/letsencrypt/renewal-hooks/update-znc.pem
