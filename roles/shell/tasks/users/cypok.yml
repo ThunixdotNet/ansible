@@ -1,0 +1,15 @@
+---
+- name: Setting up cypok
+  user:
+    name: cypok
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/cypok
+- authorized_key:
+    user: cypok
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBkpbXReV5vuA5OReSOA3F9zJoqE3GVebkqnJccfEPeLpt34BfuWgRgWMeMO0Ja+AQoXW0sZnpre7/0971Xj+eG+hgm7qkOzvIpJHeX3Qp5zxARDS69LQYYOKEzkNfNatxK5FP42IAKtJzCl2HX2kq4k4xLWC6nfZ3rN3nxsFGcgvVXICV7t0zEgFC+weyYdijr5Z2D6B3NGln6CPTkqpmgI2tyCfYD/a2Oi2M23SzinkxDgZniTo2MzzqmjBk3piwNQOZYryysu+ZOF6F6x1XddD8b+yX0VjJqeNVjPKXkRKKcEuwx7mfOVQbIDzoYygTGiSrliQLhZZ19gT623mj cypok@de1"
