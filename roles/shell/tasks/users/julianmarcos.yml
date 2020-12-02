@@ -1,0 +1,15 @@
+---
+- name: Setting up julianmarcos
+  user:
+    name: julianmarcos
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/julianmarcos
+- authorized_key:
+    user: julianmarcos
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCXs61R0cmrb6kMBvy/3qGc3TVk7vILhunyb3yL9VarEfXk9vCmOoNz+kpgOAr8HJhPWlMZ8HlZlUKkEmO8Vj3NNmjFrrS8Kw7fMmyQrJ5TUMI8oKleqJ58Ml/iTPt5nYLvaZH7V/7YLpc2iYaB6JDMb5ev1e0p1CpiBOEyGDREhN0nflD64eiZ2QhDzq5cUf+LRrRqigOlaQ0AeLrjxSl+kclVDwKkTuTg+1SVd9BbzJnkYeRnwv0OfXZ9/w+Go82CB0s2YKTtAJCWon0/4WTwMYC4+XHHEKvxwKu9Y19pjhj+HIR7KIe8cAQn8hzAFIPmiS91wGSR1u+yiN/05a7ytTrv4Sh2C+2GV4umkRyljj+5o+Qgkpsfboc+o1vnLGQkpFGQwGD/ZTm9avK17vREau8O/oVXOfnENn5/2i9t9rx6xth03kllMQKs+XAcuP21xp/06gEoaoBkZaagmEBSkTCtCoBxR6B9GNV2rz68JOKfY/qzO1OI125T+wBw4nM= julian@art.thunix.net"
