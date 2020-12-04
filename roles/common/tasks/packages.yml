@@ -43,10 +43,10 @@
       - python-kerberos
       - python-markupsafe
 #      - python-netaddr
-      - python-paramiko
+      - python3-paramiko
 #      - python-pip
-      - python-pymysql
-      - python-selinux
+      - python3-pymysql
+      - python3-selinux
       - python-xmltodict
       - python-yaml
       - python3-flask

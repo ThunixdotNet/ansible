@@ -210,10 +210,9 @@
       - profanity
       - python
       - python-certbot-apache
-      - python-flask
+      - python3-flask
 #      - python-pip
 #      - python-potr
-      - python-twisted
       - python3
       - python3-django
       - python3-flask
