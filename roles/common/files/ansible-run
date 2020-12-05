@@ -1,5 +1,6 @@
 #!/bin/bash
 export RUNNING="/dev/shm/ansible_is_running"
+export HOOK="/dev/shm/ansible-hook-last-run"
 
 ansible_is_running()
 {
@@ -10,11 +11,9 @@ ansible_is_running()
 
 if [ -f $RUNNING ]; then
    echo "Ansible is currently running."
-	exit 1
 else
 	touch $RUNNING
 	ansible_is_running
-	touch /dev/shm/ansible-hook-last-run
+	touch $HOOK
 	rm $RUNNING
-	exit 0
 fi
