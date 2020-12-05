@@ -1,14 +1,19 @@
 #!/bin/bash
 export RUNNING="/dev/shm/ansible_is_running"
 
+ansible_is_running()
+{
+	cd /var/thunix/ansible
+	/usr/bin/git pull
+	/usr/local/bin/ansible-playbook -i /var/thunix/ansible/hosts /var/thunix/ansible/site.yml -u root
+}
+
 if [ -f $RUNNING ]; then
    echo "Ansible is currently running."
 	exit 1
 else
 	touch $RUNNING
-	cd /var/thunix/ansible
-	/usr/bin/git pull
-	/usr/local/bin/ansible-playbook -i /var/thunix/ansible/hosts /var/thunix/ansible/site.yml -u root
+	ansible_is_running
 	touch /dev/shm/ansible-hook-last-run
 	rm $RUNNING
 	exit 0
