@@ -1,0 +1,15 @@
+---
+- name: Setting up 1eye
+  user:
+    name: 1eye
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/1eye
+- authorized_key:
+    user: 1eye
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLiBWmfoQLv1NiUU5ixh8jpDJliyW/PjBq3ErmX7Gudam//0LnMQ5pb2w6JbuUrhVvjQrVkzbZKgBQUUxhmWL8CAq25v9b0bZUB+jgX45hbfxn0+HyQ5z0QJ7hC1FcZqAGUOo70JiB3/bSA/oJWaMlvMiS81u8fpX3NUTdSRSUHy9y0riCsaptylrX0hT4ScSGAFE6x9qoOEJh1Fs0ivAs1VGlE5pA5XUzn2672cpzwTy3gYJEesC+Ll0H9HK+c6nBtlqp9W8SNEEXFuD17mjm6yS3rsTtQyUj/46/+l8njskcLPdK3SMgmuUEoFce/6/IKM/rzjBfvSdQnkUN8uxbQegh2jDHiF2/J5r0z0vJAu9ieX/10QE6QeEUzHrwQjQ4nWjHYez0souJX2OsLOu55TBMIGCnLsK37OyVot2ICKQvLh1U4nsLvRwuE7PYrMLRvd1fl9x0d8iTkJDwLEWQzmNbKstjaBrGCMv30F2+HPXdfXAn6RjjrO7qYmCuQD0= meat@device.domain"
