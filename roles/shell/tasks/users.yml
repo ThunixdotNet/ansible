@@ -43,14 +43,12 @@
 - include: users/cyber.yml
 - include: users/cyphyx.yml
 - include: users/d34d.yml
-#- include: users/dalist.yml
 #- include: users/danielscode.yml
 - include: users/dariusz.yml
 #- include: users/delta.yml
 #- include: users/derby.yml
 - include: users/dex.yml
 - include: users/diabla.yml
-#- include: users/dingb4t.yml
 #- include: users/dot.yml
 - include: users/dovahkin.yml
 #- include: users/dragon.yml
@@ -73,8 +71,6 @@
 #- include: users/hexhaxtron.yml
 #- include: users/hijaben.yml
 - include: users/hitomi.yml
-#- include: users/info.yml
-#- include: users/infoTV.yml
 #- include: users/init0.yml
 #- include: users/isaac.yml
 - include: users/jac98.yml
@@ -113,7 +109,6 @@
 - include: users/neo.yml
 - include: users/noce.yml
 - include: users/olya.yml
-#- include: users/orliesaurus.yml
 #- include: users/os.yml
 #- include: users/panzer.yml
 #- include: users/parik.yml
@@ -144,10 +139,8 @@
 - include: users/southerntofu.yml
 #- include: users/spanmer.yml
 #- include: users/stenli990801.yml
-#- include: users/stereo.yml
 - include: users/swann.yml
 #- include: users/syncore.yml
-#- include: users/techemporium.yml
 - include: users/thekingofbandit.yml
 #- include: users/tomjerr.yml
 - include: users/transfusion.yml
