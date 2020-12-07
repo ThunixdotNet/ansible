@@ -1,0 +1,15 @@
+---
+- name: Setting up kubikpixel
+  user:
+    name: kubikpixel
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/kubikpixel
+- authorized_key:
+    user: kubikpixel
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoDPnGol5U9WIcyjsYsogkpvdBtw+9buBSLzl2D5QyXlLYNfLh5MTBhThIcIZSPWvXArD0TcWYIG2xD1hlFwSuUoTDE7/vtDq47Mc91ReV1bAOFGjot18VKe1FdeAXZdubYmukz/QaIa8odGhTC9Zt0WOHLJDjzj+nLhS0sOdrgIGAQCvm5RSB/fFJSzGGe6RxdhhzWx1AB+l7PfYWgRCZy+Zu44ZUhEi/8niIVg2edRfiUDjYK3c4hOLpeg71L/Mb+uD82zDJXC86UyjvA1zzOg/T3smX6nlEP3v57YnMZ0Q/tvc85hdKzJbEty842Fg/m1FQsDZ1UCbEkuDMba9P tilde"
