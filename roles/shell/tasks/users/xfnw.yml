@@ -1,15 +1,15 @@
 ---
-- name: Setting up lickthecheese
+- name: Setting up xfnw
   user:
-    name: lickthecheese
+    name: xfnw
     groups: tilde
     state: present
     skeleton: /etc/skel
     shell: /bin/bash
     system: no
     createhome: yes
-    home: /home/lickthecheese
+    home: /home/xfnw
 - authorized_key:
-    user: lickthecheese
+    user: xfnw
     state: present
     key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGWrzyntW1bgfQ10SBIOMR0ZBkLVtBL1OAGzC2nmUGds ltc@cbarchbtw"
