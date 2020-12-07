@@ -5,11 +5,9 @@ export SCHED="/dev/shm/ansible_scheduler"
 
 ansible_is_running()
 {
-	touch $RUNNING
 	cd /var/thunix/ansible
 	/usr/bin/git pull
 	/usr/local/bin/ansible-playbook -i /var/thunix/ansible/hosts /var/thunix/ansible/site.yml -u root
-	rm $RUNNING
 }
 
 # sets ansible scheduling
@@ -18,10 +16,12 @@ touch $SCHED
 if [ -f $RUNNING ]; then
    echo "Ansible is currently running."
 else
+	touch $RUNNING
 	while [ -f $SCHED ]
 	do
 		rm $SCHED
 		ansible_is_running
 		touch $HOOK
 	done
+	rm $RUNNING
 fi
