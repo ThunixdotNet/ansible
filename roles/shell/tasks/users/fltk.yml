@@ -1,0 +1,15 @@
+---
+- name: Setting up fltk
+  user:
+    name: fltk
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/fltk
+- authorized_key:
+    user: fltk
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLVd8ynhgsRxynyapLrZqN2C38AC+rG+UeicDEFKjlToCHN3RM+iV4vVjos93x65kPzJBc96TeTu4gjcK2l3DdlKjlw2eJt5KIZvK82cGn9x7VcWeqrmL20vXki1BbiB4twBUOfu8+BKeCYGQE24R/hbcD/X2stoVv1ySnmhhfWQGODupRrPNAQ4yOkqdpv/DN1bg5mNZ2PmOyLozsfsKlX2HMte9lNURlLXAspOEKtu/GkazD7nKGZa+clSJnS9eA8SD74XM9V3nogBJIzzbE4lzYcqdOEOxJbNk+pepLFUeQtMJdZipUMTnmKPxEHKeFBX9nkvBNW6hCT4RgatDkkSYDEDA1eCO3WrD9CWymI6yQLJ7BW+utvdWQhN6kB1HoOf7M9uSsxiX2ZAzaLmvioHrKfwEiE+elo4iXcEYNEyD0WdMh02cdsRGTr2n9uBHDBRtVRwtnaUZX2ef4SpRjT3m40tMlaRkqsoeK9J8+xCkXP7mbp13HHqIsjWmzpZs="
