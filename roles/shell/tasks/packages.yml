@@ -94,6 +94,8 @@
       - finger
       - fingerd
       - fish
+      - flatpak
+      - flatpak-builder
       - flex
       - fortune
       - frotz
