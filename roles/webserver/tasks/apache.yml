@@ -18,7 +18,6 @@
     - default-ssl
     - thunix.cf
     - www.thunix.cf
-    - ftp.thunix.cf
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
@@ -40,7 +39,6 @@
     - default-ssl
     - thunix.cf
     - www.thunix.cf
-    - ftp.thunix.cf
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
