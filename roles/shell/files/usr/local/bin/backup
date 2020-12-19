@@ -3,8 +3,6 @@
 DATE=$(date +%Y%m%d)
 PATH='/var/backups'
 
-mysqldump --all-databases > $PATH/all_databases.sql
-
 tar -cvz \
  --exclude ".nobackup" \
  --exclude "nobackup" \
@@ -23,10 +21,13 @@ tar -cvz \
  /var/lib/bzflag/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
- $PATH/all_databases.sql \
  -f $PATH/$DATE.tgz
 
-chown root:sudo $PATH/$DATE.tgz
+mysqldump --all-databases > $PATH/$DATE-all_databases.sql
+tar --remove-files -cz $PATH/$DATE-all_databases.sql \
+ -f $PATH/$DATE-all_databases.sql.tgz
+
+chown root:sudo $PATH/$DATE*.tgz
 chmod 640 $PATH/*.tgz
 
 find $PATH -name "*.tgz" -mtime +3 -exec rm {} \;
