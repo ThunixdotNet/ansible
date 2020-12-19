@@ -31,4 +31,3 @@ chown root:sudo $PATH/$DATE*.tgz
 chmod 640 $PATH/*.tgz
 
 find $PATH -name "*.tgz" -mtime +3 -exec rm {} \;
-rm $PATH/all_databases.sql
