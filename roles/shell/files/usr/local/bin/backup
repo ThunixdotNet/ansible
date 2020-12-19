@@ -3,7 +3,7 @@
 DATE=$(date +%Y%m%d)
 PATH='/var/backups'
 
-tar -cvz \
+tar -cz \
  --exclude ".nobackup" \
  --exclude "nobackup" \
  --exclude "/home/irc/*" \
