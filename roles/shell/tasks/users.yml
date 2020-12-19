@@ -298,3 +298,4 @@
 - include: users/kubikpixel.yml
 - include: users/deli.yml
 - include: users/fltk.yml
+- include: users/login.yml
