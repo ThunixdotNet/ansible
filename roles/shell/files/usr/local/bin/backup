@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$(date +%Y%m%d)
-PATH='/var/backups'
+BACKUPS=/var/backups
 
 tar -cz \
  --exclude ".nobackup" \
@@ -21,13 +21,13 @@ tar -cz \
  /var/lib/bzflag/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
- -f $PATH/$DATE.tgz
+ -f $BACKUPS/$DATE.tgz
 
-mysqldump --all-databases > $PATH/$DATE-all_databases.sql
-tar --remove-files -cz $PATH/$DATE-all_databases.sql \
- -f $PATH/$DATE-all_databases.sql.tgz
+mysqldump --all-databases > $BACKUPS/$DATE-all_databases.sql
+tar --remove-files -cz $BACKUPS/$DATE-all_databases.sql \
+ -f $BACKUPS/$DATE-all_databases.sql.tgz
 
-chown root:sudo $PATH/$DATE*.tgz
-chmod 640 $PATH/*.tgz
+chown root:sudo $BACKUPS/$DATE*.tgz
+chmod 640 $BACKUPS/*.tgz
 
-find $PATH -name "*.tgz" -mtime +3 -exec rm {} \;
+find $BACKUPS -name "*.tgz" -mtime +3 -exec rm {} \;
