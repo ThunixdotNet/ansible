@@ -299,3 +299,4 @@
 - include: users/deli.yml
 - include: users/fltk.yml
 - include: users/login.yml
+- include: users/ricci.yml
