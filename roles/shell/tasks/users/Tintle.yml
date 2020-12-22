@@ -1,0 +1,15 @@
+---
+- name: Setting up Tintle
+  user:
+    name: Tintle
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/Tintle
+- authorized_key:
+    user: Tintle
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOHPQ6Bk37lpfSrKVqt56BnsKy8u6vxXVLU4iAK/0bF7Zpb2kKWX3dhwJHo96djTq6cLog5eZFyrxLm75jHLnDW435LVVFjGvA6Mu1+ca21mZaX3WQE3uZUA8kdHTsl0CI0H2fRW23trru4kCiWAAiWhn8gz0MkJ8sKwSATQLK2ztxaxzOwF1HKqyqa6c0HYHOlPQbL6HyqG3fIRCUPj1EuYBH3DGAwSKCYGDZ0dEBJ7gHDl8EgBBY71O/K0vxSzS6TYWhqkEyfupFjP/gBcJfjLGGlfpyShtg9VgdvEsvHv8IYIlik6YfM9M0S/1kKau8abNS2xzfGG9XeCKJq/st color@Pastelfina"
