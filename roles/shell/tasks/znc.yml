@@ -2,7 +2,7 @@
 ---
 - name: Create home dirs for znc 
   file:
-    path: /var/lib/znc/.znc
+    path: /var/lib/znc
     state: directory
     owner: znc
     group: root
@@ -28,7 +28,7 @@
       After=network-online.target
 
       [Service]
-      ExecStart=/usr/bin/znc -f --datadir=/var/lib/znc/.znc
+      ExecStart=/usr/bin/znc -f --datadir=/var/lib/znc
       ExecReload=/bin/kill -HUP $MAINPID
       User=znc
 
