@@ -21,6 +21,7 @@ tar -cz \
  /var/games/minetest-server/.minetest/ \
  /var/lib/minecraft/paperclip/ \
  /var/lib/bzflag/ \
+ /var/lib/znc/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
  -f $BACKUPS/$DATE.tgz
