@@ -302,3 +302,4 @@
 - include: users/ricci.yml
 - include: users/hedy.yml
 - include: users/zackward.yml
+- include: users/jack.yml
