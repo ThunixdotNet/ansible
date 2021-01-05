@@ -1,0 +1,15 @@
+---
+- name: Setting up zackward
+  user:
+    name: zackward
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/zackward
+- authorized_key:
+    user: zackward
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAfn1rpWFgz0MDsjUjYUywNbxIIBER/c01NQJyMwbWJ+DGxOF1wx1sFTkHSfpJDeNg+oY6ddR1MEI8srLjoY90yHmhNrZ1iE72kceI5KKdsJhJMBbILD9fg0MYp7WAoTRZoLelC2XEmdmRqp6fk/gHdBonbktajV32nn2nVub53ABf5ECPC1MMSeeST3l6m9j5DXNmISJByvQiU3ymdOyr/rDF47OwPpiw9DVlF93TbfoEdYtSP9LrDu+MsXlE0/VJsReTGyhS2FYvXH3GYfFoUvaIcgJdCgcXeSm/BdEq+AmpeyIg4zaRlQKCii0b2NQgvocCjMqrIl+RzyWK5FKzNW51VHS/PlnDObJ0fFHfKTlXgHUKmlonygYWuu93pmeu4ihUExtrXcNhWRvyKE8EfrhQoTETsYQItwbgiAyeWI1XgWM8azbeRFJDQNiohgOncS+eT7VuiXi/JosAxsYuyJuIe8CnK+JU/L9m3ois5JRA2UBI7EERKk8Z7b2gz+2gKN+OzpjIfH3KsVlVghGAGoN90/AZIR9Kk2HMX18pqp3R/TEULL5duT26IgwZdfwqVfv/xbasHL2fgnZHmi+UDOJsxnn/KgfHCe6cEdfLt6uhTcuH0LezTo2ncn7a3459P9b+N0o9sCbRppsPXDB/EVumrOwA1f9G9RCo9x7tHQ== SSH"

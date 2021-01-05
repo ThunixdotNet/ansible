@@ -77,6 +77,7 @@
       - cmake
       - cmake-curses-gui
       - cmark
+      - cmatrix
       - context
       - cowsay
       - devscripts
@@ -94,6 +95,8 @@
       - finger
       - fingerd
       - fish
+      - flatpak
+      - flatpak-builder
       - flex
       - fortune
       - frotz
@@ -107,6 +110,7 @@
 #      - ident2
       - inkscape
       - imagemagick
+      - ircii
       - irssi
       - isync
       - jekyll
