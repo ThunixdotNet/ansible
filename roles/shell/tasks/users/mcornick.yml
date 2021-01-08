@@ -1,0 +1,15 @@
+---
+- name: Setting up mcornick
+  user:
+    name: mcornick
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/mcornick
+- authorized_key:
+    user: mcornick
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHdYz/7llKpHco2IzZDW+tLKo+b3hZOecocnFtspIf3E"
