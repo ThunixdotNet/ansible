@@ -1,0 +1,15 @@
+---
+- name: Setting up nyku
+  user:
+    name: nyku
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/nyku
+- authorized_key:
+    user: nyku
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBWeQfllxOhRbsqcjk4bSq3jJWPpB/KP3Mj5RWtvCVPh nyku@nyku"
