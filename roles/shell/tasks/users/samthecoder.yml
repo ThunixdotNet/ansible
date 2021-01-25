@@ -1,0 +1,15 @@
+---
+- name: Setting up samthecoder
+  user:
+    name: samthecoder
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/samthecoder
+- authorized_key:
+    user: samthecoder
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC4KRQp49OZNaWsLqVhAQ1tBlMup9HzQQYwKFDkIUSZ99VRIgr1lPMjrLP4BXq3MoKXW0xz/MoCYDKDGDnATLljuO5dZxHbXMb55XHJrLnlHmgFJLSMqkCKsNvGOOhl9Opp9HQtlDYsecoosTwVIQrgpH/jtGLPJeIwCQ4zD1NkAgkt8kY6lgK9i1wEyKr9G1L7ckUsY4JLtsd1b5EsuoD1N+yPlnVlLuO4K2T+2QGZBt6CXmb5GyQv+hNn+Q6oOO2KKw0zM3FeicED+LbKEzKRxqFlSo/YYxWYwktuZSW0SkBpECsbWDBGxx/WCEYODPq8nomg4UKZNCbFc0DY0ovCrRuRTL+8xcTvXGhcIeBD5yVL82VTMDpCriQ3/nA0codS9CkEyLKj3U9F4l5LpDkPTy7Vs0wlfs7544OIUaXLzJqN1ikg/gxoRpRu0v2a1nSP4t7/O8ITaRHHk0tEHg9axaEJFKR+cbvY/jH8QElLE6HeGqCOorbtSzwsgUHEKh70ZJDF/Tq37J94tRptVMnva+nTW7cKkuoXOzgeDB9cvZJgPUNOvvgPllqtl9TShmk30FqFs3kSwyTHz/sI843dg5hI3R1j8EX/45NQyqAQeWxf7BonZowwFbe9xSfbBQOlqaMOzQ62P49sNVgjPFEKAK5sbEs8gLG452VDSXasvQ=="
