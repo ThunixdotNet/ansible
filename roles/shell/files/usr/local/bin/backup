@@ -17,6 +17,7 @@ tar -cz \
  --exclude='/home/amcclure/*' \
  --exclude='/home/fosslinux/*' \
  --exclude='/home/zszoke/*' \
+ --exclude='/home/duitser/*' \
  /home/ \
  /var/games/minetest-server/.minetest/ \
  /var/lib/minecraft/paperclip/ \
