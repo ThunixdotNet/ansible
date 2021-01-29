@@ -245,7 +245,7 @@
 - include: users/Loial.yml
 - include: users/beneskiwik.yml
 - include: users/nikto.yml
-- include: users/seerlite.yml
+#- include: users/seerlite.yml
 - include: users/pokemongo.yml
 - include: users/prashantch.yml
 - include: users/Xiboon.yml
