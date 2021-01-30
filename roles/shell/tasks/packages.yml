@@ -64,6 +64,7 @@
       - adwaita-icon-theme
       - analog
       - autoconf2.13
+      - bat
       - bison
       - bsdgames
       - build-essential
@@ -88,6 +89,7 @@
       - dovecot-core
       - dovecot-imapd
       - eggdrop
+      - exa
       - elinks
       - emacs
       - ffmpeg
@@ -95,6 +97,7 @@
       - finger
       - fingerd
       - fish
+      - fd
       - flatpak
       - flatpak-builder
       - flex
