@@ -88,6 +88,7 @@
       - dovecot-pop3d
       - dovecot-core
       - dovecot-imapd
+      - dtach
       - eggdrop
       - exa
       - elinks
@@ -132,7 +133,7 @@
       - libjpeg62-turbo
       - libjpeg62-turbo-dev
       - libmime-tools-perl
-      - libncurses5-dev
+      - libncurses-dev
       - libopencolorio1v5
       - libopencolorio-dev
       - libsdl1.2-dev
