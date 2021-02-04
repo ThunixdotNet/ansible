@@ -97,7 +97,7 @@
       - finger
       - fingerd
       - fish
-      - fd
+#      - fd
       - flatpak
       - flatpak-builder
       - flex
