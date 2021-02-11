@@ -12,4 +12,4 @@
 - authorized_key:
     user: computertech
     state: present
-    key: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlywR+GXWaNMO/jPcGj8Rv+xHhNHW62IX9y1eH1TV8x1S4auEAX4iPyXjqiNJH6NQuaxm+wyxMMjwaYyZkRoqDF28aI8RUqjnBBsZ7pkdLUGfu5KR2t/fu05ABMM40AI4wyBoO7QwsNr1/17iEcZD7p/kOP3IJlfMno/+bXQkGcB+fI9PtAgfZK3/UFFgggcnvFBrHGf79XmfisPblMy76BDhvXlPU1q/ecW2RYfZ7dnnGHhVH1EhddD2ibM0oNoqtyRmYnq6++gfvh3RM4VJf6IfCfErO3hOJ3bmaD/VhMvgH6ddf7HsIMOV9vgiDo3o6hPbsGEsw/ffU5KeqgSFow=="
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAqyhQb8j3fnboRZbe2UqyUs1IdWOPHIJKAJDo+e2D2rC12e4CcpAX9M9/+jxSG6BINXLgwfX2fqInEXu7E6/KhfKuxTfrJVtFVKwpSrelQJG2FDk0+5TuCJyv4gTcV0c/3HyzVNmbmGWaOeZcLiADdOYCr7v0rrSraiCPWOGXXWR7iSv66Jfz79acH+jit0fIF4Xsbc4FMwz0SxHq3gYmq+WRSjrCQtn7CLyGOwzamwD1x3FreZ15Q+Mo1oBrG+YB2Bzt+UrtAIczk8dq8E9J4dCOHgDi9Z80NAhu22fEK1X6xon78/iXKtGIdKYQrAUQoorJ7mdS1d7kcIO74wvMKQ=="
