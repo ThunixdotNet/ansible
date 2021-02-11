@@ -220,7 +220,6 @@
 - include: users/duitser.yml
 - include: users/lonely-wolf.yml
 - include: users/cloverfield.yml
-- include: users/ComputerTech.yml
 - include: users/noteness.yml
 - include: users/baloo.yml
 - include: users/sriwafikadr.yml
