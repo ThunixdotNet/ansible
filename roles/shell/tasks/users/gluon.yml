@@ -1,0 +1,15 @@
+---
+- name: Setting up gluon
+  user:
+    name: gluon
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/gluon
+- authorized_key:
+    user: gluon
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDci0Z1j/4wwdCF0CGMZzslmX6HfUncpk4bj3wDMb1fYNmrDw8cawPz31xO3RiRWkYZziAEWQC9723FA9pXdicFnOZ7jYX2qcwZlfFFhX30K752dPd2PzPXQ7iWMHgYCNtChzmsIH42qM/w7PVdNIpOBOkL+KmPUwKYFcB/yPWqvvPtSBSpNPWoPj+RyYIVZJZycIieI6GEkbqNSexyiaCgFmfIotaJ6t9z4HZVi9wSgnHL/ioXfQtWUq1d/uhOjHAUW75yTEeRZYq8hFSeZeEGWLXMeUxiTStVGkByy/R4SyvQfoU3ILCeIAj7eY7tE2JZyjdYGWuJbz3atbnARPXcmaNt1zhfrlFNs4e4eKydjPeYjEb0vi3WkqU/mrBQDkBQtixDGOOfmKjE50YnBYar233qazliIv/AM/FzqqvEVimRBKxg5FbuyL9TI/41CWZtmkD92xeWvp0IIh3x6tlGTjM+RisJBTD+lbQ6EtmKZL2RNatfrjh3UpwiNG4u0Qa3WfEqHWOwKW84QNrmkAkAgo64O3+Ssx2x3sHG64UFe0N8fyuKbbMIRoY0O0NOF0TsKiq8gDzassPe2TaCtbjN/k4RYpTreo+7DsY8BaqMhHoWXNsDfWvaocF//TY+w4GFR/q2kEb2Xv6HQj+yhoVx/iccHuqOw0tdZaW6mxIG2w=="
