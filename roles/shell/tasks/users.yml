@@ -38,7 +38,6 @@
 #- include: users/bullah.yml
 #- include: users/camellia.yml
 - include: users/chispitos.yml
-- include: users/chuck.yml
 - include: users/clu.yml
 - include: users/cyber.yml
 - include: users/cyphyx.yml
