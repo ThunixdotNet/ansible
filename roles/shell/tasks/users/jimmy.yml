@@ -1,0 +1,15 @@
+---
+- name: Setting up jimmy
+  user:
+    name: jimmy
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/jimmy
+- authorized_key:
+    user: jimmy
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDn4BUPibEJilfzer+tWUcj7r4kxxQHXm+LkrQ626s21RPI2dPzlyVs6uPzUXpoy8JXR52dcoSxLv9XowvatiArueIB4hNBYzHivGIQenzFoxgDtK29LtCar52lFmvQe+i9PsnnPNgW29PZPsSpkE9VZQVlMI4h4QY11rS0jQcBekiAk6ohI+lFyQ+/CvQX5pKaX0qrtDbiBjCnctxRW+P0aMFUAMAI2Nk2dTLwXqBgk1cikcoubQrr1aavHxGcDopznLhDCeyiFcJqG8/0MPtAXuUdzYkY8Se00Rkr/UMW995nwqzYJLwK1o/1F+z4fIg1/WN9j7Kv4kTRwUKwqzE5 otn\jshen@TOL5259JIMMYS"
