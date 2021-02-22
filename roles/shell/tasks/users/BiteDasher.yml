@@ -1,0 +1,15 @@
+---
+- name: Setting up bitedasher
+  user:
+    name: bitedasher
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/bitedasher
+- authorized_key:
+    user: bitedasher
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDnoJez0KF103EkmjiVqftq/+1wKNUmoMpQI1qU8vBxI7N5cK1dY533MscM/G1OFC5x1a0Aue8UCHBnWbCMkRdN31G0d03ICCVsjVQ0c1O4xXng/54fRWhizAnMA7yhG489bp3/50jDrR9VSE3Rv2f8WIAZa1kwSYW+POGAVnOj2jjLEI3j0VyAUxTmPFPHyR0Wg0AI99qdEAQxdDEOLW8GYX37ywl941uAAC63FispPacpv0KyHvytmKwewR3+JWX5tAZqJkCjdQQBbPyk/ZVWYS4RM37qSX64SgomWR0w0ur3gfgB6koI48+WHuw9fY2EJGer3sZQ4B2wvUh/Et5k4hLGHdoVYp8wAqYcsW/5vbXAOY/KZGbN9dHfSv+/gy2DocK3WamW6CRwn17u6SedHoANEOxme+28cyFnm4yKB/XalfQPXVrtDwv4mvtSe92rcYTjiPhq0v0XLzP4Z6Dj9df9qvrqReMSMSqDM1xKb6z8Oy3RxD9d6ZpqB3J9ZNKCkbTeJ9z5LjqbWispjizE60fqd6jR10ylrbG9Z42aj4KaOuWDWEAWgq2o18XZORx+k6J6JBkR36P3Q/OVdyhVNj3rqkB7Zvwt163lpZKNumzH8DBihd/Or6pKQj80DM0i+lK3XpYjbJqJw1RDjaI41yFXWQ+fC9sa6v11WCIXUQ=="
