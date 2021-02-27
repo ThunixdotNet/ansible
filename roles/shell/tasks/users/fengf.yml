@@ -1,0 +1,15 @@
+---
+- name: Setting up fengf
+  user:
+    name: fengf
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/fengf
+- authorized_key:
+    user: fengf
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDlizOMqrOYdnEcIkDQletmnOS4Lc9kKIOTGs+SEhdcBq1XPiNHDR6io96Rw6fs4UluFJZ5km7+Sfk+AlnAXbNTz/Qi4fV0XTEjtBPhSw6Qh2/W3spuDZtecq09eI9Um1okCjsvlJ4iMDEtUilA5MA2XerDrun3CccQlZz3DZc3GULp2L2uW/DSWa7b/cy/7O0AKaLG6ymtWFOevGyMyZHBd/FeDdm0D9FzXp3BnkC6plaKb7P9HtiePNxsB+UlWlxn/fPoSPrRGr9Xjchyic2kmxyJ4itgt9wyOQMvhT2+e12bS9GWUDsBKEUruz9IjzAF6IrN6e1A/dtvaWvie9wSrvW3Om98YMXJrL6lgoYp5It8LanxakHyCgPU6x6iVQzZp9bQd4mB15YkTjCgbS8tKO90+sozsLXHn3+l4wLNiDncWY184Yu3odMRJgcUlDGsL/DjkuutaMMhCpgS4z54BTbOu6bWBweUo9Pzo3EWYQ+obuUE4g3iBXG5fgf24Z0= fengf@MacBook-Pro.local"

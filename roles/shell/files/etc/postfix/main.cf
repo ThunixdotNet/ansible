@@ -11,11 +11,12 @@ readme_directory = no
 compatibility_level = 2
 
 # TLS parameters
-smtpd_tls_cert_file=/etc/letsencrypt/live/thunix.net-0001/fullchain.pem
-smtpd_tls_key_file=/etc/letsencrypt/live/thunix.net-0001/privkey.pem
+smtpd_tls_cert_file=/etc/letsencrypt/live/deb.thunix.net/fullchain.pem
+smtpd_tls_key_file=/etc/letsencrypt/live/deb.thunix.net/privkey.pem
 smtpd_use_tls=yes
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
 smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+smtp_tls_security_level = may
 
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
@@ -37,8 +38,8 @@ mynetworks = 127.0.0.0/8
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
-#inet_protocols = all
-inet_protocols = ipv4
+inet_protocols = all
+#inet_protocols = ipv4
 
 home_mailbox = Maildir/
 
@@ -48,6 +49,10 @@ smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
 smtpd_sasl_local_domain = $myhostname
+
+# Don't accept mail from domains that don't exist.
+smtpd_sender_restrictions = reject_unknown_sender_domain
+
 #Allow ONLY authenticated users to send email
 smtpd_recipient_restrictions =
  permit_mynetworks,
@@ -60,12 +65,17 @@ smtpd_recipient_restrictions =
  reject_unknown_sender_domain,
  reject_unknown_recipient_domain,
  check_policy_service unix:private/policyd-spf,
- reject_rbl_client blackholes.tepucom.nl,
+ reject_rbl_client spamsources.fabel.dk,
+ reject_rbl_client bl.fmb.la=127.0.0.2,
+ reject_rbl_client bl.fmb.la=127.0.1.[24,25,26,27,28],
+ reject_rbl_client dnsbl-2.uceprotect.net,
  reject_rbl_client spam.dnsbl.anonmails.de,
+ reject_rbl_client uribl.abuse.ro,
  reject_rbl_client all.spamrats.com,
- reject_rbl_client ix.dnsbl.manitu.net,
+ reject_rbl_client db.wpbl.info,
  reject_rbl_client sbl.spamhaus.org,
  reject_rbl_client xbl.spamhaus.org,
+ reject_rbl_client blackholes.tepucom.nl,
  reject_rhsbl_sender dbl.spamhaus.org
 
 policyd-spf_time_limit = 3600
@@ -73,5 +83,9 @@ policyd-spf_time_limit = 3600
 milter_protocol = 2
 milter_default_action = accept
 
-smtpd_milters = inet:localhost:12301
-non_smtpd_milters = inet:localhost:12301
+#smtpd_milters = inet:localhost:12301
+#non_smtpd_milters = inet:localhost:12301
+
+# message delivery requests that any client is allowed (50/hr)
+smtpd_client_auth_rate_limit = 50
+anvil_rate_time_unit = 60m

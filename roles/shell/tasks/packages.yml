@@ -24,7 +24,7 @@
 
 - name: Add weechat repo
   apt_repository: 
-    repo: 'deb https://weechat.org/debian buster main' 
+    repo: 'deb https://weechat.org/debian bullseye main' 
     state: present
     filename: weechat
     update_cache: yes
@@ -43,21 +43,15 @@
     
 - name: Add debian contrib
   apt_repository:
-    repo: 'deb http://ftp.de.debian.org/debian stable main contrib'
+    repo: 'deb http://ftp.de.debian.org/debian bullseye main contrib'
     state: present
     update_cache: yes
 
-- name: Add Debian unstable
-  apt_repository:
-    repo: 'deb http://deb.debian.org/debian/ unstable main'
-    state: present
-    update_cache: yes
-
-- name: Add mono-project repo
-  apt_repository:
-    repo: 'deb https://download.mono-project.com/repo/debian stable-buster main' 
-    state: present
-    update_cache: yes
+#- name: Add mono-project repo
+#  apt_repository:
+#    repo: 'deb https://download.mono-project.com/repo/debian bullseye main' 
+#    state: present
+#    update_cache: yes
 
 - name: Install baseline packages
   apt: 
@@ -69,6 +63,9 @@
       - alpine
       - adwaita-icon-theme
       - analog
+      - autoconf2.13
+      - bat
+      - bison
       - bsdgames
       - build-essential
       - byobu
@@ -76,16 +73,23 @@
       - bzflag-server
       - ca-certificates-mono
       - caca-utils
+      - clang
+      - cloc
       - cmake
+      - cmake-curses-gui
+      - cmark
+      - cmatrix
       - context
       - cowsay
       - devscripts
+      - dopewars
       - dos2unix
-      - dosemu
+#      - dosemu
       - dovecot-pop3d
       - dovecot-core
       - dovecot-imapd
       - eggdrop
+      - exa
       - elinks
       - emacs
       - ffmpeg
@@ -93,17 +97,23 @@
       - finger
       - fingerd
       - fish
+#      - fd
+      - flatpak
+      - flatpak-builder
+      - flex
       - fortune
       - frotz
       - gitweb
+      - golang
       - gopher
       - gnome-icon-theme
-      - gnome-icon-theme-extras
+#      - gnome-icon-theme-extras
       - htop
       - hugo
-      - ident2
+#      - ident2
       - inkscape
       - imagemagick
+      - ircii
       - irssi
       - isync
       - jekyll
@@ -113,6 +123,8 @@
       - lftp
       - libapache2-mod-php
       - libarchive-dev
+      - libc-dev
+      - libc++-dev
       - libconvert-binhex-perl
       - libffi-dev
       - libfreetype6
@@ -126,21 +138,26 @@
       - libsdl1.2-dev
       - libsdl2-dev
       - libssl-dev
+      - libtool
+      - libtool-bin
+      - linux-headers-amd64
+      - lolcat
       - lua5.3
       - lynx
       - make
       - mercurial
       - mc
       - mc-data
+      - micro
       - midori
       - minetest-data
-      - minetest-mod-advspawning
-      - minetest-mod-animalmaterials
-      - minetest-mod-animals
+#      - minetest-mod-advspawning
+#      - minetest-mod-animalmaterials
+#      - minetest-mod-animals
       - minetest-mod-maidroid
       - minetest-mod-mesecons
-      - minetest-mod-mobf-core
-      - minetest-mod-mobf-trap
+#      - minetest-mod-mobf-core
+#      - minetest-mod-mobf-trap
       - minetest-mod-moreblocks
       - minetest-mod-moreores
       - minetest-mod-nether
@@ -150,7 +167,7 @@
       - mkdocs
       - mkdocs-doc
       - mkdocs-bootstrap
-      - mkdocs-bootswatch
+#      - mkdocs-bootswatch
       - mono-apache-server
       - mono-complete
       - mono-dbg
@@ -159,18 +176,21 @@
       - moon-buggy
       - mosh
       - mutt
-      - mysql-client
+#      - mysql-client
       - nasm
-      - nbsdgames
+#      - nbsdgames
       - neofetch
       - neomutt
+      - neovim
       - newsbeuter
       - newsboat
+      - oidentd
       - openbsd-inetd
       - opendkim
       - openssl
       - p7zip-full
       - pandoc
+      - pwgen
       - pelican
       - pelican-doc
       - php-imagick
@@ -182,23 +202,28 @@
       - php-imap
       - php-intl
       - php-mysql
+      - php-ps
       - php-pspell
-      - php-recode
+#      - php-recode
       - php-sqlite3
       - php-tidy
       - php-xmlrpc
-      - php7.3-xsl
-      - php7.3-curl
-      - php7.3-xml
+#      - php7.3-xsl
+#      - php7.3-curl
+#      - php7.3-xml
       - pngtools
       - postfix-policyd-spf-python
+      - poezio
       - proot
+      - profanity
       - python
       - python-certbot-apache
-      - python-pip
-      - python-potr
-      - python-twisted
+      - python3-flask
+#      - python-pip
+#      - python-potr
       - python3
+      - python3-django
+      - python3-flask
       - python3-pip
       - python3-toot
       - python3-twisted
@@ -207,10 +232,12 @@
       - qemu
       - qemu-efi
       - qemu-system
+      - racket
       - ranger
       - ruby-paint
       - ruby-trollop
       - rustc
+      - sat-xmpp-primitivus
       - scala
       - scala-doc
       - scala-library
@@ -227,10 +254,13 @@
       - tcl8.6
       - tcllib
       - tcltls
+      - texinfo
       - tdom
       - telnet
       - telegram-cli
       - todotxt-cli
+      - unrar-free
+      - uuid
       - vim
       - vrms
       - w3m-img
@@ -296,3 +326,19 @@
     owner: root
     group: root
     mode: 0755
+
+- name: Install Telehack wrapper
+  copy:
+    src: ../files/usr/local/bin/telehack
+    dest: /usr/local/bin/telehack
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Install Backup Job
+  copy:
+    src: ../files/usr/local/bin/backup
+    dest: /usr/local/bin/backup
+    owner: root
+    group: root
+    mode: 0774

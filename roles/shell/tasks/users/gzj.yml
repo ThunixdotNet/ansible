@@ -1,0 +1,15 @@
+---
+- name: Setting up gzj
+  user:
+    name: gzj
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/gzj
+- authorized_key:
+    user: gzj
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeOuvzMl+hntNwi0vznRsfw0EM2OUR2cfiwKMTBSE8A3e2Mx1zmBtbWgtd1pWZLVqKlNIL1RzeWhQHzTa+5YluCRfZJcRBHNBnTLw0RoOmC0pzHQHEouSTjh+gOp33N7wLNrEx+Fs0apFetA02O0PzKeJUD2qFY9+HmLoZ4BopsD6ObYYPeMeln4D8C11UBTNAF7Wuf9UlXsNmXL776XGCXMSU93xFtEYpn/FQNK1AcCtQ3qzRGvU/uDNf8d2nZ+y110DFUxK5E1oUZmNmlfQ+anF6o+DJNzf9rEBkwj1JaoVJQXAR0c0pqronScEOordcW+0sHgVP0o9P4qgHsZvp gzj0x@RED"

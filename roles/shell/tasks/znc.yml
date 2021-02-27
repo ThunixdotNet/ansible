@@ -2,7 +2,7 @@
 ---
 - name: Create home dirs for znc 
   file:
-    path: /var/lib/znc/.znc
+    path: /var/lib/znc
     state: directory
     owner: znc
     group: root
@@ -28,28 +28,12 @@
       After=network-online.target
 
       [Service]
-      ExecStart=/usr/bin/znc -f --datadir=/var/lib/znc/.znc
+      ExecStart=/usr/bin/znc -f --datadir=/var/lib/znc
       ExecReload=/bin/kill -HUP $MAINPID
       User=znc
 
       [Install]
       WantedBy=multi-user.target
-
-- name: Install znc_newaccount
-  copy:
-    src: ../files/var/lib/znc/znc_account.newconf
-    dest: /var/lib/znc/znc_account.newconf
-    owner: znc
-    group: root
-    mode: 0660
-
-- name: Install znc user script
-  copy:
-    src: ../files/var/lib/znc/create-znc_account.sh
-    dest: /var/lib/znc/create-znc_account.sh
-    owner: znc
-    group: root
-    mode: 0770
 
 - name: Install LE hook
   copy:
@@ -57,4 +41,4 @@
     dest: /etc/letsencrypt/renewal-hooks/update-znc.pem
     owner: root
     group: root
-    mode: 755
+    mode: 0755

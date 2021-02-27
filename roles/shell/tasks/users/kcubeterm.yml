@@ -1,0 +1,15 @@
+---
+- name: Setting up kcubeterm
+  user:
+    name: kcubeterm
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/kcubeterm
+- authorized_key:
+    user: kcubeterm
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4BCZ7B9SYDx9fNKjt5wPNMLrkj+Aw80I9xJ3diTnUuvdL42nc/OGpRf/ZcwPyBbet9yflEZrzm3v+y95/Ry5hX7C9rlC7nchU0r4jqZinCgp9L4bHXvTlmeoEqOkfgSU3sRholju7D9bRMx8tg3hBke9KASL7N9Dg6ACblWwPoKnxgVAmGcgNcJOYtUByDd6YzzjLDbUeCVC1H5LeU7sz+i2M314qcpd8qjYsGmlTzgizGWddQfGVQdFRITKXVsPYqxnH0riAAI5p7JFQrrPc34SF1JyzrKTvKFC/gUyhHck1EgdTCeLcrZdQQY26OxND/EUIClfIHsSvoWM4PdoI1cP0tTusYW446OYwYi22Pmo7txZFz53/j+tsTD41mokk/pt0yryWiOe23HimXXAwRz8Pu9/0/c7AMfBADGoWqGFiegIV9K5mI3Ja+vw26Nkcl1RALuol65m1GmzcMKPQNZALSnk0RSRGtOBxfiRZtgEC5+yF6HfV/K7Oo2ha7J8= u0_a227@localhost"

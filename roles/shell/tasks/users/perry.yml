@@ -1,0 +1,15 @@
+---
+- name: Setting up perry
+  user:
+    name: perry
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/perry
+- authorized_key:
+    user: perry
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCv742MRGJTZ/8jNKMkOb62oX0auSOI8nNSBwz6+biTe2TWcABC8r16LNwATHZ0D4uteG4EXXILE9QkEK4LCdgHWNGAqI+j1ljOxHAID67pnZSZHGvXzNqyLJzVqm4JwTfPVDMIeJ1temqx3+P3AIgAGnPKrqogkfyLh5WEUYiz7me1J1zd02XAnvGO2I3s+h4+TilZw+hlX4nLDUxLfNEVc/l5DYkaPSQonCLXg9wSHrSHHhyQ9/WDzCBww8nBnOEbIyFwrp08BRocttiPMpArakuRu15iTXBaKL5OxroSsjsGsfM5VNcUIKzaq8kv5LuhWDvWpUxF6JVkIWenFCVWOe6q9IIQnmaAPsDIrFHFX4pJz5q+xS98AsIP7vD0PXugOuBD2xk8zMm8FbCpAaEhk4sCe/bMPjRlaDFH5R8nStsNq8rgE6GLWAxpuAQSDo4KNeCLH0Y/SXg2P35FCf8eeccZc85XgVEwwi4Tt2bYC0IBpq9rOw1qMM0cuTWJECLALZ4VeCpBkImyp/ucN1L03F79JEONIurkd1TMjEXlaT5T7GHsMX6YGplr30/ePHxSjP42joDUb8JdkrgmLXvDwRu6ZNKvy5ZZ8YpJ+ZmJgvW/0vVkxhiBUnbxW68C5a6D1qSRN8OwBHVJ0UD36YpV8lzNvAG4q7Etv54Myri4dw=="

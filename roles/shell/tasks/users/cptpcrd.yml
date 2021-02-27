@@ -1,0 +1,15 @@
+---
+- name: Setting up cptpcrd
+  user:
+    name: cptpcrd
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/cptpcrd
+- authorized_key:
+    user: cptpcrd
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDQ7WapAoeCy8+MzukIKSbsk0qoSWzD2RhSwk6Y9Pw5uAz6Z5dp2P2srTD94pcgo9InZtuVBmGBpvV53QBbioFI5vwokQQY9I7ycjh6ylePNUh+BGcMUW3K7hFA/2PgSRZyhmAUtWs+IrZd3cS+mdXWcnaY2CMKUl9bUF2BiTXPkr6jQzT5QmnjSH0Oe16z2n9Z44irsIbRegph7nYGNnHCp/54TR6wca1W1z+fyeTbzuianqzsqrQU3A5SCaui0EO/1pSedegpD/iYL8DTOE20D6SKpyCnVEnoOfSu+m3nqtfwMHW/Lkd7KxeLVy/AR3awG9+zbnCCDjcRuwlU/IDdgJKli1qiOIlonSjxB8WprKOQcvHkJnjYDDtbV15W2qqv07h8KgGlCMnSWvjQjHO2LrIvu4e7BAGDZt9FLkN2kjo9539rhFwpMKfZZjjwbAaq3JJsXm8Kan+YV0EspW3Df1A1OnkwskgKNrBh4CJO3mFNXmlVreuBSTCO5YBuyEoOLLnQ/as/78dEY/vrneQUDj2206TB9qnUbosV7JhIGYolZ6Wen3OJY9BbQo5GZx1drxfqba8iypoi9cnu+96W82nnUN4lKx0ukmjgKMMWc0ROQalpfUlBD/wdZ83nAoZV7HDCoNT73wh3SjH09ijDUuZfRiglxg177ybGXpxBSQ=="

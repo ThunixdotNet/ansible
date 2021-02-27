@@ -1,0 +1,15 @@
+---
+- name: Setting up earne
+  user:
+    name: earne
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/earne
+- authorized_key:
+    user: earne
+    state: present
+    key: " ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCo73NRIy4Rnkjg7A13aGP4nXLrxycs28qk0sKlVv6OqlcttN9ZS7P53Bt2B6Vkn7InNfNb728cxiPHj4dJkYLD3nP/fzMLQtfoCqmYvTqeBKBlaQVgj29LJePFoJYCbtH+TeSRfDmWx808ZrpJFSi2tznqrEAK65UrGlPDG218XDIyHpqvQYFd+Iiup8IEGhFncEnDJrbgsfVr+p1dcbeym2KrkDAUA3FpA38+trcXof7o/RgwJTz+ZEjRdVbdrjwz91iHhxlDr1ePNm1WnzYGhVO3qtwFryAidcAUXv7GHrzcunHa7v4Htesxirf+DnGeIpmWfAKlOGMzeYA8yLhJJ1qu7VWyqUQ9TObyFPzeSnQCia001qKWyutXeICiuGmoxtkC3trCSrsvE1BveVKUa8E9RaDe++YXTQh0khxJaLg3EaRjWgo89O6FAK6NYmJF8/F2P7srEXWFxzVx1wAhYpxaxyAkYIYwGVlXOp4+J00qkVYvqOGYrCvz4O5XJABMQbVJHwGUy7HM9pJnYyJQs+z3MJAOXQ5SGji78vlcLvG3rxNuCWzjYZjbMtcWxnYRnWx+n4M5EqqClq5YCIdRbqO9lygw+1LjuPuxA1gGhxP9CkSlPhsFeRoUjuYR6T4A1DlMjPGQWnHAR42u8Hrj+A6ot0B2DmenCVBeyZtx/Q== earne@Tycho"

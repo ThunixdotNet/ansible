@@ -1,0 +1,15 @@
+---
+- name: Setting up crispr
+  user:
+    name: crispr
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/crispr
+- authorized_key:
+    user: crispr
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOH4qqhVV5fctnQb1JDp0f5umEaQTCxoMIYpCO5CmSU/UfTjDMgKwjW9JXq7Ly2QBy8Rl5DYQa8eOvQIyQYamv/5S2jhXN/G8ZU88e+BJagcxQc0Fk7cQDuquLWqAipvKFjQIELVe6hvMdcoTOESZqAByLDu8Y6xEdH0qP+lQPAy5HuEfqcTlfaW3VCIVMLYPwPTQs5aOMDJh+8udYQF4NTIxYALyBXk9WpULmEaWFOuO/JHeZ3Mz2TZ1thY0h+4+L3iJj63c5hYD7y2HI+frvAXPX+5DR7UQlguK9z33DYDZd7skfh4GEvGmYivK0cE0xaCwPNyT6AwXaIQdsuIngC45pUKSxReCyHaScsx2fNr5r7FfHi/O0nyljyVWpEVAxyZIlgqfyh04g5dfYEUr8/1w3hgU7peWUr+ohnK7qp8ak6Kh9XK98hnqQunhowoXFP52NOqpwmet05M/dnumdrGIBQZtZ7J7pFyVzBsKxsmaLHL1cRzQklBiM7oy5tF/2JPpJWSc81q7gTR7V2W19XAHhLcdTIfSdIKJEpRIQNwbozeDloTPnIW20VX1wMT6s9ruGOaxIM43Ya9tb/TV9OAqVWkWZudw4bsApckmQJyMFw5cgpUJqZPWMZeqrRnkZv3A4gCIc4z5HkYMbdT8PeV9kGvmKIPEoVDSwYpPQKQ== phobos@phobos"

@@ -1,0 +1,15 @@
+---
+- name: Setting up ricci
+  user:
+    name: ricci
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/ricci
+- authorized_key:
+    user: ricci
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgV3kcXbeJBaCfjQv2omuPfpe8RkRocv92LVIy8NdkH"

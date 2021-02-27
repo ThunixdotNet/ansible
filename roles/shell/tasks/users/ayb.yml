@@ -1,0 +1,15 @@
+---
+- name: Setting up ayb
+  user:
+    name: ayb
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/ayb
+- authorized_key:
+    user: ayb
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLZk6JzqlxqrtfFkN63AbI78bnkO8ZqwyUuye2u8WTGH7Bza/3cvnvkOKzp43ppY9/cN6vtK7t19JmgD/MtgIePwHdi9yCmiDK+dSOLuDWjvV81itWuFouCg8Ji4L3xSxaDPwE7zWy0CorB7y/JoZ/M1KdWoLtdPwz/Mv0IOCp7QrUc/UQ1F6eI1yHG3Y3F7O/+sr2R2xeA041s1FKEj5Y0iCUadTiNEyeZDnldiXclStaFqfAMmfgQ6cJ11eV8J8dCUi/A+IKl64K0Q4/MW7Yu7oexx7VLS9/8Mg0j5YTQJxEeOia1DH5jQduQoXdJ6SiYArUZW9SREFTx/SV0Dil4KO2xjWxrFcX/IW4jhYmwF9KWowp55/lW1WIy6Q3ycfpZ7gU8pnfWkRnLnW1Id13Z3Zp9S3p2BklfHoqK4cO/bvwwDM27D68IM0AAHM+LlUHX8V98l8++RiWGkxowZ2EqCQX6TowGXdl6uQa96p6jpRS8TwAobFE7P/Zgks9cRk= aghilas@desktop"
