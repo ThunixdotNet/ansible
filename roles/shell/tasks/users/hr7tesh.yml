@@ -1,0 +1,15 @@
+---
+- name: Setting up hr7tesh
+  user:
+    name: hr7tesh
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/hr7tesh
+- authorized_key:
+    user: hr7tesh
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIENJInWtWVaWwRlvS5wmHd11hRLMqzWc5J7U4OaJX/B1 hr7te@Swordfish-II"
