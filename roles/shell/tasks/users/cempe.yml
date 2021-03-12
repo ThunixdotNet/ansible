@@ -1,0 +1,15 @@
+---
+- name: Setting up cempe
+  user:
+    name: cempe
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/cempe
+- authorized_key:
+    user: cempe
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaat2GVJeEGQGMGhQX0KnLsKGM0PZ6O+xbl3rw5CxrcuQvCYax6tA/byTr8mMMnabjw9aHr/Bq49tcpor46u5c0xF6mNhB+9oH441KTkNv/vhWQ0rd4RonBTE/IIbHg0AHxSXeD1UCWtwo76mXsA9P4VToxfNocc+jzUnIcD3gOk0IdY3C0Mrzc1fSdJjrZ/XOfMI7uGtskb5bdd324o0g7s6QHNpIoJCRxkZONklNRwNg6oNhRNIUZEJ2cQbg0xGAh2nEj+gwsDeGhT7K73uQdZDSxmM77dj3P7B3nSyW+rf3y+lbBPGoGATkIh3yv3MCiZmhFgW6/S+0RBP47RzF cempe"
