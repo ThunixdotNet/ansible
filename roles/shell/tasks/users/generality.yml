@@ -1,0 +1,15 @@
+---
+- name: Setting up generality
+  user:
+    name: generality
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/generality
+- authorized_key:
+    user: generality
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINbIPaYSPmlccB4AZZ0u4asNge2aadaV+u972iUyRoHZ PC1@DESKTOP-TO5B17E"
