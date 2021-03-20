@@ -1,0 +1,15 @@
+---
+- name: Setting up mptyhead
+  user:
+    name: mptyhead
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/mptyhead
+- authorized_key:
+    user: mptyhead
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHohRSGGaXi6fKVtibW5LQJGuz48gCA6IH1nfpxLiwg5 timpen@penguin"
