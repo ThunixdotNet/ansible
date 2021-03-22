@@ -1,0 +1,15 @@
+---
+- name: Setting up walkersneps
+  user:
+    name: walkersneps
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/walkersneps
+- authorized_key:
+    user: walkersneps
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEpW5m+B6WpyHSSEjknB3uIDMAIMaXQa8v6nT2MbhYM7"
