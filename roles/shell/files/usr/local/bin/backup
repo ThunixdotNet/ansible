@@ -8,6 +8,7 @@ find $BACKUPS -name "*.tgz" -mtime +3 -exec rm {} \;
 tar -cz \
  --exclude ".nobackup" \
  --exclude "nobackup" \
+ --exclude ".thunix/nobackup" \
  --exclude "/home/irc/*" \
  --exclude='/home/chuck/*' \
  --exclude='/home/slip/*' \
