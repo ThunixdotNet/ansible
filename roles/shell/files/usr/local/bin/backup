@@ -10,7 +10,6 @@ tar -cz \
  --exclude "nobackup" \
  --exclude ".thunix/nobackup" \
  --exclude "/home/irc/*" \
- --exclude='/home/chuck/*' \
  --exclude='/home/slip/*' \
  --exclude='/home/angelok/*' \
  --exclude='/home/usernameak/*' \
