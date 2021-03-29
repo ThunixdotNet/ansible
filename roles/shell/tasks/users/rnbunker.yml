@@ -1,0 +1,15 @@
+---
+- name: Setting up rnbunker
+  user:
+    name: rnbunker
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/rnbunker
+- authorized_key:
+    user: rnbunker
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCrH6ycoQRGCvHUHwp6+w+Y616ly2VL+CNceU0vhO197OG2MKdVRUJlIV5qgXAygWB2xt/eLbK8bUnE/2+WwMGNULEJkGD8gkburNrCpT1EGT0PRNuyijlTCtV+yaQ/4FX2HRx8vGTEm9ikBxhKYCt9Y+ZtMPxXI4KltDkGY0lpwnsGCwHxk+1Uc4sbCbHDrxuEyiQNzQ8Q/mKrTvr/vQ7N5uA3907AdqYMuCA/z+BKP9hPet47Jchsheg5bZhHMFPonALLAxdwHPrYqpbgACcJyGI3sH/T1vMD/OABIROZikZ/zLQxMlMCkmZm77lUjstx7C76Ez97FoFuL5paTfWRMG6lG7M0/adbjKUZDE0HHcBtowMY7+IFdky02hNIIfWuLrRd0x0kLBCfkwPS5TFmWemlAbm79d6L7lZh2u7Flm9gTomWXczMM3kCdG6+KB/kbu+4y99e5fYGi2kc9Nn9oNt1qCB1TwohJtp6+BzOdJkGQ83oo0MTfhdJJfQAVc0="
