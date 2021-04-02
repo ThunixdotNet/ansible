@@ -1,0 +1,15 @@
+---
+- name: Setting up guela
+  user:
+    name: guela
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/guela
+- authorized_key:
+    user: guela
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUbvXR6f8gf7CntYBbOsNypIJZDbGZQ5eWcPyVILvNU1i5qsgu7jfCVxBp27i5RLEpUwbnC7vvZw0+N66dmu+/9ZQcVltjMllMO/yWdyBubKQZRFEvJGNdNGRhIC7AcouEHCa0A7iRf/OwGLfXTQ66CYAM/6VJ+FQIQRAoNAWeQA1QRHP34dUSlMiQdDMgZB+NJniZQc98wkJ8TMwYvUXv6moeIMf47jcNsYs4216MXLc439DbSrhBgK6yvm3ISLJLj4WPyt78rESN6HnbUySxsDchQsuGe6SxPw7ShKprgAhL+MIvdktzdVro5Ch4uEK7phFIxYTdFK7dCQE+d6tT guela"
