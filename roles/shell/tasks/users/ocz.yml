@@ -1,0 +1,15 @@
+---
+- name: Setting up ocz
+  user:
+    name: ocz
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/ocz
+- authorized_key:
+    user: ocz
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAhEkwHcIfY9K3dZkYWJEBjaiiqiDgsoKgk0rqO5HLex/XenoGkbAjrTfda26+eNDCtNaeLlhf1y9EHOlMUlIRZfXAcqBfE/WzP1GOwtVSBNFv9/n6ZlFZWJ2WSldhWZ8FQxG9om8jzMUnXlXetCLe+aePriuQgkcXkmCQ2SYWWK0nj+kFV+JUg0yIaebzMvg9HYGF0Nxo3uql/uAqUHY1svmtGiuyqLC8i2eabpiYz2bUl2bqVpo+FCmTPo29kvoZ+JD39mZyTVYmVdtAn704fGoVSWxMMB83AJIUIo1jK2YXYqjm/EC6YcOR7u+AN4rY6F9MMJPVRxtDdJzrU6JgkQ== rsa-key-20210402"
