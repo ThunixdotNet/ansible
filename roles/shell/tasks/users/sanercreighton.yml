@@ -1,0 +1,15 @@
+---
+- name: Setting up sanercreighton
+  user:
+    name: sanercreighton
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/sanercreighton
+- authorized_key:
+    user: sanercreighton
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxc9cVAWGXd9bas00apNntwZVxyhE+zRtrxjTi9PUQowEMsJFKn5olbwkWjwtcflWrUJNeNjbRTNcYwsj7pZZ+Qi9d69cXp6K3jh3v34YMZ3ULZlCHHZ01OAsUswGQ4x/q+0b4WQwhLd0lDQ+AmgvF0jZ/eulRzsDBQGiI4ImWm8YYCrROt3ZvKbUUPQILwnzofDziGXgoI0peEiY2GkpYYl2HIcB1e4EZ912QE1sqwq+OhpSYfevBvjU+eKc2ruAT1L7w7idSyc/22TkdDBGu4ChkQoeHo6MgvyUHdJ9klo0IRy4xPbqbSXnq8i1Ca6Bdf0s7dAdoW8Z6AoSNuwYO2De8IAmoqT2Wvh7h6ZO/OTk4CNrQg/xgNzK21GVLNLUkO4AMv8Gebb6pm2ZcarrhPZ8GmZmZXDkcVEgnGdBeZQ051eByMiy8zgye959GzrpvR7RXMRHATaW1JY12+ZjoPN0bQ07o5umUj//oEsToggoPGAFVZXWvr0oJgYser78= sanercreighton"
