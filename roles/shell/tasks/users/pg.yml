@@ -1,0 +1,15 @@
+---
+- name: Setting up pg
+  user:
+    name: pg
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/pg
+- authorized_key:
+    user: pg
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCsocr/sRV79H2krU6VZCGWZZLD1GfQsqkaDzN1slRUbHbrXDpyzDx81T2DOxiV+PUXL5A8ulz8e1zxjSyoNOAlLllA+etKMxdTr8DJyBOPIXkd7/SZ0Y/thw6uaXlZD4Ts0hk1XhZqxD4WjGwRrVMl17/XSE06xtyTV+fZZ/aKjWe93Wis2vcEyzrqRSPIHYh3o7FoMLXm2vyE1qGvf9lXMvtzsWIMJaC0KS8tl4xTrMxiN4Din0TGM1rFGTG6x4xp3wNJOOFMNA0OSZfIczk9iox6qurqT7gBkZGK2yiP7umD4MrZ75LgZ6yjPDE8z0bPc3biPwm2+jWx9ggUwvc2WXz33Gsfz6FBKcZOcPX5qEhKhJ/loE4N/IqLMiipMBcOlB3rv4VKI/xrIa9QgD/4Wm2PzlbOUkgaVHb3s8dY2ZXdM0jEWVT8dl5NzbCpNfk6Yy8skqC2gjLFSWP4+ckBpLan/oqm21Oh1yKkyG8IQT9Y87CsZYTdquJ/mGo6Ypc="
