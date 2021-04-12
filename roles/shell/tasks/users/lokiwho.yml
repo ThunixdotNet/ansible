@@ -1,0 +1,15 @@
+---
+- name: Setting up lokiwho
+  user:
+    name: lokiwho
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/lokiwho
+- authorized_key:
+    user: lokiwho
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK3PJfAIT3dj/dCbecKMPtLEwKOdwERWI+lBJJhCNRRl loki@puddlejumper"
