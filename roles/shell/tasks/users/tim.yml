@@ -1,0 +1,15 @@
+---
+- name: Setting up tim
+  user:
+    name: tim
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/tim
+- authorized_key:
+    user: tim
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC36nOiZyPgUEBBJcJQYRySv3YmZpHnCfGrzW4X3d3LhXED/Hqp8mSjZKHHYj8cwBuUj/61RL3ggqEF3Xq4FbbHAjExZg1HsCyrXTbqMpg/jDqjNruDY1ZeiDNDscei2c37mVqf2yiQanrsg+IVXUybs41ihq4YiB0I7zvOgVrYZRELe3Js3dM1bcitKWbM5exanGnnUutGVTCdeq53JUeeKkzh84ahGgHtMEKOy/156n5gLf83GmWfyi0zrPPyhniLvyiSodDUh3vhbpC+hAohwRQOSelZpYNgcD2IBgPLlpPgiakUDjGvxaXESR/Y4Ogfo6v2auf3bPNpPU6fqGHIFsAUMyxLFZ4iKMxkOukNlDHnMcuvy8TPdjjyXfvWcVdI5SX7pW1GAgjn86BaS1jL5zh3sm4TWn00ajTLHEBPi5WiGNJnUxOfo/dIMx/sXa+gIjN9FK+zNVuW3EMOtyMdqdLM1jXUff89NDkdUYXJFihmc5QLUKuwv2ojflb4THM= tim@hp-15"
