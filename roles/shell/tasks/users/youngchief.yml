@@ -1,0 +1,15 @@
+---
+- name: Setting up youngchief
+  user:
+    name: youngchief
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/youngchief
+- authorized_key:
+    user: youngchief
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDI5q6O5bt1cNpOBzHdtWf3wF7MKVUuAURqwlcnO1NvIljNGmBUmADis6sGlLKQTvEJEav7iTzlHzVoOO+LXFb0BMxTEgbsp3bXBTDDeZYzB3I6urUQpQoOZTV5Wt1vyvuzXEjtCryJ9bcJw3M2a4iSNzz7np5jf4QHiz40CGG5EQBIcqQWB70fEScqwylyr8QV0XNQjV1+1GBqF0sQQs1vonR89drfMc4jFvaL8r5y9+ZBQx3RH3Gf51BfyUkW2qH4WNkmhaQk2k5N7OYXEuxEWTEFOaEiuDP9k1mOAdy5BkpVwXVt66LlJiWVi0yWJwHqXAecAE9SOrsRueac/InkHqVZ8LJDa3i1fFPoZtOAjcQAaoAZjPYULZQ0jipdsVPtYKrxQ+BmNK3soeJiyy6rhfvevpky0XXe47iMUvwIos5MToabj6YOiQbJotueGxwPk1LWGCA5R7R6+MJUBCyDfcJXt5o2IszqHKo+W9yjk/klStSPUQbNcqeH4Zgkk4s= #! youngchief"
