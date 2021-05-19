@@ -1,0 +1,15 @@
+---
+- name: Setting up fenris
+  user:
+    name: fenris
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/fenris
+- authorized_key:
+    user: fenris
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA17SRr5/Xxl22z/iHQtH3U5v5K1uFL2ba/O4IGRTZlxYiST13mi80y65O8SXmzuzKIJ6UWECqV5oogfgZ5FIKfq2oEPg0AcPrhfh5yQd7Vfx1MUhKqrDuN/s8rxtlKEyUTUp3KKCfBpxdyb6acrUuaAwzQYHObBisHbyd8YPlSY2WxSdf5ChyT3YJW011lg3JG+5D7GFJV45Qiy/d0rYl615TeW9CziY0zIsT1OVfnvxa3yvlbKtPK4Q8uVX8LL7pZe2QR1kjo0l42Hn7hZwJmoB5j/y2I8tmc9VYAgXnWpym7Da95EEP06btnOLqI840ki5psi3VvY78qBmw0UKi5w== devils@otaku"
