@@ -1,0 +1,15 @@
+---
+- name: Setting up hana
+  user:
+    name: hana
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/hana
+- authorized_key:
+    user: hana
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCd7MzUc8YiLm80IjsePrmxC0hogJlPqGyNdevdQesXVE1R/SA0wTmnw+GG/Mi/sHoNJM8/iud33xonzrgb8jkQyUVQrKefG+R+ZazIV3pBgx1NbOAH5sRluZvMThoL1H/52hm9kpm2cuSw5Kyi2Jdd944adiwdBDT6ushqBpnvMdbtE9hlpnWTnDJmLDe2JlsvqAaLo6pnmb1Jn8gXq8aF8bkRpqdAOyV6I2eDapA9LmjW1quE8uhs0RrZYne+ucawxnryu1Rlsn100yI7c/gdi0XpsGfGHAHKXj1zJNTMMxIynJcBGzJwPVay7pwOjKr3J5eRkyfjaHEQRTt1cLAUuNIXkkTicGnZlpFiCFWninoERE8KHo4EEHD9KCtS3zqNKOUdKU6/wVAMCX1cxEl7W+cXDLLTn4vOtd/Vl955kIe7JAv6BqPDiFdJjlld/ZUwoRBOptP8PVB/QtGzomLBsm7QTd/G685VmH05r1dHNGrXgroDFJbMMIb5H574zXo7pQ9Io2d7PntnN+nzsutaJjAWUqp5RwgkGLndFcSUu4UzM0ojii6E0Q0QDzdhchZEoUVzEzykarHHGKj249EPqrB1g5QSvS5gPrr0klD+Hj4GSpKt9+VCwJOSjENSESXbk4DxHu+Q5q/D4Cg4XHqsD75fW2hBpz0qEWo/zyW4Ew=="
