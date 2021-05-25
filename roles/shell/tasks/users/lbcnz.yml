@@ -1,0 +1,15 @@
+---
+- name: Setting up lbcnz
+  user:
+    name: lbcnz
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/lbcnz
+- authorized_key:
+    user: lbcnz
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5aMPvhAZgtl5GEHmR06vmvVa3oG2XvDF2RErZz1yZy/MpyjW6RkuUYqs3GsmDKnUoB2CtxHNYw9EeLg5DLPSvwvEsBqYprZTgHTSto3lmz0zEj4eXVfdPHyPydvSpnDQyvkNIa+7FqrjBczbJMuuMEQ2BA3M84P83CSvGbiwMg0RxH2k6MAdDoKy2l2CrX0k/pSCrG95fk+txz/JUWznbNYIVR1TRmR7iNW6vj88pRI9zBTinvy+JgXOtpSzsF8llOxTloPqNcYN4MrgAJ0RrS/a3anRiEQxgzUjUQ7qGKjRpA3DxGQy4l3hWSNdxe5jv5ihZ7sVND6lX3ZCiVMX4VlJ2GrStXaH1u5nxHDz/T8kHt8aRrizhwZMfCSlp/s1g/A6dtz9plVa/29BgYvYi8BkZumz0alnGbhtx667h9qS7Kjqwjar/jEmzX0h/eJJBATuro06CH4Taffy8TR2j/jsUFoNNZmFusVqQimIdVoN8C4b0T026xgUSub7rgc8="
