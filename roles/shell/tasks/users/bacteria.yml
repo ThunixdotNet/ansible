@@ -1,0 +1,15 @@
+---
+- name: Setting up bacteria
+  user:
+    name: bacteria
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/bacteria
+- authorized_key:
+    user: bacteria
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDoETzjeNJpmtI5nNXzRk4zBs7hTh5uY2DU+Z8cqrht bacteria@edvinbasil.com"

@@ -347,3 +347,4 @@
 - include: users/fenris.yml
 - include: users/hana.yml
 - include: users/conform.yml
+- include: users/bacteria.yml
