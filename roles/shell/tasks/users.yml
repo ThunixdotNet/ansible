@@ -349,3 +349,4 @@
 - include: users/conform.yml
 - include: users/bacteria.yml
 - include: users/lbcnz.yml
+- include: users/kax.yml
