@@ -351,3 +351,4 @@
 - include: users/lbcnz.yml
 - include: users/kax.yml
 - include: users/nix.yml
+- include: users/kasmo.yml

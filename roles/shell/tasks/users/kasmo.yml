@@ -1,0 +1,15 @@
+---
+- name: Setting up kasmo
+  user:
+    name: kasmo
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/kasmo
+- authorized_key:
+    user: kasmo
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAJary6oxxQMek/xdaGvGxWfw/co2MkDB/rDA1RyEx7f fernando@samBox"
