@@ -31,3 +31,11 @@
     owner: root
     group: root
     mode: 0644
+
+- name: Install LE hook
+  copy:
+    src: ../files/etc/letsencrypt/renewal-hooks/deploy/reload-dovecot.pem
+    dest: /etc/letsencrypt/renewal-hooks/deploy/reload-dovecot.pem
+    owner: root
+    group: root
+    mode: 0755
