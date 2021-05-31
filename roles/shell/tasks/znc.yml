@@ -37,8 +37,8 @@
 
 - name: Install LE hook
   copy:
-    src: ../files/etc/letsencrypt/renewal-hooks/update-znc.pem
-    dest: /etc/letsencrypt/renewal-hooks/update-znc.pem
+    src: ../files/etc/letsencrypt/renewal-hooks/deploy/update-znc.pem
+    dest: /etc/letsencrypt/renewal-hooks/deploy/update-znc.pem
     owner: root
     group: root
     mode: 0755
