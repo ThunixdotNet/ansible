@@ -1,0 +1,15 @@
+---
+- name: Setting up nix
+  user:
+    name: nix
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/nix
+- authorized_key:
+    user: nix
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZwmxU7vtTgk8Z9sBpulh9kQ8bn8HR3dlqyQZ41QAdHB/2onwb17UAR44YoiIYhGm6Th0P6xT0HRaiva9lYE4S76hru9akU56b566IIisIV9FUHeyfXOZZi3PayhnRldke9kbxMYuxeWbn0kiQ8Y168GnejL2oJtgYeQw0ccVTxEjYWL+MTA0ZgUrq9lujrcsst8My/K5jd5Nemf537gvuaebNBKJFfHlHqntrPkqq93fhJLZmgonjFiPNBf4ugrsGAkyZ0idI0JZ0AjfQrdxTpHEw2HSnfwD7OKH7PjBy9h2hpG67UBGZY7wId9Xdp+gA5HBinogpqW4VOu0uA+9f"

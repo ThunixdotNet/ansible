@@ -350,3 +350,4 @@
 - include: users/bacteria.yml
 - include: users/lbcnz.yml
 - include: users/kax.yml
+- include: users/nix.yml
