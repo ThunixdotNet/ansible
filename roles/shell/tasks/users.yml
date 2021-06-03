@@ -123,7 +123,7 @@
 - include: users/rain.yml
 - include: users/redhat.yml
 #- include: users/responsibleracoon.yml
-#- include: users/ringo.yml
+- include: users/ringo.yml
 #- include: users/riska.yml
 - include: users/sakhawkins.yml
 #- include: users/sancho.yml
