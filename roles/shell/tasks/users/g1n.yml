@@ -1,0 +1,15 @@
+---
+- name: Setting up g1n
+  user:
+    name: g1n
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/g1n
+- authorized_key:
+    user: g1n
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIHXwwFXoC4JEZoBtblUtg8aVu5VFhTmT8CJ7rcnMaG4 g1n@arch-notebook"
