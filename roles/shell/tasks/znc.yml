@@ -6,7 +6,7 @@
     state: directory
     owner: znc
     group: root
-    mode: 0770
+    mode: 0771
 
 - name: Create znc run dir
   file:
