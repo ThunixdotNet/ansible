@@ -50,9 +50,9 @@
       # ZNC reply with the name of the user that initiated the connection.
       user "znc"
       {
-	default
-	 {
+        default
+	{
 	  allow spoof
 	  allow spoof_all
-	 }
+	}
       }
