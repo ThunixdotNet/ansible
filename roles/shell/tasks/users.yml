@@ -354,3 +354,4 @@
 - include: users/kasmo.yml
 - include: users/g1n.yml
 - include: users/lguilher.yml
+- include: users/vadim.yml
