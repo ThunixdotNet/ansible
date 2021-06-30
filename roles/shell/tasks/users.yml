@@ -355,3 +355,4 @@
 - include: users/g1n.yml
 - include: users/lguilher.yml
 - include: users/vadim.yml
+- include: users/buggy.yml
