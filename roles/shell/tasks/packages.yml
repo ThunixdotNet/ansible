@@ -103,6 +103,7 @@
       - flex
       - fortune
       - frotz
+      - git-email
       - gitweb
       - golang
       - gopher
