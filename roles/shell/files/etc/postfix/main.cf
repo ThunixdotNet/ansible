@@ -74,6 +74,7 @@ smtpd_recipient_restrictions =
  reject_rbl_client db.wpbl.info,
  reject_rbl_client sbl.spamhaus.org,
  reject_rbl_client xbl.spamhaus.org,
+ reject_rbl_client pbl.spamhaus.org,
  reject_rbl_client blackholes.tepucom.nl,
  reject_rbl_client hostkarma.junkemailfilter.com=127.0.0.2,
  reject_rhsbl_sender dbl.spamhaus.org
