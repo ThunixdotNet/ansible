@@ -47,7 +47,7 @@
       - python3-pymysql
       - python3-selinux
       - python-xmltodict
-      - python-yaml
+      - python3-yaml
       - python3-flask
       - python3-flask-restful
       - python3-flask-api
