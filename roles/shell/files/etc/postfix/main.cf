@@ -50,6 +50,9 @@ smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
 smtpd_sasl_local_domain = $myhostname
 
+# Enforce the requirement for a helo to be sent for each message
+smtpd_helo_required = yes
+
 # Don't accept mail from domains that don't exist.
 smtpd_sender_restrictions = reject_unknown_sender_domain
 
