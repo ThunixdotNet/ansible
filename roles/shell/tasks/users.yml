@@ -358,3 +358,4 @@
 - include: users/buggy.yml
 - include: users/anuwatk.yml
 - include: users/papaya.yml
+- include: users/chrisbs.yml
