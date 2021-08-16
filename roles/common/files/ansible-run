@@ -1,22 +1,22 @@
 #!/bin/bash
 export RUNNING="/dev/shm/ansible_is_running"
 export HOOK="/dev/shm/ansible-hook-last-run"
-export SCHED="/dev/shm/ansible_scheduler"
-
-# sets ansible scheduling
-touch $SCHED
+export PATHMODIFIED="/dev/shm/run-ansible"
+export SCHED=1
 
 if [ -f $RUNNING ]; then
    echo "Ansible is currently running."
 else
 	cd /var/thunix/ansible
-	while [ -f $SCHED ]
+	while [ $SCHED = 1 ]
 	do
-		rm $SCHED
 		touch $RUNNING
 		/usr/bin/git pull
 		/usr/local/bin/ansible-playbook -i /var/thunix/ansible/hosts /var/thunix/ansible/site.yml -u root
 		touch $HOOK
+
+		[ "$PATHMODIFIED" -ot "$RUNNING" ] && SCHED=0
+		! [ -f "$PATHMODIFIED" ] && SCHED=0
 	done
 	rm $RUNNING
 fi
