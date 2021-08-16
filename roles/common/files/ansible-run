@@ -9,11 +9,11 @@ touch $SCHED
 if [ -f $RUNNING ]; then
    echo "Ansible is currently running."
 else
-	touch $RUNNING
 	cd /var/thunix/ansible
 	while [ -f $SCHED ]
 	do
 		rm $SCHED
+		touch $RUNNING
 		/usr/bin/git pull
 		/usr/local/bin/ansible-playbook -i /var/thunix/ansible/hosts /var/thunix/ansible/site.yml -u root
 		touch $HOOK
