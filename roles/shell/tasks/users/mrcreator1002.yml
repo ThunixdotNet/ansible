@@ -1,0 +1,15 @@
+---
+- name: Setting up mrcreator1002
+  user:
+    name: mrcreator1002
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/mrcreator1002
+- authorized_key:
+    user: mrcreator1002
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILFQ60vmQCBGQ/H9KA5vDGtSfXaaPdoF65aXCEOPpatI"
