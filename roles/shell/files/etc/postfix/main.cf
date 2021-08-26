@@ -68,7 +68,6 @@ smtpd_recipient_restrictions =
  reject_unknown_sender_domain,
  reject_unknown_recipient_domain,
  check_policy_service unix:private/policyd-spf,
- reject_rbl_client spamsources.fabel.dk,
  reject_rbl_client bl.fmb.la=127.0.1.[24;25;26;27;28],
  reject_rbl_client spam.dnsbl.anonmails.de,
  reject_rbl_client uribl.abuse.ro,
