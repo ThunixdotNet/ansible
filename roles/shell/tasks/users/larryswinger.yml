@@ -1,0 +1,15 @@
+---
+- name: Setting up larryswinger
+  user:
+    name: larryswinger
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/larryswinger
+- authorized_key:
+    user: larryswinger
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOwpEeHHOQeG8sKFLyFiOsuPGs0nWyQskcVlaPjW6q1PuqzgsRL4rZ18w42ofP4z0l4npALBwExT0YCpMdgjmU08JBmK9ovjOVhMPZ9vgvBMJFa8f1tkHmB5PNWrqWBybsGNfSl7TuqJlIi/3HMuAmRvG6FxFK59vocBHweCLsg2x+KRbVGVzamfT9g8A5LOtFZcxebvq5hQzb3e362QeMivqrQ/KqBfIn5tVYyUDyEHMWJ2XsiFXW8s1ZZ5DcY+lXqq0hC6LPpS/aM5N5//QVGwbMzxbWgJmz7UbUZU5Gw+Q072QgSb1gELtZvXnZ44sixroCGPKZ76kO3bA1Lkl0obT956Lvpz0SopLmfqlVPn8rta1xtk5chEn61064ub6g6MHNwRi8p2sG1BL/iu86dgJgXs7AjLkOVUC/qsIA0+NTL7aHF308LSVR5G9WzBajoiQoAdxfJ0aKoKlWkrvD1fLVedeBU/GfWXbW9uLd7za2GpmwkmbZLRkSI9TZFoc= jasoncarswell@Cassandra"
