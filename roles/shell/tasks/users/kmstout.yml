@@ -1,0 +1,15 @@
+---
+- name: Setting up kmstout
+  user:
+    name: kmstout
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/kmstout
+- authorized_key:
+    user: kmstout
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDFUUKKdsurr6+P6imuZ1gFM3Y3qfeAi4snnMYXxSePK7MdTQLCzrdncwzmy4wus27SozhoS3ca840cUaO3copUtDX8uOUQs4qWh+CV3FI55cB9pWt1XNR8eSKPWFozuAmnFWcD7qTWgVmsXinNwdnPpvZMJvc8wJQVVZr/LJ83PdAq/YYpLjYBG44OrDTsKW0S19d3NtwzfOOG6FP/ITgVXwmDjmWTgE+/ZArffBbxw/wSyCqjwVOUHlG4HA8b3FEBCoGLq0Fw0WR0iVfK95+A8rIsG9/2CnVrRsrQb5Bhgcxsd5VVvW+S+dQ7VOGC0PAa2uDju3ipa9UkXDpTV62zz7XIitqvLxAWPd26QwtZJQVNBCxQneQbD6W+aztLbaBjWTWYuUGoLV+KGZEvrUcQCqKlXnn6ePuHun9ntdesdATpZdF3YHmSaovrWtMut5wJCz0Zj0yC6Mb2WYjtjEUC80eek/q6CNY2/DDwdYual2dEsDXEymUP1FNxPu7jNG0= kmstout"
