@@ -1,0 +1,15 @@
+---
+- name: Setting up subhambhatta
+  user:
+    name: subhambhatta
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/subhambhatta
+- authorized_key:
+    user: subhambhatta
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIIzcqvfiPJx1wIsL0e25f0hWeyHrw5Zj3ql4vWvNLUQ4JejORva2lbseyLF5BTc7fRt0LXI+ZXVBDJFFr9jWnqg5beGaOtroj9+uKFrupH3P8H/5cv4jadomULgXbmdVnzRf3TtoQaDPwMMnrxFv2Rdoz97VrmWBaG7cA1ceH1Vak/fPYagSUyTfEzRdqn0vOtMgMKtirr1OwZ9jAGmQOLdjOo2jy4R1BDgGYPWRyFXoKKV0XX8dEcnEk2PGJc3sRBc0T4FlawGJBPUp3yd78hXB6duj/xf2JXeCyqEcc9K2wdKxwFOM98UFGg7tf1fJSnVYtbZawFE4j+1CR4B/4So46EWPCOdeHzzwn2KCtpvnR6u6Ezyi77zq+uiFWHxJWpcPWcYYTMawWT9ATvE2qKkU6xJGGSt+kKVLdxgA4yQyvckqZYrMcgTjgWk2P38zr6Blj32rtrDN1jqALvk9z1qtuc8lqFCW+8cuJ7KO9cAtlJn67+8bSSXnymGs+cfs="
