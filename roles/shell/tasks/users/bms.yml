@@ -1,0 +1,15 @@
+---
+- name: Setting up bms
+  user:
+    name: bms
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/bms
+- authorized_key:
+    user: bms
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDWov+sPnHJunCCLk1DekvtNk2h/Qgw7808+Q7z56V1wUNOIJdMOZIBpecsvbOxQlmGami73BaSOQoCL3yQFhYTKAOk+FWaemptToLSxKTz02+sJ/mc0orgwo+0swZ+dttncp08Y7yJjZyhKHGNv2fv5WAUT2mLRleTmoUYAzOXPMEmrNbekrqAv2ExA5c5TLoq/KgiofUL7AkXyw8d/oK0fqKRy/1uMBL2hER/rsO1ibxBuulgblvZaP5WbBRXga/CWwnqKT0HK2ySAuRwW8MWJsCcMsMU53qX/g1PsqXoxVkhQ853LxG5EVuiG92Gix4oUjTTWOhq5H1NtPM+2wbwL3JMH1GHdYerx+KL0G990dwTsTgFRxo3lTnEgcs4bJo5V2QjYlqtovVxvoABAwf75wvpHicvjWQ6AyOOu8xxpZbI8TDuWeYMGUQ8pgsSqljEDR6rlQBTz18lPMNEvY37cNTQSr4ABYhjh7qnDCQEvOKVbexJd8C68QRCGgRzq8= bms@Bens-MacBook-Air.local"
