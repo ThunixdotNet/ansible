@@ -1,0 +1,15 @@
+---
+- name: Setting up forero
+  user:
+    name: forero
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/forero
+- authorized_key:
+    user: forero
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDuM9Y8baYEMWZYjE40u9e0LZ3aSIA6gHHA2Eh/6z7oL4wBCO27UurkKI2v/2bd9dLq/WT+zpT4+3GObNeF1jdZs6PN1y7dRQ9J0FTbnVZJ6dxVKLve+/umOlbdJB3WGSj2KNxWUKAR7rM4iwhtLScea/OI/dG/ntIMCLKQtaEO84fbV9VcX5AO9c+pWzdC/M3xLIlW8YwIP4g4AZ3wxUgUkpixv5GwPSLcnUrqMwuAc301/9gsa2mdOlyXgKBW98VbmKPb/aOKxwqwT19mK68CEkfNvN7/mGPaTra62w06Qj/SWyvjp8/kK+RnrUaFVMYVPbbk5zNZGltlgoR0eYHkTb8c5GOgLZh1USqfbNaNGuZ7CLJrphGcbsU5IHd6ZAIEnD34lOmdCXpL6FLYeiaAbUlGi8/Mihotlugfm8b927nXjYBFonARhNP/GbXmpI7G2z1XX6pkJyIpyDDqHJiPWTqyxadePd1doIbSR5Idbflr3HtA3pIKot03l5NfDqEVNb56lHlM/NnY5Pl8O6tPxcmusCIKylUsYt4ENyeStvnuYUTpINZVp19yf/9UON/zGc8oFae+DHjDbqdrWljCH2AkTPQOAtyajg0c9OpWO/38sRVIWO6vvVu1bcmHlGblGA8VxUFiQrDSToiGIjiICkTGPSXxHmwiqSR831sdzw== forero@computer"
