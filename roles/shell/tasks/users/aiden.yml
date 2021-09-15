@@ -1,0 +1,15 @@
+---
+- name: Setting up aiden
+  user:
+    name: aiden
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/aiden
+- authorized_key:
+    user: aiden
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKTWhwm8ZIKAeA8xZ3pPEw9rp7w621zDWcTwsGTW1i5q user@host"
