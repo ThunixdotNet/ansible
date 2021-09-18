@@ -56,3 +56,11 @@
           allow spoof_all
         }
       }
+
+- name: Rewrite znc.conf
+  copy:
+    src: ../files/etc/cron.hourly/znc_saveconfig.sh
+    dest: /etc/cron.hourly/znc_saveconfig.sh
+    owner: root
+    group: znc
+    mode: 0754
