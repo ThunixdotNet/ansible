@@ -19,13 +19,22 @@ tar -cz \
  --exclude='/home/zszoke/*' \
  --exclude='/home/duitser/*' \
  /home/ \
+ -f $BACKUPS/$DATE-home.tgz
+
+chown root:sudo $BACKUPS/$DATE*.tgz
+chmod 640 $BACKUPS/*.tgz
+
+tar -cz \
  /var/games/minetest-server/.minetest/ \
  /var/lib/minecraft/ \
  /var/lib/bzflag/ \
  /var/lib/znc/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
- -f $BACKUPS/$DATE.tgz
+ -f $BACKUPS/$DATE-var.tgz
+
+chown root:sudo $BACKUPS/$DATE*.tgz
+chmod 640 $BACKUPS/*.tgz
 
 mysqldump --all-databases > $BACKUPS/$DATE-all_databases.sql
 tar --remove-files -cz $BACKUPS/$DATE-all_databases.sql \
