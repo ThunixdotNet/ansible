@@ -20,7 +20,7 @@ tar -cz \
  --exclude='/home/duitser/*' \
  /home/ \
  /var/games/minetest-server/.minetest/ \
- /var/lib/minecraft/paperclip/ \
+ /var/lib/minecraft/ \
  /var/lib/bzflag/ \
  /var/lib/znc/ \
  /var/spool/cron/ \
