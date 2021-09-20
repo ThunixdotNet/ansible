@@ -28,7 +28,7 @@ tar -cz \
  /var/games/minetest-server/.minetest/ \
  /var/lib/minecraft/ \
  /var/lib/bzflag/ \
- /var/lib/znc/ \
+ /var/lib/znc/configs/ /var/lib/znc/moddata/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
  -f $BACKUPS/$DATE-var.tgz
