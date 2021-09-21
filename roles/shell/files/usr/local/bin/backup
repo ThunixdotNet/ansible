@@ -26,7 +26,7 @@ chmod 640 $BACKUPS/*.tgz
 
 tar -cz \
  /var/games/minetest-server/.minetest/ \
- /var/lib/minecraft/ \
+ /var/lib/minecraft/paper/ \
  /var/lib/bzflag/ \
  /var/lib/znc/configs/ /var/lib/znc/moddata/ \
  /var/spool/cron/ \
