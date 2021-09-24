@@ -3,7 +3,16 @@
 DATE=$(date +%Y%m%d)
 BACKUPS=/var/backups
 
-find $BACKUPS -name "*.tgz" -mtime +3 -exec rm {} \;
+LEVEL0=$(find $BACKUPS -name "*full.tgz")
+DUMPS=$(find $BACKUPS -name "*incremental.tgz" | wc -l)
+
+if [ -e $LEVEL0 ] && [ $DUMPS -le 8 ]
+then
+  TYPE=incremental
+else
+  TYPE=full
+  rm -f $BACKUPS/incremental-backup.snapshot
+fi
 
 tar -cz \
  --exclude ".nobackup" \
@@ -25,10 +34,17 @@ tar -cz \
  /var/lib/znc/configs/ /var/lib/znc/moddata/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
- -f $BACKUPS/$DATE.tgz
+ -g $BACKUPS/incremental-backup.snapshot \
+ -f $BACKUPS/$DATE-$TYPE.tgz
 
 chown root:sudo $BACKUPS/$DATE*.tgz
 chmod 640 $BACKUPS/*.tgz
+
+# Remove dumps and the previous backup once there is another.
+if [ $TYPE -eq "full" ] && [ -e $LEVEL0 ]
+then
+  rm $LEVEL0 $BACKUPS/*incremental.tgz
+fi
 
 mysqldump --all-databases > $BACKUPS/$DATE-all_databases.sql
 tar --remove-files -cz $BACKUPS/$DATE-all_databases.sql \
