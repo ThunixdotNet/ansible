@@ -10,6 +10,7 @@ else
 	cd /var/thunix/ansible
 	while [ $SCHED = 1 ]
 	do
+		sleep 1
 		touch $RUNNING
 		/usr/bin/git pull
 		/usr/local/bin/ansible-playbook -i /var/thunix/ansible/hosts /var/thunix/ansible/site.yml -u root
