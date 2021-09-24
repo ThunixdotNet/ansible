@@ -41,7 +41,7 @@ chown root:sudo $BACKUPS/$DATE*.tgz
 chmod 640 $BACKUPS/*.tgz
 
 # Remove dumps and the previous backup once there is another.
-if [ $TYPE -eq "full" ] && [ -e $LEVEL0 ]
+if [ $TYPE = full ] && [ -e $LEVEL0 ]
 then
   rm $LEVEL0 $BACKUPS/*incremental.tgz
 fi
