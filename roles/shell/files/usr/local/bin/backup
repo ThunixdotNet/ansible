@@ -1,12 +1,14 @@
 #!/bin/bash
+# Please see the backup(8) man page for full documentation.
 
 DATE=$(date +%Y%m%d)
 BACKUPS=/var/backups
+DUMPS=8
 
 LEVEL0=$(find $BACKUPS -name "*full.tgz")
-DUMPS=$(find $BACKUPS -name "*incremental.tgz" | wc -l)
+INCR=$(find $BACKUPS -name "*incremental.tgz" | wc -l)
 
-if [ -e $LEVEL0 ] && [ $DUMPS -le 8 ]
+if [ -e $LEVEL0 ] && [ $INCR -le $DUMPS ]
 then
   TYPE=incremental
 else
@@ -46,6 +48,7 @@ then
   rm $LEVEL0 $BACKUPS/*incremental.tgz
 fi
 
+# Database backup
 mysqldump --all-databases > $BACKUPS/$DATE-all_databases.sql
 tar --remove-files -cz $BACKUPS/$DATE-all_databases.sql \
  -f $BACKUPS/$DATE-all_databases.sql.tgz
