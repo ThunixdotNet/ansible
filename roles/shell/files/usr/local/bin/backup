@@ -49,9 +49,8 @@ then
 fi
 
 # Database backup
-mysqldump --all-databases > $BACKUPS/$DATE-all_databases.sql
-tar --remove-files -cz $BACKUPS/$DATE-all_databases.sql \
- -f $BACKUPS/$DATE-all_databases.sql.tgz
+find $BACKUPS -name "*.sql.gz" -mtime +$DUMPS -exec rm {} \;
+mysqldump --all-databases | gzip > $BACKUPS/$DATE-all_databases.sql.gz
 
-chown root:sudo $BACKUPS/$DATE*.tgz
-chmod 640 $BACKUPS/*.tgz
+chown root:sudo $BACKUPS/$DATE*.sql.gz
+chmod 640 $BACKUPS/*.sql.gz
