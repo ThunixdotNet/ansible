@@ -13,7 +13,7 @@ then
   TYPE=incremental
 else
   TYPE=full
-  rm -f $BACKUPS/incremental-backup.snapshot
+  rm -f $BACKUPS/incremental.snapshot
 fi
 
 tar -cz \
@@ -36,7 +36,7 @@ tar -cz \
  /var/lib/znc/configs/ /var/lib/znc/moddata/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
- -g $BACKUPS/incremental-backup.snapshot \
+ -g $BACKUPS/incremental.snapshot \
  -f $BACKUPS/$DATE-$TYPE.tgz
 
 chown root:sudo $BACKUPS/$DATE*.tgz
