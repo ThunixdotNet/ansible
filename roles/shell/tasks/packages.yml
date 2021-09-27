@@ -209,6 +209,7 @@
       - php-sqlite3
       - php-tidy
       - php-xmlrpc
+      - php-zip
 #      - php7.3-xsl
 #      - php7.3-curl
 #      - php7.3-xml
