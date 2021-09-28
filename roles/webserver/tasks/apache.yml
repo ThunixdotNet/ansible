@@ -28,7 +28,7 @@
     - wiki.thunix.net
     - lukewarmcat.codes
     - xerty.lukewarmcat.codes
-    - mightywcms.thunix.net
+    - mightywcms
       
 - name: Make Apache2 site configs live 
   file:
@@ -49,7 +49,7 @@
     - wiki.thunix.net
     - lukewarmcat.codes
     - xerty.lukewarmcat.codes
-    - mightywcms.thunix.net
+    - mightywcms
 
 - name: Give permissions for staticadventures.netlib.re to southerntofu
   file:
