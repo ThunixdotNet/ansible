@@ -26,8 +26,6 @@
     - rpm.thunix.net
     - stats.thunix.net
     - wiki.thunix.net
-    - lukewarmcat.codes
-    - xerty.lukewarmcat.codes
     - mightywcms
       
 - name: Make Apache2 site configs live 
@@ -47,8 +45,6 @@
     - rpm.thunix.net
     - stats.thunix.net
     - wiki.thunix.net
-    - lukewarmcat.codes
-    - xerty.lukewarmcat.codes
     - mightywcms
 
 - name: Give permissions for staticadventures.netlib.re to southerntofu
