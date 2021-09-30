@@ -15,9 +15,6 @@
     src: ../files/etc/apache2/sites-available/{{ item }}.conf
     dest: /etc/apache2/sites-available/{{ item }}.conf
   loop:
-    - default-ssl
-    - thunix.cf
-    - www.thunix.cf
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
@@ -34,9 +31,6 @@
     dest: /etc/apache2/sites-enabled/{{ item }}.conf
     state: link
   loop:
-    - default-ssl
-    - thunix.cf
-    - www.thunix.cf
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
