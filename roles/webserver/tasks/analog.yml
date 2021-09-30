@@ -9,7 +9,7 @@
 
 - name: Add analog cron task for stats
   copy:
-    src: ../files/analog-cron
+    src: ../files/etc/cron.hourly/analog
     dest: /etc/cron.hourly/analog
     owner: root
     mode: 744

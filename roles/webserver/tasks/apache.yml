@@ -4,7 +4,7 @@
 # Certbot
 - name: Add certbot cron job
   copy:
-    src: ../files/certbot-renew
+    src: ../files/etc/cron.weekly/certbot-renew
     dest: /etc/cron.weekly/certbot-renew
     owner: root
     mode: 755
