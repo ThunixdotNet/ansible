@@ -24,6 +24,7 @@
     - stats.thunix.net
     - wiki.thunix.net
     - mightywcms
+    - apogee.thunix.net
       
 - name: Make Apache2 site configs live 
   file:
@@ -40,6 +41,7 @@
     - stats.thunix.net
     - wiki.thunix.net
     - mightywcms
+    - apogee.thunix.net
 
 - name: Give permissions for staticadventures.netlib.re to southerntofu
   file:
