@@ -99,6 +99,7 @@
       - fingerd
       - fish
 #      - fd
+      - fd-find
       - flatpak
       - flatpak-builder
       - flex
