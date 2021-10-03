@@ -3,12 +3,12 @@
 
 DATE=$(date +%Y%m%d)
 BACKUPS=/var/backups
-DUMPS=8
+DUMPS=7
 
 LEVEL0=$(find $BACKUPS -name "*full.tgz")
 INCR=$(find $BACKUPS -name "*incremental.tgz" | wc -l)
 
-if [ -e $LEVEL0 ] && [ $INCR -le $DUMPS ]
+if [ -e $LEVEL0 ] && [ $INCR -gt $DUMPS ]
 then
   TYPE=incremental
 else
@@ -45,7 +45,7 @@ chmod 640 $BACKUPS/*.tgz
 if [ $TYPE = full ]
 then
   cp $BACKUPS/full.snapshot $BACKUPS/incremental.snapshot
-  # Remove dumps and the previous backup once there is another.
+  # Remove dumps and the previous backup if there is another one.
   [ -e $LEVEL0 ] && rm $LEVEL0 $BACKUPS/*incremental.tgz
 fi
 
