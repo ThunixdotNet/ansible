@@ -39,12 +39,12 @@ tar -cz \
  -g $BACKUPS/$TYPE.snapshot \
  -f $BACKUPS/$DATE-$TYPE.tgz
 
-chown root:sudo $BACKUPS/$DATE*.tgz
-chmod 640 $BACKUPS/*.tgz
+chown root:sudo $BACKUPS/{$DATE*.tgz,$TYPE.snapshot}
+chmod 640 $BACKUPS/{*.tgz,$TYPE.snapshot}
 
 if [ $TYPE = full ]
 then
-  cp $BACKUPS/full.snapshot $BACKUPS/incremental.snapshot
+  cp -p $BACKUPS/full.snapshot $BACKUPS/incremental.snapshot
   # Remove dumps and the previous backup if there is another one.
   [ -e $LEVEL0 ] && rm $LEVEL0 $BACKUPS/*incremental.tgz
 fi
