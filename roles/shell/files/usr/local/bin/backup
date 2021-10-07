@@ -8,7 +8,7 @@ DUMPS=7
 LEVEL0=$(find $BACKUPS -name "*full.tgz" | sort | tail -n1)
 INCR=$(find $BACKUPS -name "*incremental.tgz" | wc -l)
 
-if [ -e $LEVEL0 ] && [ $INCR -le $DUMPS ]
+if [ ! -z $LEVEL0 ] && [ $INCR -le $DUMPS ]
 then
   TYPE=incremental
 else
