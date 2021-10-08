@@ -373,3 +373,4 @@
 - include: users/vxrx.yml
 - include: users/nacionalna.sigurnost.yml
 - include: users/dev.yml
+- include: users/picard.yml
