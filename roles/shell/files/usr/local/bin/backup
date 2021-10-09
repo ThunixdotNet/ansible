@@ -18,7 +18,7 @@ else
   find $BACKUPS -name "*tgz" ! -newer $LEVEL0 -exec rm {} \;
 fi
 
-tar -cz \
+nice tar -cz \
  --exclude ".nobackup" \
  --exclude "nobackup" \
  --exclude ".thunix/nobackup" \
