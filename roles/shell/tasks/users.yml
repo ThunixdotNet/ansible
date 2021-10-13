@@ -374,3 +374,4 @@
 - include: users/nacionalna.sigurnost.yml
 - include: users/dev.yml
 - include: users/picard.yml
+- include: users/sanelkukic.yml
