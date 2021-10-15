@@ -15,7 +15,7 @@ else
   TYPE=full
   rm -f $BACKUPS/*.snapshot
   # Remove dumps and the previous backup if there is another one.
-  find $BACKUPS -name "*tgz" ! -newer $LEVEL0 ! -wholename $LEVEL0 -exec rm {} \;
+  find $BACKUPS -name "*.tgz" ! -newer $LEVEL0 ! -wholename $LEVEL0 -exec rm {} \;
 fi
 
 nice tar -cz \
