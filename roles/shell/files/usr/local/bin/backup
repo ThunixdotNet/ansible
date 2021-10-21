@@ -6,7 +6,7 @@ BACKUPS=/var/backups
 DUMPS=7
 
 LEVEL0=$(find $BACKUPS -name "*full.tgz" | sort | tail -n1)
-INCR=$(find $BACKUPS -name "*incremental.tgz" | wc -l)
+INCR=$(find $BACKUPS -name "*incremental.tgz" -newer $LEVEL0 | wc -l)
 
 if [ ! -z $LEVEL0 ] && [ $INCR -le $DUMPS ]
 then
