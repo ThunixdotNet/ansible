@@ -5,7 +5,7 @@
     groups: tilde,sudo
     state: present
     skeleton: /etc/skel
-    shell: /bin/bash
+    shell: /usr/bin/fish
     system: no
     createhome: yes
     home: /home/ubergeek
