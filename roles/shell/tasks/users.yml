@@ -376,3 +376,4 @@
 - include: users/picard.yml
 - include: users/sanelkukic.yml
 - include: users/alinur.yml
+- include: users/elric.yml
