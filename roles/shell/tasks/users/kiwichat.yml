@@ -1,0 +1,15 @@
+---
+- name: Setting up kiwichat
+  user:
+    name: kiwichat
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/kiwichat
+- authorized_key:
+    user: kiwichat
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3Ml4A2QucGIta7AeltuRnXqUYK9TBuNLHrZbntIhU+E7KQ0V4lI/mmzRiRpOSCMn4wCHGnzFH1wVgXExWo2PXLPv8rpS6cjUPl+w7bQzPBAaaDHETJtX/1FgdCFm6OW1Ao3MIvwt5RXjG25bnVnXN+HytOr6in04GUe5THBmFMcUTUm16fdJ5EWNDk+3HH2u/zJHfsdVLHem/PVVb5S52nlEituGZX0vl2KcQbVCdB9dUnZh+dUz2+T1DZu1xUMEByDnAGvt4lGX4L76NuFUjJHlZ1SlbXyMa06n84Ge1XqQVwX9ulzeWTaqZuG2QA92AhNAgqVYt1F7TqaRkFnxk98jNlHRi9D36JTYA+eJK6yBpfB6Zrn6KVyK11io7UZxo2Szl2J72djcP7hqSbcfZ+pQrEdHJUuJE4DZupoWIYXqiAdPvWevjz3b8RHHaSmH1GJwje3o41vPxABspPxfP46efsWjKAEqn1uw4buZfxRm9dzGl67gtMRR1TMBYjq8= Beatrix@Beatrix-PC"
