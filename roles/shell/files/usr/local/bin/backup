@@ -21,8 +21,7 @@ fi
 nice tar -cz \
  --exclude ".nobackup" \
  --exclude "nobackup" \
- --exclude ".thunix/nobackup" \
- --exclude "/home/irc/*" \
+ --exclude="/home/irc/*" \
  --exclude='/home/slip/*' \
  --exclude='/home/angelok/*' \
  --exclude='/home/usernameak/*' \
@@ -31,6 +30,9 @@ nice tar -cz \
  --exclude='/home/fosslinux/*' \
  --exclude='/home/zszoke/*' \
  --exclude='/home/duitser/*' \
+ --exclude='/home/fltk/*' \
+ --exclude='/home/nirvana/*' \
+ --exclude='/home/transfusion/*' \
  /home/ \
  /var/games/minetest-server/.minetest/ \
  /var/lib/minecraft/paper/ \
