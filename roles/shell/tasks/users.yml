@@ -383,3 +383,4 @@
 - include: users/kiwichat.yml
 - include: users/iamruinous.yml
 - include: users/gratefuldev.yml
+- include: users/munger.yml

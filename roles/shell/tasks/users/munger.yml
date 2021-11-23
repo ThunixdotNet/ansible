@@ -1,0 +1,15 @@
+---
+- name: Setting up munger
+  user:
+    name: munger
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/munger
+- authorized_key:
+    user: munger
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCvFwIcvo8ilaInx35PxSTmelvNVa40OHgO2tLqDX12rbk2TCD1Xjp7744MXPrF34lgvSWaI+KJxGIE9pkpYlVVADm7mVjiNC4ipJA0Jq4PxWb58Dx6JxytupFtul+GgIAj5D1V46FSs29PGGhGATbAZB/ZSg5cJXqBzg41/T4NIVBHGBpzqf27zy3Ar9keb/vl7yQ/oklBBlTCIX7jtfNIW7ZpA1evoFdqy3AzN7lNiS4U01XEh0qbj4+NQcu3atXr5vD2Mgo/ab/TcyeXiMxnEhmhrAszwhYKewFuU0UTo0kRBHp5/3/8IF4ha6G8hA2Z9tiFsVTPLlN0oPx+dFv8+J/yoknH+iWTYg4T385GlAKB2GCDwXe39pt8zhx/BMhxsNpXZuBg3Xp8IdH3CoKJ34oQraMYY+UvaObuyVaDvRjm97sx/k20XjGFx3T202lZtITu9aRG/kLp6UPz9qbp+9svBLBzPHVwRMks8LGdybveE1Bs5Z6NNGBTISHhMZM= jane@swim"
