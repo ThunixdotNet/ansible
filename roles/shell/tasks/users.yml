@@ -388,3 +388,4 @@
 - include: users/jailop.yml
 - include: users/seipy.yml
 - include: users/shadow.yml
+- include: users/cobra.yml
