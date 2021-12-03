@@ -1,0 +1,15 @@
+---
+- name: Setting up owabs
+  user:
+    name: owabs
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/owabs
+- authorized_key:
+    user: owabs
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCIJONzJJi5b0Qi09GA89l9yme3FSO11DhnC3smohbT5owj3+8WsaZCcufwJ2cN8jWd3C04JJqOL0P45oZIm5379l+j5Dse9BsDC0BFDlkn/LvmebUpj6SIMdcGnyoKR8AhfmvHiWb3d257A2GqjaoCA9aaZ3EHUmv25IKaHDZTuh4E2b/uRjuBdf4WzhVV1peqYpwKvTMl3d5/QzK8NsHHNxxjRGaQ0TOXEleWhQ/b0HwsQFyBN5pB0hDEXGOWHcI5IdeL69Q6U5jZAUuSC0f3rlsMYNrRhD0HfW55eXJ5AR4204repkqSwEH9ZtzwkCDtBsaT5qyM2KFV4UAmN2bH"
