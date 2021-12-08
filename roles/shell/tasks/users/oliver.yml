@@ -1,0 +1,15 @@
+---
+- name: Setting up oliver
+  user:
+    name: oliver
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/oliver
+- authorized_key:
+    user: oliver
+    state: present
+    key: "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAGYoGbV54xC6VoHYNlYfIP3FjW5LxNdojvoBXD4oFqxEBucAzz7u+k7rxbEyi/wpef640gbM6CLLyEdSxtW4bOAoQF9V341jmxIKrVvK0HoTWbKpC9pTumy+lIULjzz1TMgToHt7jSkd1bYJH9M5zRxaCU0+oKuVi23edFtA7vh82gaag== kaguya@sandalphon"
