@@ -1,0 +1,15 @@
+---
+- name: Setting up mnusw
+  user:
+    name: mnusw
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/mnusw
+- authorized_key:
+    user: mnusw
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC1DjKfrOUOfM+85Qn9X6JXDqU7lHlx7GT3Bwd8TEJl7nzLcPLlvfE52Rcw9pqKx/jGR2tqG83U/m+L2dcts0+6HE5xazBiytfx7Ajnlo9EEBE5EPh+aHPFZdaKPNnRIfObQ/yYiURu6jhA3nDUpYdXwj79kPD1BpemW3eUnAIgikQw8D1dRJ3geCcEdTS82/QIz1LHjw+jhF3eyo8jtmyVdP9bKl0tWW9psnhEYlSYoH6LM92VMgV9kqJZjUh/VpUzOhIYyArao1lW66umuU3rlbORuDNLCyrPGPBNrV1VeYZH2BOj7MvwfdXj4kLbiWDtacMf256PxRGfjZooBlqzSIjWQzLXOPuqij/+VAAcgXTolzoz5kPKAGxl8H1/bFxoQOtwHb+cwiwyOQ2UrQOK4mu2kjA0u24GfcI7Y1W0AgM+Grp9PbOCtLZeCzq4Su5cCuHTMYf0v1ETY3rQSXjAQAILlZ2zAIVCi3YPMqTop9EPdnN1hQpQGqFqYqIsp18= user@some.domain"
