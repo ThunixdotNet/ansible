@@ -1,0 +1,15 @@
+---
+- name: Setting up flook
+  user:
+    name: flook
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/flook
+- authorized_key:
+    user: flook
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVLCor4WDl3HdAuerUc0frUmNZ2zIjSuz8QDJ+E1CcwTCZ1Xx7YZuXlfiI+C+yr+UeUWDdoRys0QQ3krcV5S+5KCkXJ3VnmHVDWGt0KsuEb96Qa1ZPIw27VZG36WFP/01aBxvk6v4d2qv3Cqsxqtm/atWYKMlSM2QgwbV87zeT6NlKyC/PV0nSxfMrBcppBrlbWYm/TXmFIkldhrLRKCyNwQaLVmnIRPvfw9wknlO6hMBAMlJoq8OMwgxYd7WOxEu3ZUWObJkHXldFbOjNN8Vbws2XhwQXIyE0h118Ua5k2UdKVpB5isYto4PRsU6fgZXI5k2NvXYOE+TpaCDzATr/ flook@tilde"
