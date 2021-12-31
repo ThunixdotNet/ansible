@@ -13,3 +13,18 @@
     dest: /usr/local/bin/botany
     mode: 0755
     state: link
+
+- name: Initalizes shared data folder group and mode
+  file:
+    path: /var/lib/botany/sqlite
+    state: directory
+    owner: root
+    group: tilde
+    mode: 0775
+
+- name: Keep weekly visitors tidy
+  file:
+    src: /var/lib/botany/clear_weekly_users.py
+    dest: /etc/cron.weekly/clear_weekly_users.py
+    mode: 0755
+    state: link

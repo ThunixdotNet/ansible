@@ -40,6 +40,7 @@ nice tar -cz \
  /var/lib/znc/configs/ /var/lib/znc/moddata/ \
  /var/spool/cron/ \
  /var/spool/anacron/ \
+ /var/lib/botany/sqlite/ \
  -g $BACKUPS/$TYPE.snapshot \
  -f $BACKUPS/$DATE-$TYPE.tgz
 
