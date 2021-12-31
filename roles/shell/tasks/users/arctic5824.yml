@@ -1,0 +1,15 @@
+---
+- name: Setting up arctic5824
+  user:
+    name: arctic5824
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/arctic5824
+- authorized_key:
+    user: arctic5824
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIZDK9k+r5NgcerBBJjD5t7VLUket3PLoVh06cPvklbDjLn7cz70RAUWWAr5X7d3w+h846ffsxbb4NOCZFB66jjTMV8VHx5mIQwsYi6Okulx3ABi3btaNS41kEpkseYet801wDdV+YOGsMe6JeiQo2LVbdplQt3vlFB4d797lF6KDSH/zsVsNMbPxnY+q+EXgjxANBvP0gLHZ3nBg17vFf9sjjZkz8exO5yxZcl/xwOc1vADIXQQWP1tWDsIDINxdRkU0JCSnUocFCpizH2KxCz1UL0+hciOh1TgWQ2YdzEBFDaVEY6/+QV3DIJ8QXKivZ4Ik4RTPAT7ZYLE0sKtjP nikita@Nikita-Gram"

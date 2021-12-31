@@ -396,3 +396,4 @@
 - include: users/wrk.yml
 - include: users/flook.yml
 - include: users/clc9.yml
+- include: users/arctic5824.yml
