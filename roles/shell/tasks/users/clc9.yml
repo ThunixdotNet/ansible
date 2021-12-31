@@ -1,0 +1,15 @@
+---
+- name: Setting up clc9
+  user:
+    name: clc9
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/clc9
+- authorized_key:
+    user: clc9
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC92ytTrrXGWksA/vG8t3ufUb86182XanjFuilFAu05ueS8lC5b3niNNidUGcq6LvtlNKRlfcrdYmzsmv9HXXaepDDCMgaBCFpUyIpU2p01h4EDK/ru172BuSagm77cnJRbTjS1mIyim5BHTpuMgK5q79boSLV6R+QUvRnnL4uOkTpu6bxEnYgSDEqBUjHTgzERuOWGbBCrdA+nxxut5ao62fRWRNPdQvZpkJ5H03ZodGgodapqv/87g9RmkxVYethsdtOfSf9tvAU8QnJGNTI8S9BiY3voN/q17ljZlFBiqXvUYjJ7K3rxFgNOfQ+Ee6/rlh2TV7sWFMvgoabNEt2d dorucu@x200"
