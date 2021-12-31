@@ -395,5 +395,4 @@
 - include: users/miningpro362.yml
 - include: users/wrk.yml
 - include: users/flook.yml
-- include: users/calico.yml
 - include: users/clc9.yml
