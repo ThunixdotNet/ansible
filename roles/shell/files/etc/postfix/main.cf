@@ -60,7 +60,7 @@ smtpd_sender_restrictions = reject_unknown_sender_domain
 smtpd_recipient_restrictions =
  permit_mynetworks,
  permit_sasl_authenticated,
- permit_auth_destination,
+ reject_unauth_destination,
  reject_invalid_hostname,
  reject_unauth_pipelining,
  reject_non_fqdn_sender,
