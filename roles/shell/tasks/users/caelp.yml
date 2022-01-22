@@ -1,0 +1,15 @@
+---
+- name: Setting up caelp
+  user:
+    name: caelp
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/caelp
+- authorized_key:
+    user: caelp
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWKOBxK+fADLuREszpDOuRH5yvEQ2xg83JhXn71LpUpu8LFpVlvI6T/fFOlDjc3r8SAyCQBblLydNSc3HF3OS61clw5SYXbvkWYF+DjC7MsNxk5zRv2BXvOdsm58E0KM30wGdfuZiJSb+K9YbDRMo1q1NpFNUz6tQ9H9DjsjkIrmyYZF4vx2/dycDFm8ulSeXuc1Ao3PPSfMjNj+auXkZHbCT/IIwJATn2PREdzyjgODGRpYwPdq0IakfyHiZr5gHZByflu4cOdAqf2GVzWPMHs82JZstQArr9zSlvH5AYxXWGAHy2qTsAO/CBvoRjJ6ZhccSztZIfufj7IPLtPuUTuWkY1npEhF9RpcSVse+swtdb6ik4BNKBzc62dYD6GGMQT0Uz4RFvhVpR0ouekQRcgMSlumQRGftIKAcU0KQn8aTGdSUjJUlj1qFlXwpzjmP0cQf1/ZRc1oGtW6wU45o0D0G5jO0ywdm/vGY+c2jyFq7LTZ3b9CKcww2DiXFplhM= mark@mark-Inspiron-3501"
