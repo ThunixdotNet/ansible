@@ -82,6 +82,7 @@
       - context
       - cowsay
       - devscripts
+      - dialog
       - dopewars
       - dos2unix
 #      - dosemu
