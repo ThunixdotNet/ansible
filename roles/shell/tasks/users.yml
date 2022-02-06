@@ -119,7 +119,6 @@
 #- include: users/rado.yml
 #- include: users/ragnarok.yml
 - include: users/rain.yml
-#- include: users/redhat.yml
 #- include: users/responsibleracoon.yml
 - include: users/ringo.yml
 #- include: users/riska.yml
