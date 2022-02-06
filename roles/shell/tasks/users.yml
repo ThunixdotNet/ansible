@@ -57,7 +57,7 @@
 #- include: users/freuddy.yml
 - include: users/geetfun.yml
 - include: users/georges.yml
-- include: users/gokce.yml
+#- include: users/gokce.yml
 #- include: users/golden.yml
 #- include: users/gonthey.yml
 - include: users/gooly.yml
@@ -76,7 +76,7 @@
 #- include: users/janda.yml
 #- include: users/jin264.yml
 #- include: users/johnc.yml
-- include: users/joro.yml
+#- include: users/joro.yml
 #- include: users/jumbajookiba.yml
 #- include: users/jundi.yml
 #- include: users/k4j.yml
@@ -121,7 +121,7 @@
 #- include: users/rado.yml
 #- include: users/ragnarok.yml
 - include: users/rain.yml
-- include: users/redhat.yml
+#- include: users/redhat.yml
 #- include: users/responsibleracoon.yml
 - include: users/ringo.yml
 #- include: users/riska.yml
