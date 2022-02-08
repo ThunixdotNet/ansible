@@ -128,7 +128,6 @@
 - include: users/saturnv.yml
 - include: users/sebre.yml
 - include: users/serafeim.yml
-- include: users/shark.yml
 #- include: users/skirk.yml
 - include: users/slip.yml
 #- include: users/smtpsupplicant.yml
