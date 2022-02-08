@@ -114,7 +114,6 @@
 #- include: users/pidgeotto.yml
 #- include: users/pria.yml
 - include: users/quantum.yml
-- include: users/quetzalcoatl.yml
 - include: users/r.yml
 #- include: users/rado.yml
 #- include: users/ragnarok.yml
