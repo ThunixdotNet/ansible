@@ -1,0 +1,15 @@
+---
+- name: Setting up x025
+  user:
+    name: x025
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/x025
+- authorized_key:
+    user: x025
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDTaqmwQGPJSqgvUUz18uQeNQUlPR07uymT3o4aBSmLof3JvnSdYnNvoBJYLEtqPe48d/as+kAMD2wEV3NNWgLHUtm/uN14UpLR14uoJqB6Wsv8m1Sm9EekqfHP7xM0sD3MP2KODN6/Cj+mMgrKI9/n4KGDZhxdjR1BTpBRZ7MYIW4027KedzZ/wrDm4OxwIrQQcLrlcTQdN7V3FzKzNU8uDejSp0xfm1r6EVWrNYlqGLlKoynX5nrWNkzgGRuVc0zDiI7kLBKRiPVajH1jGUcedNJlRgLcbdVSHhdhQuYrfmMC6JZx6T+jRiVZhGc6XqfrRaZLBuBkW9aBDfsWtXP6I46v7dcGuf7qCob0AL4D8s/ZDfjSkxCXcSSlhRWnklLOqOJ3iqm81qxytq71IHwCYAZ6TdbRYkISyShhDBeP4ebqlp/ESKmKjOatmed069NRa36R2gOiOGsxf+vWErNU3L/Z7kveNG5f5WL3xc9fm+Oz03h5QjnRqjIg115xhY8= x025@pizza"
