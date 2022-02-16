@@ -82,7 +82,6 @@
 #- include: users/leonid.yml
 #- include: users/letamesis.yml
 - include: users/linel.yml
-- include: users/logique.yml
 - include: users/lugubris.yml
 #- include: users/lytedev.yml
 #- include: users/makassar.yml
