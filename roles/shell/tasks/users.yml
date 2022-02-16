@@ -145,7 +145,6 @@
 #- include: users/ultima.yml
 #- include: users/un4ckn0wl3z.yml
 - include: users/user.yml
-- include: users/usernameak.yml
 - include: users/usher.yml
 - include: users/vernon.yml
 #- include: users/vgk.yml
