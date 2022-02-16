@@ -159,7 +159,6 @@
 - include: users/denzuko.yml
 - include: users/calamitous.yml
 - include: users/sleepless9.yml
-- include: users/stelima.yml
 - include: users/gagrilli.yml
 - include: users/hlv.yml
 - include: users/baruchel.yml
