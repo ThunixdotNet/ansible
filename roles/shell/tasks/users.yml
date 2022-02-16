@@ -82,7 +82,6 @@
 #- include: users/larasaty.yml
 #- include: users/leonid.yml
 #- include: users/letamesis.yml
-- include: users/liesinties.yml
 - include: users/linel.yml
 - include: users/logique.yml
 - include: users/lugubris.yml
