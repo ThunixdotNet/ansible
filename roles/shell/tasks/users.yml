@@ -126,7 +126,6 @@
 - include: users/southerntofu.yml
 #- include: users/spanmer.yml
 #- include: users/stenli990801.yml
-#- include: users/syncore.yml
 - include: users/thekingofbandit.yml
 #- include: users/tomjerr.yml
 - include: users/transfusion.yml
@@ -172,7 +171,6 @@
 - include: users/greek.yml
 - include: users/tawi.yml
 - include: users/pluto.yml
-- include: users/sy.yml
 - include: users/roygbiv.yml
 - include: users/neotux.yml
 - include: users/n0a110w.yml
@@ -361,7 +359,6 @@
 - include: users/alinur.yml
 - include: users/elric.yml
 - include: users/teriyake.yml
-- include: users/noisytoot.yml
 - include: users/pourjour.yml
 - include: users/kiwichat.yml
 - include: users/iamruinous.yml
