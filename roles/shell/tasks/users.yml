@@ -54,7 +54,6 @@
 #- include: users/fncso.yml
 - include: users/fosslinux.yml
 #- include: users/freuddy.yml
-- include: users/geetfun.yml
 - include: users/georges.yml
 #- include: users/golden.yml
 #- include: users/gonthey.yml
