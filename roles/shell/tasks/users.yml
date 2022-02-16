@@ -28,7 +28,6 @@
 - include: users/apple.yml
 #- include: users/arch3r.yml
 - include: users/arda.yml
-- include: users/atdx.yml
 #- include: users/audiofile.yml
 - include: users/bacterio.yml
 - include: users/ben.yml
