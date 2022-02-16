@@ -60,7 +60,6 @@
 #- include: users/gonthey.yml
 - include: users/gooly.yml
 - include: users/growl.yml
-- include: users/haakondahl.yml
 - include: users/haivets.yml
 - include: users/hamlet.yml
 #- include: users/hasbullah.yml
