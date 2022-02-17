@@ -233,7 +233,6 @@
 - include: users/alma.yml
 - include: users/uberius.yml
 - include: users/low-key.yml
-- include: users/slaserx.yml
 - include: users/fengf.yml
 - include: users/axolotl.yml
 - include: users/lesstech.yml
