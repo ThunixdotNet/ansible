@@ -236,7 +236,6 @@
 - include: users/fltk.yml
 - include: users/login.yml
 - include: users/ricci.yml
-- include: users/hedy.yml
 - include: users/zackward.yml
 - include: users/jack.yml
 - include: users/xlamer.yml
