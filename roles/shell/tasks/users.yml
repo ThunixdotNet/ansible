@@ -238,7 +238,6 @@
 - include: users/ricci.yml
 - include: users/zackward.yml
 - include: users/jack.yml
-- include: users/xlamer.yml
 - include: users/mcornick.yml
 - include: users/nyku.yml
 - include: users/perry.yml
