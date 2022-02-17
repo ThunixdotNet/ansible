@@ -196,7 +196,6 @@
 - include: users/baloo.yml
 - include: users/sriwafikadr.yml
 - include: users/sillyfanboy.yml
-- include: users/gyges.yml
 - include: users/brendantcc.yml
 - include: users/stadham.yml
 - include: users/missk.yml
