@@ -202,7 +202,6 @@
 - include: users/hellspawn.yml
 - include: users/kuldar.yml
 - include: users/randocontent.yml
-- include: users/chris.yml
 - include: users/Cropt0.yml
 - include: users/Cryptolover248.yml
 - include: users/kcubeterm.yml
@@ -327,7 +326,6 @@
 - include: users/vadim.yml
 - include: users/buggy.yml
 - include: users/anuwatk.yml
-- include: users/chrisbs.yml
 - include: users/sharpe.yml
 - include: users/mrcreator1002.yml
 - include: users/triplexcrewz.yml
