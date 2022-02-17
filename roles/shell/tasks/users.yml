@@ -272,7 +272,6 @@
 - include: users/kax.yml
 - include: users/nix.yml
 - include: users/kasmo.yml
-- include: users/g1n.yml
 - include: users/lguilher.yml
 - include: users/vadim.yml
 - include: users/buggy.yml
