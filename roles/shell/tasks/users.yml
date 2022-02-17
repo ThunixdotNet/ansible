@@ -261,7 +261,6 @@
 - include: users/ocz.yml
 - include: users/sanercreighton.yml
 - include: users/lokiwho.yml
-- include: users/archwizard.yml
 - include: users/gliggy.yml
 - include: users/behmen.yml
 - include: users/aidenlol.yml
