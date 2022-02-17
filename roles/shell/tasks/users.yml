@@ -260,7 +260,6 @@
 - include: users/guela.yml
 - include: users/ocz.yml
 - include: users/sanercreighton.yml
-- include: users/pg.yml
 - include: users/lokiwho.yml
 - include: users/archwizard.yml
 - include: users/gliggy.yml
