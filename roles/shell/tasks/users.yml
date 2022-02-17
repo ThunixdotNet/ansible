@@ -131,7 +131,6 @@
 #- include: users/tux.yml
 - include: users/ubergeek.yml
 #- include: users/ukhuwah.yml
-#- include: users/ultima.yml
 #- include: users/un4ckn0wl3z.yml
 - include: users/user.yml
 - include: users/usher.yml
@@ -264,7 +263,6 @@
 - include: users/gliggy.yml
 - include: users/behmen.yml
 - include: users/aidenlol.yml
-- include: users/tim.yml
 - include: users/youngchief.yml
 - include: users/subhambh.yml
 - include: users/imperishable_dusk.yml
