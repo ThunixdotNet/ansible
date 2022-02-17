@@ -235,7 +235,6 @@
 - include: users/crispr.yml
 - include: users/ialokin.yml
 - include: users/whyorean.yml
-- include: users/goring.yml
 - include: users/q45.yml
 - include: users/earne.yml
 - include: users/Raoul69.yml
