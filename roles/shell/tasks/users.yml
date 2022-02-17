@@ -138,7 +138,6 @@
 - include: users/vernon.yml
 #- include: users/vgk.yml
 - include: users/victoralt.yml
-- include: users/vigilant.yml
 #- include: users/virus.yml
 #- include: users/warcall22.yml
 - include: users/wesx.yml
