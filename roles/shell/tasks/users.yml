@@ -224,7 +224,6 @@
 - include: users/snork.yml
 - include: users/xigoi.yml
 - include: users/vgk.yml
-- include: users/GreenEyedFury.yml
 - include: users/angelmage.yml
 - include: users/deltav.yml
 - include: users/famubu.yml
