@@ -161,7 +161,6 @@
 - include: users/fro.yml
 - include: users/fauly.yml
 - include: users/k0tletka.yml
-- include: users/arten.yml
 - include: users/realvindic.yml
 - include: users/sem.yml
 - include: users/greek.yml
