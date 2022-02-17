@@ -267,7 +267,6 @@
 - include: users/imperishable_dusk.yml
 - include: users/fenris.yml
 - include: users/hana.yml
-- include: users/conform.yml
 - include: users/bacteria.yml
 - include: users/lbcnz.yml
 - include: users/kax.yml
