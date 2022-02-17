@@ -32,7 +32,6 @@
 - include: users/bacterio.yml
 - include: users/ben.yml
 - include: users/bercik.yml
-#- include: users/brendantcc.yml
 #- include: users/bullah.yml
 #- include: users/camellia.yml
 - include: users/chispitos.yml
@@ -183,7 +182,6 @@
 - include: users/freuddy.yml
 - include: users/iloveirc.yml
 - include: users/nirvana.yml
-- include: users/resultcek.yml
 - include: users/rohs.yml
 - include: users/lukewarmcat.yml
 - include: users/xfnw.yml
@@ -196,7 +194,6 @@
 - include: users/baloo.yml
 - include: users/sriwafikadr.yml
 - include: users/sillyfanboy.yml
-- include: users/brendantcc.yml
 - include: users/Cha0t1c.yml
 - include: users/farooqkz.yml
 - include: users/hellspawn.yml
@@ -211,7 +208,6 @@
 - include: users/beneskiwik.yml
 #- include: users/seerlite.yml
 - include: users/pokemongo.yml
-- include: users/prashantch.yml
 - include: users/Xiboon.yml
 - include: users/Index.yml
 - include: users/rolkoz.yml
@@ -238,7 +234,6 @@
 - include: users/sasaboss.yml
 - include: users/crispr.yml
 - include: users/ialokin.yml
-- include: users/tc.yml
 - include: users/whyorean.yml
 - include: users/goring.yml
 - include: users/q45.yml
