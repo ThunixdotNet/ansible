@@ -35,11 +35,11 @@
     state: present
     update_cache: yes
 
-- name: Add zandronum repo
-  apt_repository:
-    repo: 'deb http://debian.drdteam.org/ stable multiverse' 
-    state: present
-    update_cache: yes
+#- name: Add zandronum repo
+#  apt_repository:
+#    repo: 'deb http://debian.drdteam.org/ stable multiverse' 
+#    state: present
+#    update_cache: yes
     
 - name: Add debian contrib
   apt_repository:
