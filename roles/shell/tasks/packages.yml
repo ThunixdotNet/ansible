@@ -74,6 +74,7 @@
       - ca-certificates-mono
       - caca-utils
       - clang
+      - clisp
       - cloc
       - cmake
       - cmake-curses-gui
