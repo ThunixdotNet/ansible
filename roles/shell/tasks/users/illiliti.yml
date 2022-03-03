@@ -1,0 +1,15 @@
+---
+- name: Setting up illiliti
+  user:
+    name: illiliti
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/illiliti
+- authorized_key:
+    user: illiliti
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ02e7bUrCJcsPcSBS0ZhsrNSUkATw4CsFRj/++RqaQ9"
