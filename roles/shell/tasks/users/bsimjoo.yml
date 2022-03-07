@@ -1,0 +1,15 @@
+---
+- name: Setting up bsimjoo
+  user:
+    name: bsimjoo
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/bsimjoo
+- authorized_key:
+    user: bsimjoo
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDURfHIQBksSz6kxYOmtAmlgKE6TaeOQCKGhtaC3I3+CBuXI/4+5Ey390lQRb6GOWjFztWyNvAerrMGhBvLCRtRRgUVxswZ73u+5k+Pj8fDXBtB4Ki3X7oKQs/XQbiRlgaSjmSYA8bJ4FtCe0CbAacW43smsBS2DwiNtTan0EfnJcwXqvaMQYHjaxf/vIuVNxwDd3G3s2F300HRQPIncRNZrF4epuLECaTnHX3mSErVRL4wBUp3aGe2QyHHa8m+cAbBYkbg841vls0ncxoCevocTOKFmQQ/R7N2cIQMZyEMnktDmEFB1tqFv4LrScItp2iGMTm4GzHYUSAzy73bg0EB bsimjoo@thunix.net"
