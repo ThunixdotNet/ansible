@@ -1,0 +1,15 @@
+---
+- name: Setting up aryak
+  user:
+    name: aryak
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/aryak
+- authorized_key:
+    user: aryak
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICeUQKFE6j+legQS2aam8VlwaGJ1r5BfJevbMUxpAi6N aryakiran@zohomail.eu"
