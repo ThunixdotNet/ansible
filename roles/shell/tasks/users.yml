@@ -325,3 +325,4 @@
 - include: users/daksh.yml
 - include: users/aryak.yml
 - include: users/tel.yml
+- include: users/bosch40.yml
