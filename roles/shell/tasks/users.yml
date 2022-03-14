@@ -324,3 +324,4 @@
 - include: users/bsimjoo.yml
 - include: users/daksh.yml
 - include: users/aryak.yml
+- include: users/tel.yml
