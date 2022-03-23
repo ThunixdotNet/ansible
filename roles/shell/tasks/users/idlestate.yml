@@ -1,0 +1,15 @@
+---
+- name: Setting up idlestate
+  user:
+    name: idlestate
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/idlestate
+- authorized_key:
+    user: idlestate
+    state: present
+    key: "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPFhZs14rOR1imDHFsjeS5c9m4AuLz2oWlttcX/CMfKmHA7tbKppGxHmV0EQ6kwnDrYErJOh6bvwZ6ipX6X6iBA= Billy Idle"
