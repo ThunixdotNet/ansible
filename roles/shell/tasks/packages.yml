@@ -259,6 +259,7 @@
       - tcl-dev
       - tcl-tls
       - tcl8.6
+      - tcl8.6-dev
       - tcllib
       - tcltls
       - texinfo
