@@ -24,7 +24,6 @@ nice tar -cz \
  --exclude="/home/irc/*" \
  --exclude='/home/slip/*' \
  --exclude='/home/angelok/*' \
- --exclude='/home/usernameak/*' \
  --exclude='/home/ubergeek/*' \
  --exclude='/home/amcclure/*' \
  --exclude='/home/fosslinux/*' \
