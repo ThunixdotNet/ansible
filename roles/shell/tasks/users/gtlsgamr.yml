@@ -1,0 +1,15 @@
+---
+- name: Setting up gtlsgamr
+  user:
+    name: gtlsgamr
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/gtlsgamr
+- authorized_key:
+    user: gtlsgamr
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKKk+UEgfGNCMv6L3Wn/9EuFwlLSu9vd7y2BT22q8Vlf"

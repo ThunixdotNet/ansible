@@ -328,3 +328,4 @@
 - include: users/bosch40.yml
 - include: users/idlestate.yml
 - include: users/grizzly.yml
+- include: users/gtlsgamr.yml
