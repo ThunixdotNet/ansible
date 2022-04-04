@@ -1,0 +1,15 @@
+---
+- name: Setting up ihsan
+  user:
+    name: ihsan
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/ihsan
+- authorized_key:
+    user: ihsan
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6kdB4BHznXzErKQKnn5UJUkE1/3RQyEgiVdOn/R+V8Dug0r4opK2XbTZ1hXcsTHxofk/T+Ymh/2iuxAmUOCslwjRdhY4svJ8MWDLN80vTssbQ3A0l6qFtLYMMXZdwstSx7W0+1UYrfOF5f2j/E1gvFT9cXWPJH2eBQxT6zr8jmPKO1vr0w/WZ2GixiV7zjRszwP61OV5whq+LSpVHCZVRyT51a4Me7xWv5Ur8g7ZkTK0QcIUCQS7Ym3CZDc5rBRM2eqIdxY2LJ0NOTGr36evdKamQjwxacekc10oCNP+RErRG2vllrCNxrhEDvLRXrUfAeqK4toi8pS3v/+UEnoxpR3FA+Z/KT3BvpYDuDZjerAzbgOTz50tyMc4pvbIy+KSBk8J9IMPhxhRh/A6DOSpC7deWZTOC6uGeoit9xd3MMIFyYtH868jFwNTFoMGDFSDbT7Ahee4xv7T30izIFoA7A3LnMOjwvA1lcnGzVO1PQ3exPoIrRRXcQtr4czgjw6duLPB4vdtBxvXeyBgXiKrYate1aY1ztcHLNnU/NcHfkjLtKwcjH5UNkwWD72xeT9nON3cUteN4feEhlYvg6mGllZMzwtvz3ocVC6bhR7vIHPQsrVpSrj+7UKZfeCl3PGEyNt+obNj0GxBULMry7fAjqNJkmFZRKUR9RSn33aPtWQ== ihsan@localhost"
