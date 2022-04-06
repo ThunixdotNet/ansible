@@ -1,0 +1,15 @@
+---
+- name: Setting up thepineappleguy
+  user:
+    name: thepineappleguy
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/thepineappleguy
+- authorized_key:
+    user: thepineappleguy
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCfRghAzgBXxT0pl2U7ddksYl9vOTItvMylM/Y17QHCalGnH+HR4cc+ayhgCFpNf92jNruFDnRuQjh05pmToX1m+NL5J65n/qUnKgsRkVepMcL6Xg/9XnKqNRLcb0HK60UM+nVUV/dy3fmdBmJladvQUR0GMFgltvWWYLb7P2Yhaj8HiAPyeMNedSgD88zqqNKkjJdyLwKSt0BOvgio2Y4lUiPefdzrReCRHCY6rIAYVNbU/u/4nTRJ6pcN3fdmC24BvHVIYGzP9DgGWkyToy8L9uwYWTxZ0dB+WuTI/wJqlbVNpqkgBHUNs4nw5HLwtcYxvKMXbbi4eSPftTDDiltms1L+kzoZqplwIGbd0Z4AaEYxpLrWSBfZR0G49421H4ukmEzItIJ75MdA2qhRWLpv+dn0YG3yzdxQMwhqFMekanp7WAQpd+pKPO7aM3ojEDl0dXO9Whm/SKqee0WrFZR92zkQ5eJHihJjb7y4qWH/b77RHk+95zEAH7mZnHErW4U= sar@ng"
