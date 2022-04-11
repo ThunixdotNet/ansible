@@ -27,6 +27,7 @@
     - mightywcms
     - apogee.thunix.net
     - pcworms.ir
+    - adlerhouse
       
 - name: Make Apache2 site configs live 
   file:
@@ -46,6 +47,7 @@
     - mightywcms
     - apogee.thunix.net
     - pcworms.ir
+    - adlerhouse
 
 - name: Give permissions for staticadventures.netlib.re to southerntofu
   file:
