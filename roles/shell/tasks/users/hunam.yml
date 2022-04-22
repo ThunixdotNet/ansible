@@ -1,0 +1,15 @@
+---
+- name: Setting up hunam
+  user:
+    name: hunam
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/hunam
+- authorized_key:
+    user: hunam
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBl40iHmI39Qv6ciYMzIkuludd43rSZ7yncZGOZI/jSq"
