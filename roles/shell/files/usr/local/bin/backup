@@ -5,16 +5,19 @@ DATE=$(date +%Y%m%d)
 BACKUPS=/var/backups
 DUMPS=7
 
+# Search for the last full backup.
 LEVEL0=$(find $BACKUPS -name "*full.tgz" | sort | tail -n1)
+# Search and count incremental dumps newer than the last full backup.
 INCR=$(find $BACKUPS -name "*incremental.tgz" -newer $LEVEL0 | wc -l)
 
+# If there is at least one full backup and less than specified incremental dumps
 if [ ! -z $LEVEL0 ] && [ $INCR -le $DUMPS ]
 then
   TYPE=incremental
 else
   TYPE=full
   rm -f $BACKUPS/*.snapshot
-  # Remove dumps and the previous backup if there is another one.
+  # Remove the first backup set (full and incremental dumps) if there is a second one.
   find $BACKUPS -name "*.tgz" ! -newer $LEVEL0 ! -wholename $LEVEL0 -exec rm {} \;
 fi
 
