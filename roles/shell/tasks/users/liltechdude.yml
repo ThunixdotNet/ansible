@@ -1,0 +1,15 @@
+---
+- name: Setting up liltechdude
+  user:
+    name: liltechdude
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/liltechdude
+- authorized_key:
+    user: liltechdude
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJcmByBJlUmnN5A354MhKgswuRewb0T7vuA5gloItMNT3iEclJZWc7KPEqmmQrBZ488bRdWuOtOp8xIYA5aetgK0AYed2OqL+AcmpbRtVzog2HtQcaZE4d4k9oOSv7ipmq3qrzoDVftM5dDyYKfyXc/Y6gq3bnJN/VhCG60gldh2rSqITXBUXdzNyOSFsknRY3FIsD4+902E20O2E/Oj2wL1wBAlD3IjajO5cV1UmxKRnujLckSsJjxBcjyIaHlqfyt7SF1PS/8ssjmLh9RYgB3IxbQ7Dswuz8zgvmGDi3z0CAVDdnwbFVSXkjr33/yhFkjXJyx+jvsCsXlX84guhwm3UBU+rEXPFbB6FMKQtwAF3SvQOSHhUtuP1gIidwClJl++dI8K9og7je0fQz+XciM37TVaJa41xgVyP/DynO1h4wgesnrfXtH5D/X/ab5tgriykwjld01r0yDfaA2Unmfyblr6l5ZozxWXCI1VC/RMmnpu0+V5zgdtlvbu1PkSc= sigma\19798541@SBT-WSN-0004044"
