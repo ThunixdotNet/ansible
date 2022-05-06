@@ -16,6 +16,7 @@
     dest: /etc/apache2/sites-available/{{ item }}.conf
   loop:
     - 000-default
+    - 000-default-ssl
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
