@@ -217,7 +217,6 @@
 - include: users/famubu.yml
 - include: users/riolo.yml
 - include: users/catman.yml
-- include: users/genvara.yml
 - include: users/alma.yml
 - include: users/uberius.yml
 - include: users/low-key.yml
