@@ -19,3 +19,8 @@
     user: ubergeek
     state: present
     key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC39hcHfyjhiiIRuXq4oYfrvRc0MWsXPVXJihc5XLUNedgpWDO+mNh5/AWUyMQwHoaN8cbqE4rp0rpHoW8pSeSKY8qFB0mnDyYK6KsJM+Q9rNLG25CbObnzzJaUpU9wl3RnSlgNIeLlWo8eyUVmd86AM4gLYmfoDP5gJfFfyi2027NTKvAyIJvqMw+jQYxP4/6vBQ8DU6hkObD0HR/loOdTZc1bHp0br2WzpGuvoKSbFVEQMc763F/Wi6N7wyJfosI5MfanNqKtmfGjwIoro72f1kuYa37JUoYUeV9799ot/pGk4HnZnteFobJU96IKGif83ijCIKEQQOWwI5vLcjrh"
+
+- authorized_key:
+    user: ubergeel
+    state: present
+    key: "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBILcdGfq65TabkdTNiIkgG8BiT/jNiIUWJVX5Z/k/LXYoXflO8QgYra6SoOEDsG62HprMq01oNAoLoL9GzmZFhA="
