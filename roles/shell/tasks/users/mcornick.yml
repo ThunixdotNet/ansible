@@ -12,4 +12,4 @@
 - authorized_key:
     user: mcornick
     state: present
-    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHdYz/7llKpHco2IzZDW+tLKo+b3hZOecocnFtspIf3E"
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL25/CkyKSTZVLsSCK+gFEWTVJC9Bmibpc7X7ucGTX7f"
