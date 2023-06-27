@@ -187,7 +187,7 @@
       - neofetch
       - neomutt
       - neovim
-      - newsbeuter
+      #- newsbeuter
       - newsboat
       - oidentd
       - openbsd-inetd
