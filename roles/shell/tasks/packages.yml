@@ -249,7 +249,7 @@
       - scala-library
       - screen
       - sipcalc
-      - staticsite
+ #     - staticsite
       - stow
       - talk
       - talkd
