@@ -228,7 +228,7 @@
 #      - python-pip
 #      - python-potr
       - python3.7
-      - python3.7-django
+      - python3-django
       - python3.7-flask
       - python3.7-pip
       - python3.7-toot
