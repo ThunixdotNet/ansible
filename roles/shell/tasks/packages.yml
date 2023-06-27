@@ -223,7 +223,7 @@
       - proot
       - profanity
       - python
-      - python-certbot-apache
+      - python3-certbot-apache
 #      - python-pip
 #      - python-potr
       - python3
