@@ -222,10 +222,10 @@
       - poezio
       - proot
       - profanity
-      - python
+#      - python
       - python-certbot-apache
-#     - python-pip
-#     - python-potr
+#      - python-pip
+#      - python-potr
       - python3.7
       - python3-django
       - python3-flask
@@ -233,7 +233,7 @@
       - python3-toot
       - python3-twisted
       - python3-potr
-      - python3-venv
+      - python3.7-venv
       - qemu
       - qemu-efi
       - qemu-system
