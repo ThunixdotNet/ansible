@@ -11,10 +11,10 @@
     url: https://keybase.io/ihabunek/pgp_keys.asc
     state: present 
 
-- name: Add apt key for zandronum
-  apt_key:
-    url: http://debian.drdteam.org/drdteam.gpg
-    state: present
+#- name: Add apt key for zandronum
+#  apt_key:
+#    url: http://debian.drdteam.org/drdteam.gpg
+#    state: present
 
 - name: Add apt key for mono-project
   apt_key:
@@ -35,11 +35,11 @@
     state: present
     update_cache: yes
 
-- name: Add zandronum repo
-  apt_repository:
-    repo: 'deb http://debian.drdteam.org/ stable multiverse' 
-    state: present
-    update_cache: yes
+#- name: Add zandronum repo
+#  apt_repository:
+#    repo: 'deb http://debian.drdteam.org/ stable multiverse' 
+#    state: present
+#    update_cache: yes
     
 - name: Add debian contrib
   apt_repository:
@@ -287,7 +287,7 @@
       - xfce4
       - xfce4-goodies
       - task-xfce-desktop
-      - zandronum-server
+ #     - zandronum-server
       - znc
       - znc-dev
       - znc-perl
