@@ -2,7 +2,7 @@
 ---
 - name: Add apt key for weechat
   apt_key:
-    keyserver: p80.pool.sks-keyservers.net
+    keyserver: hkps://keys.openpgp.org
     id: 11E9DE8848F2B65222AA75B8D1820DB22A11534E
     state: present
 
