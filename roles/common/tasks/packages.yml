@@ -37,16 +37,16 @@
       - pflogsumm
       - python
       - python3-certbot-apache
-      - python-httplib2
-      - python-jinja2
-      - python-kerberos
-      - python-markupsafe
+      - python3-httplib2
+      - python3-jinja2
+      - python3-kerberos
+      - python3-markupsafe
 #      - python-netaddr
       - python3-paramiko
 #      - python-pip
       - python3-pymysql
       - python3-selinux
-      - python-xmltodict
+      - python3-xmltodict
       - python3-yaml
       - python3-flask
       - python3-flask-restful
