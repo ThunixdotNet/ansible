@@ -235,9 +235,9 @@
       - python3-twisted
       - python3-potr
       - python3-venv
-      - qemu
-      - qemu-efi
-      - qemu-system
+ #     - qemu
+ #     - qemu-efi
+ #     - qemu-system
       - racket
       - ranger
       - ripgrep
