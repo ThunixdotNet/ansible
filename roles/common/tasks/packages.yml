@@ -35,7 +35,7 @@
       - man
       - members
       - pflogsumm
-      - python3
+      - python
       - python3-certbot-apache
       - python3-httplib2
       - python3-jinja2
