@@ -27,7 +27,7 @@
       - aptitude
       - cron
       - debhelper
-      - dpkg-sig
+#      - dpkg-sig
       - git
       - ieee-data
       - libboost-dev
