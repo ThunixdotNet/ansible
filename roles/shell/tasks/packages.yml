@@ -138,7 +138,8 @@
       - libjpeg62-turbo-dev
       - libmime-tools-perl
       - libncurses-dev
-      - libopencolorio1v5
+ #     - libopencolorio1v5
+      - opencolorio-tools
       - libopencolorio-dev
       - libsdl1.2-dev
       - libsdl2-dev
