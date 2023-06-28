@@ -155,7 +155,7 @@
       - mc
       - mc-data
       - micro
-      - midori
+#      - midori
       - minetest-data
 #      - minetest-mod-advspawning
 #      - minetest-mod-animalmaterials
