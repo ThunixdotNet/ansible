@@ -24,7 +24,7 @@
 
 - name: Add weechat repo
   apt_repository: 
-    repo: 'deb https://weechat.org/debian bookworm main' 
+    repo: 'deb https://weechat.org/debian bullseye main' 
     state: present
     filename: weechat
     update_cache: yes
@@ -43,7 +43,7 @@
     
 - name: Add debian contrib
   apt_repository:
-    repo: 'deb http://ftp.de.debian.org/debian bookworm main contrib'
+    repo: 'deb http://ftp.de.debian.org/debian bullseye main contrib'
     state: present
     update_cache: yes
 
@@ -138,7 +138,7 @@
       - libjpeg62-turbo-dev
       - libmime-tools-perl
       - libncurses-dev
- #     - libopencolorio1v5
+      - libopencolorio1v5
       - opencolorio-tools
       - libopencolorio-dev
       - libsdl1.2-dev
@@ -155,7 +155,7 @@
       - mc
       - mc-data
       - micro
-#      - midori
+      - midori
       - minetest-data
 #      - minetest-mod-advspawning
 #      - minetest-mod-animalmaterials
@@ -235,9 +235,9 @@
       - python3-twisted
       - python3-potr
       - python3-venv
- #     - qemu
- #     - qemu-efi
- #     - qemu-system
+      - qemu
+      - qemu-efi
+      - qemu-system
       - racket
       - ranger
       - ripgrep
@@ -265,7 +265,7 @@
       - texinfo
       - tdom
       - telnet
-  #    - telegram-cli
+      - telegram-cli
       - todotxt-cli
       - unrar-free
       - urlscan
