@@ -20,15 +20,11 @@
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
-    - staticadventures.netlib.re
     - deb.thunix.net
     - rpm.thunix.net
     - stats.thunix.net
     - wiki.thunix.net
-    - mightywcms
     - apogee.thunix.net
-    - pcworms.ir
-    - adlerhouse
       
 - name: Make Apache2 site configs live 
   file:
@@ -40,20 +36,7 @@
     - thunix.net
     - www.thunix.net
     - ftp.thunix.net
-    - staticadventures.netlib.re
     - deb.thunix.net
     - rpm.thunix.net
     - stats.thunix.net
     - wiki.thunix.net
-    - mightywcms
-    - apogee.thunix.net
-    - pcworms.ir
-    - adlerhouse
-
-- name: Give permissions for staticadventures.netlib.re to southerntofu
-  file:
-    path: /var/www/staticadventures.netlib.re
-    state: directory
-    owner: southerntofu
-    group: southerntofu
-    recurse: yes # Can be removed in the future, but for now all files still have old uid/gid
