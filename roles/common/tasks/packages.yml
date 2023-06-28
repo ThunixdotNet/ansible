@@ -52,7 +52,6 @@
       - python3-flask-restful
       - python3-flask-api
       - python3-pip
-      - pipx
       - python3-psutil
       - python3-pymysql
       - sqlite3
