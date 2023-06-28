@@ -11,7 +11,7 @@
     name: ssl
     state: present
 
-- name: Enable php7.0 apache module
+- name: Enable php7.4 apache module
   apache2_module:
-    name: php7.0
+    name: php7.4
     state: present
