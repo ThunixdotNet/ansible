@@ -1,0 +1,16 @@
+---
+- name: Setting up deepend
+  user:
+    name: deepend
+    groups: tilde,sudo
+    state: present
+    skeleton: /etc/skel
+    shell: /usr/bin/fish
+    system: no
+    createhome: yes
+    home: /home/deepend
+
+- authorized_key:
+    user: deepend
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEnnu2r9ZxedvrcDKvVAouXWNNj5+tdT9tYFMK/60u9"
