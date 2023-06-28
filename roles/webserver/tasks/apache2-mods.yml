@@ -8,9 +8,9 @@
   apache2_module:
     name: ssl
     state: present
-- name: php7.3
+- name: php7.4
   apache2_module:
-    name: php7.3
+    name: php7.4
     state: present
 - name: rewrite
   apache2_module:
