@@ -1,5 +1,7 @@
 # Thunix Ansible Playbook
 
+[![Build Status](https://drone.tildegit.org/api/badges/thunix/ansible/status.svg)](https://drone.tildegit.org/thunix/ansible)
+
 Clone repo, then execute playbook as follows:
 
 ```/usr/local/bin/ansible-playbook -i /var/thunix/hosts /var/thunix/site.yml```
