@@ -17,3 +17,5 @@
 # Normal Users
 
 - include: users/deepend.yml
+- include: users/naglfar.yml
+- include: users/computertech.yml
