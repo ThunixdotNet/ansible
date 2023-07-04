@@ -80,7 +80,7 @@
  #     - cmake-curses-gui
       - cmark
       - cmatrix
-      - context
+#      - context
       - cowsay
       - devscripts
       - dialog
