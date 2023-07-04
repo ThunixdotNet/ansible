@@ -250,6 +250,7 @@
       - scala-library
       - screen
       - sipcalc
+      - software-properties-common
  #     - staticsite
       - stow
       - talk
