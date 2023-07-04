@@ -102,8 +102,8 @@
       - fish
 #      - fd
       - fd-find
-      - flatpak
-      - flatpak-builder
+#     - flatpak
+#      - flatpak-builder
       - flex
       - fortune
       - frotz
@@ -141,8 +141,8 @@
       - libopencolorio1v5
       - opencolorio-tools
       - libopencolorio-dev
-      - libsdl1.2-dev
-      - libsdl2-dev
+#      - libsdl1.2-dev
+#      - libsdl2-dev
       - libssl-dev
       - libtool
       - libtool-bin
