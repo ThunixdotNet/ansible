@@ -61,7 +61,7 @@
   vars:
     packages:
       - alpine
-      - adwaita-icon-theme
+ #     - adwaita-icon-theme
       - analog
       - autoconf2.13
       - bat
@@ -85,7 +85,7 @@
       - devscripts
       - dialog
       - dopewars
-      - dos2unix
+#      - dos2unix
 #      - dosemu
       - dovecot-pop3d
       - dovecot-core
@@ -95,7 +95,7 @@
       - exa
       - elinks
       - emacs
-      - ffmpeg
+ #     - ffmpeg
       - finch
       - finger
       - fingerd
@@ -111,12 +111,12 @@
       - gitweb
       - golang
       - gopher
-      - gnome-icon-theme
+#      - gnome-icon-theme
 #      - gnome-icon-theme-extras
       - htop
       - hugo
 #      - ident2
-      - inkscape
+#      - inkscape
       - imagemagick
       - ircii
       - irssi
@@ -155,7 +155,7 @@
       - mc
       - mc-data
       - micro
-      - midori
+#      - midori
       - minetest-data
 #      - minetest-mod-advspawning
 #      - minetest-mod-animalmaterials
@@ -235,9 +235,9 @@
       - python3-twisted
       - python3-potr
       - python3-venv
-      - qemu
-      - qemu-efi
-      - qemu-system
+#      - qemu
+#      - qemu-efi
+#      - qemu-system
       - racket
       - ranger
       - ripgrep
@@ -282,11 +282,11 @@
       - weechat-tcl
       - whois
       - wordgrinder-ncurses
-      - x11vnc
-      - xdm
-      - xfce4
-      - xfce4-goodies
-      - task-xfce-desktop
+ #     - x11vnc
+ #     - xdm
+ #     - xfce4
+ #     - xfce4-goodies
+ #     - task-xfce-desktop
  #     - zandronum-server
       - znc
       - znc-dev
