@@ -15,6 +15,10 @@
 #  apt_key:
 #    url: http://debian.drdteam.org/drdteam.gpg
 #    state: present
+- name: Add apt key for Amazon Corretto
+  apt_key:
+    url: https://apt.corretto.aws/corretto.key
+    state: present 
 
 - name: Add apt key for mono-project
   apt_key:
@@ -27,6 +31,12 @@
     repo: 'deb https://weechat.org/debian bullseye main' 
     state: present
     filename: weechat
+    update_cache: yes
+
+- name: Add Corretto repo
+  apt_repository: 
+    repo: 'deb https://apt.corretto.aws stable main' 
+    state: present
     update_cache: yes
 
 - name: Add toot repo
@@ -121,6 +131,10 @@
       - ircii
       - irssi
       - isync
+      - java-17-amazon-corretto-jdk
+      - libxi6
+      - libxtst6
+      - libxrender1
       - jekyll
       - ksh
       - jq
