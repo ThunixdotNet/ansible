@@ -23,3 +23,11 @@
     owner: opendkim
     group: opendkim
     mode: 0644
+
+- name: copy trusted.hosts
+  copy:
+    src: ../files/trusted.hosts
+    dest: /etc/opendkim/trusted.hosts
+    owner: opendkim
+    group: opendkim
+    mode: 0644
