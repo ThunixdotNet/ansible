@@ -8,6 +8,14 @@
     group: opendkim
     mode: 0770
 
+- name: Create opendkim thunix.net keys directory
+  file:
+    path: /etc/opendkim/keys/thunix.net
+    state: directory
+    owner: opendkim
+    group: opendkim
+    mode: 0700
+
 - name: copy signing.table
   copy:
     src: ../files/signing.table
