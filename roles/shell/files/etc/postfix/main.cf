@@ -83,7 +83,6 @@ smtpd_recipient_restrictions =
 
 policyd-spf_time_limit = 3600
 
-milter_protocol = 2
 milter_default_action = accept
 milter_protocol = 6
 smtpd_milters = local:opendkim/opendkim.sock
