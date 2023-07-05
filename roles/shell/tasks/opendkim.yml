@@ -34,7 +34,7 @@
 
 - name: copy key.table
   copy:
-    src: ""../files/key.table"
+    src: "../files/key.table"
     dest: "/etc/opendkim/key.table"
     owner: opendkim
     group: opendkim
@@ -42,7 +42,7 @@
 
 - name: copy trusted.hosts
   copy:
-    src: ""../files/trusted.hosts"
+    src: "../files/trusted.hosts"
     dest: "/etc/opendkim/trusted.hosts"
     owner: opendkim
     group: opendkim
