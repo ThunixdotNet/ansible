@@ -1,0 +1,25 @@
+# Configure opendkim
+---
+- name: Create opendkim keys directory
+  file:
+    path: /etc/opendkim/keys
+    state: directory
+    owner: opendkim
+    group: opendkim
+    mode: 0770
+
+- name: copy signing.table
+  copy:
+    src: ../files/signing.table
+    dest: /etc/opendkim/signing.table
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copy key.table
+  copy:
+    src: ../files/key.table
+    dest: /etc/opendkim/key.table
+    owner: opendkim
+    group: opendkim
+    mode: 0644
