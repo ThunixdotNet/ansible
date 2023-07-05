@@ -6,7 +6,7 @@
     state: directory
     owner: opendkim
     group: postfix
-    mode: 0660
+    mode: 0770
     
 - name: Install postix main.cf 
   copy:
