@@ -34,8 +34,8 @@
 
 - name: copy opendkim.conf
   copy:
-    src: ../files/opendkim.conf
-    dest: /etc/opendkim/opendkim.conf
+    src: ../files/etc/opendkim.conf
+    dest: /etc/opendkim.conf
     owner: opendkim
     group: opendkim
     mode: 0644
