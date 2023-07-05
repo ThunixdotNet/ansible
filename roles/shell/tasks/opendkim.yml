@@ -28,8 +28,16 @@
   copy:
     src: ../files/signing.table
     dest: /etc/opendkim/signing.table
-    owner: root
-    group: root
+    owner: opendkim
+    group: opendkim
+    mode: 0644
+
+- name: copy opendkim.conf
+  copy:
+    src: ../files/opendkim.conf
+    dest: /etc/opendkim/opendkim.conf
+    owner: opendkim
+    group: opendkim
     mode: 0644
 
 - name: copy key.table
