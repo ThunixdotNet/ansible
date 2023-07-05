@@ -1,5 +1,5 @@
 ---
 
 - include: pb.yml
-- include: vnc.yml
+# - include: vnc.yml
 - include: postfix.yml
