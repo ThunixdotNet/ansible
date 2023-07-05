@@ -1,5 +1,13 @@
 # Configure opendkim
 ---
+- name: Create opendkim directory
+  file:
+    path: /etc/opendkim
+    state: directory
+    owner: opendkim
+    group: opendkim
+    mode: 0770
+
 - name: Create opendkim keys directory
   file:
     path: /etc/opendkim/keys
