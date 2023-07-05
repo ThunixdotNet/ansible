@@ -2,7 +2,7 @@
 ---
 - name: Create opendkim socket directory
   file:
-    path: /etc/postfix/opendkim
+    path: /var/spool/postfix/opendkim
     state: directory
     owner: opendkim
     group: postfix
