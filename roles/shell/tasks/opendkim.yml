@@ -5,7 +5,7 @@
     path: /etc/opendkim
     state: directory
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0770
 
 - name: Create opendkim keys directory
@@ -13,7 +13,7 @@
     path: /etc/opendkim/keys
     state: directory
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0770
 
 - name: Create opendkim thunix.net keys directory
@@ -21,7 +21,7 @@
     path: /etc/opendkim/keys/thunix.net
     state: directory
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0700
 
 - name: copy signing.table
@@ -37,7 +37,7 @@
     src: ../files/signing.table
     dest: /etc/opendkim/signing.table
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0644
 
 - name: copy opendkim.conf
@@ -45,7 +45,7 @@
     src: ../files/etc/opendkim.conf
     dest: /etc/opendkim.conf
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0644
 
 - name: copy key.table
@@ -53,7 +53,7 @@
     src: ../files/key.table
     dest: /etc/opendkim/key.table
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0644
 
 - name: copy trusted.hosts
@@ -61,5 +61,5 @@
     src: ../files/trusted.hosts
     dest: /etc/opendkim/trusted.hosts
     owner: opendkim
-    group: opendkim
+    group: root
     mode: 0644
