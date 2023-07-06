@@ -18,5 +18,6 @@
 
 - include: users/deepend.yml
 - include: users/naglfar.yml
-- include: users/computertech.yml- include: users/haivets.yml
+- include: users/computertech.yml
+- include: users/haivets.yml
 - include: users/redhat.yml
