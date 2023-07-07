@@ -1,5 +1,13 @@
 # install bbj
 ---
+- name: Install bbj client script
+  copy:
+    src: ../files/bbj
+    dest: /usr/local/bin/bbj
+    owner: root
+    group: root
+    mode: 0755
+
 - name: Clone bbj
   git:
     repo: https://tildegit.org/bbj/bbj
