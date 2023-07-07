@@ -13,5 +13,3 @@
     repo: https://tildegit.org/bbj/bbj
     dest: /usr/share/bbj
     force: yes
-  notify:
-    - install bbj
