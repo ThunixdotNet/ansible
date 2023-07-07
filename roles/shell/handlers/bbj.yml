@@ -1,0 +1,7 @@
+# install bbj
+---
+- name: install bbj
+  make:
+    chdir: /usr/share/bbj
+    target: install
+  become: yes
