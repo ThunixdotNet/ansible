@@ -1,0 +1,2 @@
+#!/bin/sh
+exec python3.9 /usr/share/bbj/clients/urwid/main.py --host bbj.tildeverse.org
