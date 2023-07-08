@@ -13,6 +13,6 @@
   copy:
     src: ../files/bzflag.service
     dest: /etc/systemd/system/bzflag.service
-    user: root
+    owner: root
     group: root
     mode: 0644
