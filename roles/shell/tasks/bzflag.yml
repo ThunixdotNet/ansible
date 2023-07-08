@@ -1,18 +1,18 @@
 # Configure bzflag 
 ---
-#- name: Create home dirs for bzflag 
-#  file:
-#    path: /var/lib/bzflag
-#    state: directory
- #   owner: bzflag
- #   group: root
- #   mode: 0770
- #   recurse: yes
+- name: Create home dirs for bzflag 
+  file:
+    path: /var/lib/bzflag
+    state: directory
+    owner: bzflag
+    group: root
+    mode: 0770
+    recurse: yes
 
-#- name: Install bzflag target
-#  copy:
-#    src: ../files/bzflag.service
-#    dest: /etc/systemd/system/bzflag.service
-#    user: root
-#    group: root
-#    mode: 0644
+- name: Install bzflag target
+  copy:
+    src: ../files/bzflag.service
+    dest: /etc/systemd/system/bzflag.service
+    user: root
+    group: root
+    mode: 0644
