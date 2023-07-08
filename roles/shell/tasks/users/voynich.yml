@@ -1,0 +1,15 @@
+---
+- name: Setting up voynich
+  user:
+    name: voynich
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/voynich
+- authorized_key:
+    user: voynich
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILEqZYkWn+hu7Sqpy/BAwlQHm76LfOfNLW4LjeTERS3V voynich@copland"

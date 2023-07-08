@@ -21,3 +21,4 @@
 - include: users/computertech.yml
 - include: users/haivets.yml
 - include: users/redhat.yml
+- include: users/voynich.yml
