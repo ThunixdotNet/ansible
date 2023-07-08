@@ -3,5 +3,5 @@
 if [[ -f ~/.weechat/irc.conf ]]; then
         exec weechat
 else
-        exec weechat-curses -r "/server add newnet localhost -autoconnect; /set irc.server.newnet.autojoin \"#meta,#thunix,#tildetel\"; /connect newnet"
+        exec weechat-curses -r "/server add tilde irc.tilde.chat/6697 -ssl -autoconnect; /set irc.server.tilde.autojoin \"#meta,#thunix,#tildetel\"; /connect tilde"
 fi
