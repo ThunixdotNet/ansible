@@ -1,5 +1,13 @@
 #This play configs tor for us
 ---
+- name: Create hidden_service directory
+  file:
+    path: /var/lib/tor/hidden_service
+    state: directory
+    owner: root
+    group: root
+    mode: 0770
+
 - name: Deploy torrc file
   copy:
     src: ../files/etc/tor/torrc
