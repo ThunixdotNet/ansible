@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+        <head>
+                <title>🌻  thunix  🌻 - URL Not available</title>
+                <link rel='stylesheet' type='text/css' href='https://thunix.net/includes/newthunix.css'>
+        </head>
+        <body>
+<!-- Begin Header -->
+
+        <div id='header'><p><img src="https://thunix.net/media/thunix.gif" alt="🌻 thunix🌻" /></p>
+                </div>
+<!-- End Header -->
+<hr>
+        <div id='body'>
+
+<!-- Begin Sidebar  -->
+                <div id='sidebar'>
+<ul>
+<li>
+<h2>Main Menu</h2>
+<ul>
+<li><a href="https://thunix.net/main">Home</a></li>
+<li><a href="https://thunix.net/faq">FAQ</a></li>
+<li><a href="https://thunix.net/tos">Terms of Service</a></li>
+<li><a href="https://thunix.net/gdpr">GDPR Statement and Privacy Policy</a></li>
+<li><a href="https://thunix.net/contact">Contact Us</a></li>
+<li><a href="https://thunix.net/signup">Sign Up</a></li>
+<li><a href="https://thunix.net/donate">Donations</a></li>
+</ul>
+</li>
+<li>
+<h2>Status of Servers and Services</h2>
+<ul>
+<li><a href="https://thunix.net/server">Status and Information</a></li>
+<li><a href="https://ftp.thunix.net/">thunix Mirror Services</a></li>
+<li><a href="https://stats.thunix.net/">Web Server Stats</a></li>
+<li><a href="https://thunix.net/webmail/">Web Mail</a></li>
+<li><a href="https://thunix.net:1356/">ZNC Service</a></li>
+<li><a href="https://thunix.net/news">Service News</a></li>
+</ul>
+</li>
+<li>
+<h2>Main Resources On This Site</h2>
+<ul>
+<li><a href="https://wiki.thunix.net/">Wiki</a></li>
+<li><a href="https://thunix.net/users">User Web Directories</a></li>
+<li><a href="https://gopher.tildeverse.org/thunix.net">User Gopher Directories</a></li>
+</ul>
+</li>
+<li>
+<h2>Server Staff</h2>
+<ul>
+<li><a href="https://thunix.net/~deepend/">deepend</a></li>
+<li><a href="https://thunix.net/~naglfar/">Naglfar</a></li>
+</ul>
+</li>
+</ul>           </div>
+<!-- End Sidebar -->
+
+<!-- Begin Body -->
+                <div id='content'><h1>URL Not Found!</h1>
+<p>The URL you have attempted to load is not available on this server.  You can to go the main page of Thunix if you like by clicking <a href="https://thunix.net">here.</a></p>
+<!-- End Body -->
+
+        </div>
+
+<!-- Begin Footer -->
+        <div id='footer'>
+        <hr>
+<p>All content is licensed as <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a>.  Users define their own licensing and own all of their content.</p>
+<p>All questions, comments, and concerns about this site should be sent to <a href="https://thunix.net/contact">the administration team</a>.</p>
+<p>Created with valid <a href="https://validator.w3.org/check?uri=referer">HTML</a> and <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a> code.</p>
+<p>Services and hosting sponsored by <a href="https://wnytechcollab.com">WNY Technology Collaborative</a>.</p>        <a href="https://tildegit.org/thunix/www">Site Source</a> | <a href="https://tildegit.org/thunix/www/src/branch/master/articles/main.md">Page Source</a>
+        </div>
+<!-- End Footer -->
+
+        </body>
+</html>
