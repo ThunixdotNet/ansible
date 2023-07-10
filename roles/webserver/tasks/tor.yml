@@ -6,7 +6,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0770
+    mode: 0700
 
 - name: Deploy torrc file
   copy:
