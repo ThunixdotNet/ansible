@@ -85,6 +85,14 @@
     group: root
     mode: 0644
 
+- name: deploy default index page for domains with no config.
+  copy:
+    src: ../files/default_apache_index
+    dest: /var/www/html/index.php
+    owner: root
+    group: root
+    mode: 0644
+
 - name: Enabling ansible-pull units
   systemd:
     name: "{{ item }}"
