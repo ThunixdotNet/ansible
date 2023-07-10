@@ -34,6 +34,7 @@
     state: link
   loop:
     - 000-default
+    - 000-default-ssl
     - autoconfig.thunix.net
     - thunix.net
     - www.thunix.net
