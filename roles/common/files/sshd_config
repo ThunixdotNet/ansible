@@ -83,7 +83,7 @@ ChallengeResponseAuthentication yes
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
 
-AuthenticationMethods publickey,password publickey,keyboard-interactive
+# AuthenticationMethods publickey,password publickey,keyboard-interactive
 
 #AllowAgentForwarding yes
 AllowTcpForwarding yes
