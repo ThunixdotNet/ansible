@@ -1,0 +1,9 @@
+# This will add script to run google-authenticator for users to set up 2FA 
+---
+- name: Set 2FA 
+  copy:
+    src: ../files/usr/local/bin/setup-2factor
+    dest: /usr/local/bin/setup-2factor
+    owner: root
+    group: root
+    mode: 0755
