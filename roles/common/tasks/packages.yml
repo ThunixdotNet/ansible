@@ -29,6 +29,7 @@
       - debhelper
       - dpkg-sig
       - git
+      - libpam-google-authenticator
       - ieee-data
       - libboost-dev
       - letsencrypt
