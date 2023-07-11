@@ -7,3 +7,6 @@
     owner: root
     group: root
     mode: 0755
+
+# last line of ../files/etc/pam.d/sshd  will need to be copied to /etc/pam.d/sshd.
+# Decided it to risky to automatically have ansible add that. 
