@@ -16,6 +16,14 @@
     group: root
     mode: 0770
 
+- name: Install znccreate.py target
+  copy:
+    src: ../files/usr/local/bin/znccreate.py
+    dest: /usr/local/bin/znccreate.py
+    owner: root
+    group: root
+    mode: 0750
+
 - name: Install znc target
   copy:
     dest: /etc/systemd/system/znc.service
