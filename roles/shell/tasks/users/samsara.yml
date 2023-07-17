@@ -1,0 +1,15 @@
+---
+- name: Setting up samsara
+  user:
+    name: samsara
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/samsara
+- authorized_key:
+    user: samsara
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJtaHvcXc4NDC7TOAr0A0i1p3dzQZUE6HyuIVv93oNIF amnesia@amnesia"
