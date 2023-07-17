@@ -22,3 +22,4 @@
 - include: users/haivets.yml
 - include: users/redhat.yml
 - include: users/voynich.yml
+- include: users/xhafa.yml

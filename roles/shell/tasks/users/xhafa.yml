@@ -1,0 +1,15 @@
+---
+- name: Setting up xhafa
+  user:
+    name: xhafa
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/xhafa
+- authorized_key:
+    user: xhafa
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXd/TOUPcJ8wRV5MXu1ZEEQumsEd3fihhk1DYm6yYNLe+Iq3T5MaMjODf43ofcKO+9sApyXfIWB0DY3CxLeD0mVwd9kGl6BUSwQA7Yeew6D7kfPlD/Xn8wQi65bCQCE9sq1VHyZoqVyFBv6feFmOGSuD0IGDwAbOok2XWbFcZCAARmbSzinwnwjtRHo6JauEGS85AvRh9dOis4x/JYD/0tIPjB0pxBiZDt9s7l3zrAhoRcqXiqkAEqVZROWjBRM/U8XSg0zQ11VqvZLA+wyUJEIKlq7FtnswVdfO5ryA3+E7uH/USQYJzSd0BNb9guM6Ayzq87CHHqjFc/1l578fnz rsa-key-20230716"
