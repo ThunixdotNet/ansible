@@ -24,3 +24,4 @@
 - include: users/voynich.yml
 - include: users/xhafa.yml
 - include: users/samsara.yml
+- include: users/mcornick.yml
