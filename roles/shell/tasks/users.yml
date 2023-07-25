@@ -26,3 +26,4 @@
 - include: users/samsara.yml
 - include: users/mcornick.yml
 - include: users/fria.yml
+- include: users/mspe.yml
