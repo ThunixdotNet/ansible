@@ -1,0 +1,15 @@
+---
+- name: Setting up nbsp
+  user:
+    name: nbsp
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/nbsp
+- authorized_key:
+    user: nbsp
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINpKXCgInMoUx2rOeBXySNseuIo0V82n1Yv97L3W64fl nb@stno"
