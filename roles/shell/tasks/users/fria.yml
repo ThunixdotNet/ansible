@@ -1,0 +1,15 @@
+---
+- name: Setting up fria
+  user:
+    name: fria
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/fria
+- authorized_key:
+    user: fria
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqXbK6e9cL9gcDwiBu/LoRM/H81JeB3yMMDi/xFxNUjwa7frYItLFUFWplz1wNaMQyiRKOMjxD1lnqDfua9wSQzbTGftu7JrKt5cBNNkgCUpqRogSEJNfxygtcJtTl3fOgr9MCn/OGBoB3MJFDurWuRbb3v6MHh/R9RwNOXZWtZRGY3WPt8njtPIvoVXm6o3BRmi9pu0cOZvZiNRM0mtsLdmNwQXyP88pA0BsMsZzTTY1YD40GASLSGRZEZS1vGPD9PWHz7EYRKCJaq5ykthMylLZKjeZC5cVITxiHBrVo1eVjEq7KdFngBVd8CA0gpXBmmhWo+uPd7R0mvbMQVCXaoqA2VPcwH461Bgd9u2YVUg9wSkPItbuFzFck1ZI2w2QBb30cn+jPn/lWqcDbjtXg55xPgDhCZwM8DaSPWJm69yV82jsFctCu7A7H1fknv8VN+iBs4TvbNvP37f5HBUokFuGrbEKQTnsMG1oMI9z409t8D2SYmJhvXRwtGs9WLEs= u0_a261@localhost"
