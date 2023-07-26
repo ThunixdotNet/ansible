@@ -12,4 +12,4 @@
 - authorized_key:
     user: user
     state: present
-    key: "AAAAC3NzaC1lZDI1NTE5AAAAINwcHZIhGBKzEtfkwHvMwHSUnPRDSeiBjEX1vQVOLJ7j unkno@VEndix"
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINwcHZIhGBKzEtfkwHvMwHSUnPRDSeiBjEX1vQVOLJ7j unkno@VEndix"
