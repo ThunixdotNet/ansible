@@ -28,3 +28,4 @@
 - include: users/fria.yml
 - include: users/mspe.yml
 - include: users/nbsp.yml
+- include: users/user.yml
