@@ -1,0 +1,9 @@
+# install tilde-launcher
+---
+- name: Clone tilde-launcher
+  git:
+    repo: https://tildegit.org/thunix/tilde-launcher.git
+    dest: /usr/src/tilde-launcher
+    force: yes
+  notify:
+    - install tilde-launcher
