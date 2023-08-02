@@ -3,3 +3,4 @@
 - include: pb.yml
 # - include: vnc.yml
 - include: postfix.yml
+- include: tildelauncher.yml
