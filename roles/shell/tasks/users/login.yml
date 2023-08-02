@@ -1,0 +1,15 @@
+---
+- name: Setting up login
+  user:
+    name: login
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/login
+- authorized_key:
+    user: login
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICEQLR/DYp4X2dznhzj6N8ixQGPSKIHmn3dyIzRyy0lx login@iphone8plus"

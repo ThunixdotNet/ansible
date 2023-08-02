@@ -29,3 +29,4 @@
 - include: users/nbsp.yml
 - include: users/user.yml
 - include: users/slip.yml
+- include: users/login.yml
