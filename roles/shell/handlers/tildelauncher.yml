@@ -1,0 +1,7 @@
+# install tilde-launcher
+---
+- name: install tilde-launcher
+  make:
+    chdir: /usr/src/tilde-launcher
+    target: install
+  become: yes
