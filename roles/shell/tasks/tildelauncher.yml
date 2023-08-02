@@ -7,3 +7,36 @@
     force: yes
   notify:
     - install tilde-launcher
+
+- name: Create tilde directory
+  file:
+    path: /tilde
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+
+- name: Create /tilde/pending-submissions directory
+  file:
+    path: /tilde/pending-submissions
+    state: directory
+    owner: root
+    group: root
+    mode: 0777
+
+- name: Create /tilde/descriptions directory
+  file:
+    path: /tilde/descriptions
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Create /tilde/bin directory
+  file:
+    path: /tilde/bin
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
