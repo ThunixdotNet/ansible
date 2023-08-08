@@ -30,4 +30,3 @@
 - include: users/user.yml
 - include: users/slip.yml
 - include: users/login.yml
-- include: users/therainingmonkey.yml
