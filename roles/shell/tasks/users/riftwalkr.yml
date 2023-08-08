@@ -1,0 +1,15 @@
+---
+- name: Setting up riftwalkr
+  user:
+    name: riftwalkr
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/riftwalkr
+- authorized_key:
+    user: riftwalkr
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/4L6rMqf7z8iRCopx/WhTUInOY5YlV9nc6wOxII9cmK3GhKgGQJqQ81Hl5uTKx8i8gxjo8DGy2GEDKxHlH4356M6p9Shbw75Sy/Nt/YNqAqCOwziSM5GUk06dMeByuCSAsE0JmRx/+IuzFOeUx1njWHkbhRyYCJyplw4VG0HOYJzN5Sw3DVZi/5MgLfjDU4HbeCeIYC/EogHkAZNyi0lRy+FQgiX+n+C3chKGLR+2KzTJ2iTmDuZL030WVmk1Op/bkDHP4tRy0RrD2xqaO9vQ6ndEwpjog9HZNVNimF/ecmzQrFDVeG5ny3Vufc9kRiP7jsejpYcrqtauRnq/SIsZp87zbuF3jnwtK+mZkk7txRRvSlE9JQnV3Rlt5Ulmhb0E/j/hL/6YMeMHO+TQRnlPUPKrzgf8P2MYsBG/dzNCOFuvX88MN6uNw1ywrOrj8ozNMD+f+gXFYHHs+KncIB84+lk1R+5qF/KBcaCaGuqh1XJppFwLtIvquUWhooBZ75M= TheWinner@RiftwalkrLaptop"
