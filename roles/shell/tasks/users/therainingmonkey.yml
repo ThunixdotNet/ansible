@@ -1,0 +1,15 @@
+---
+- name: Setting up therainingmonkey
+  user:
+    name: therainingmonkey
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/therainingmonkey
+- authorized_key:
+    user: therainingmonkey
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfXIkp8h4ct6A5u9mVAroYj7c0qgbPeVO4AB6r1DJGMrCp3GCm/atqgLQ3J6foqxTOPjj+3ZBoc/8nia1mUJWESleS5TOk4orcfqiarzggAcOFUjP5OhPVh2369XfMQTK1i/SNzKxJ9lFizIcmQzgdXxB00ucfQprN/9WxTo05NxkoRx4FTdCfVc1O5YEj6dn39pU11r6hPTnB/t0pRhs/txkOI3JevOUhY4B1PPi3F5t+bqYIyj5UbMQsQ2m0Wey5MWU+OLBqvcbSqlNrvQVUo/tNtGNuJ+hb36ZRDYwHUtptIG79UOEZjmUc0QqRiEFd+F3gzdwJ06ChcsTUMSIX"
