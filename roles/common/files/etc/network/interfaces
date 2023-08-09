@@ -1,0 +1,23 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug ens33
+iface ens33 inet static
+        address 142.44.150.185/32
+        gateway 66.70.181.254
+        # dns-* options are implemented by the resolvconf package, if installed
+        dns-nameservers 8.8.8.8 8.8.4.4
+        dns-search net
+        up ip route add default via 66.70.181.254
+
+# The IPV6 network interface
+iface ens33 inet6 static
+        address 2607:5300:0204:4340:0000:0000:0000:0185/64
+        gateway 2607:5300:0204:43ff:00ff:00ff:00ff:00ff
