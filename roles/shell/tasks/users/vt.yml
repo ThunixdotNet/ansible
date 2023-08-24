@@ -1,0 +1,15 @@
+---
+- name: Setting up vt
+  user:
+    name: vt
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/vt
+- authorized_key:
+    user: vt
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8XU7EZHTeCaC76dDGGqxjwZx4jzfCyZoD38pqd0bC8EDDDxs7g27OsDR1ofzFacBXtjM09tA663t7hGuNM+XmSA4aQavQZsPfz8ptlbA+2olMJEv/Fu4raUGQULltUUoQPnEbqlVguaJ08pF0K0eQZFihLfY6d4wK+EpT5gaMupHmI/jgxDfSLQBi6vLLSOWME9Of0QnYHWlnwmCd7fSnkb4/TpcS02u2tqcv6JDuHV60AG4V2liJdTQbfkh6FKB/jzf2tuRKzfA4u5A39z1ttqkvnLpqzf2kRCbyRcnuNL5CsOogkVpS2DbAbohFt1laBev+yusQuZAE4ZasKG0ct4BWw9yMhv5gYH0Q4n4uKqztdLig/bkQObF0uHYQmQgZ8i9YABxYHSsMiRUob4ixYeeZeFSRTP48uOlQ5GEtv7Z0NSCx61sMHdEcE9BeYbqlRyhCWf3yU08gQy7qnu2zwuTXW1dS0podV7FqOSbl639K9UNFxbfmgKIahiFhjNc= vt@vulcan"
