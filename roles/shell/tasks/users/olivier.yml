@@ -1,0 +1,15 @@
+---
+- name: Setting up olivier
+  user:
+    name: olivier
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/olivier
+- authorized_key:
+    user: olivier
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7PmERIH/BYX1+9R5Gbf5RInL9IHvuvS5ljGqT6tC0sjqgMDKvlGkAEv13yQkvlOfV+/8iPhz57Fcv+W0l7R2VThjUQirR/9qNm3gaPHc+wXkEoDcNzLarO5um87hY0V1ycYWuPyyHW66uIMYZj0X/ixq9eqQyiV6mcf7syEBbAeg94j1SpcfKnVXcg6Ilc35t1Dqu7LzmbVAXilFQQKERIreR1Zq2TRV/2cwHypBsjoWYkslYBLfDY5CX6zpWOlwY9Wiy5XF5j8Il4bWBI6879ZyibfFBInau2poqMt+a7VIpptxlJCJudPdWEWMMlrtPcSl6hx/3Vj5Dp+yG8K4D"

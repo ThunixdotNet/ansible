@@ -35,3 +35,4 @@
 - include: users/slackjeff.yml
 - include: users/haras.yml
 - include: users/d34d.yml
+- include: users/olivier.yml
