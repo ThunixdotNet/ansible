@@ -1,0 +1,15 @@
+---
+- name: Setting up slackjeff
+  user:
+    name: slackjeff
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/slackjeff
+- authorized_key:
+    user: slackjeff
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHlZKaiNcTUOEalsq8ucVpccUVDpMulmM/wGsub1A+P4GMlcZ/3W/Bo2kJBWZ3tWVch/scmcXAmKG1sFHot/LJBbJtXcqdWYbzGiSp+jF59cYKihbG1dzdPv9frEoFqTudQgXDQGHgbIBrNrSfF5zE2z0JKrzcIhw1XpN9dKfBNCmT7zUy/dhBI4pFkpnTazM/Aoz6TyJpm94vd0h9t85lnDae0m+RjY5s8qYmR2p51fL1EWiJlQqQlXqmG21CZXFQunaK8W692cvjvI49gIJu7ioOYDFbxv3ffk1rA1CF4vNKEdRIy1dMRIAnB+F9c+DEbbelC9tXVls9hw/G3L131flh85mOoAzAYqSpXB11eSxOEgsuU3eAXZ8xmevvKyYBJtpf7wxYdeTCYhucM+EDTg61hQAAIcGuTlDY2R15ovVAPAmDqURwgWfI6grPrBypkAWPsOscmOF+F2VtJblzXasufMpLAjMHbRPPvy1o81GVAy6YV0Q25sTnL5fGhXc= slackjeff@slackware.slackware.com"

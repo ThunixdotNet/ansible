@@ -32,3 +32,4 @@
 - include: users/login.yml
 - include: users/riftwalkr.yml
 - include: users/gooly.yml
+- include: users/slackjeff.yml
