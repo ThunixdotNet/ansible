@@ -359,6 +359,14 @@
     group: root
     mode: 0755
 
+- name: Install resources-used command
+  copy:
+    src: ../files/usr/local/bin/resources-used
+    dest: /usr/local/bin/resources-used
+    owner: root
+    group: root
+    mode: 0755
+
 - name: Install Backup Job
   copy:
     src: ../files/usr/local/bin/backup
