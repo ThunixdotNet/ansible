@@ -1,0 +1,15 @@
+---
+- name: Setting up haras
+  user:
+    name: haras
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/haras
+- authorized_key:
+    user: haras
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOJjfUnrwQvqmcG9c+/NUAaGyAt+odb5BsEynAzWSXE haras@disroot.org"
