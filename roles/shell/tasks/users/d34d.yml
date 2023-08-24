@@ -1,0 +1,15 @@
+---
+- name: Setting up d34d
+  user:
+    name: d34d
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/d34d
+- authorized_key:
+    user: d34d
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC0SoDOSIkZSeflrDqb+QXOf7zs58SRYsPFkpUG61W6j2AlxqtbTuif4msprLP3SWsDnroTkeuOr2GMaBPhC4YybyQiddCZJUVo11Y8FDgqNscZRl3hd38XnULRVEDGZ40M/mkp2v/f+rIwxEENYT37e+YDAO2Y19oL97lKxUhFph1t1IHHWqG0LXwBzByXoBt/pDtIB8FdNvBAbhHuUVORjBKuH/g12TcjCYZhpmL8iJSMbTRFjCWXIyflHA1Q59DHt9ZbOzZlgUzXcVB+YfC0iZ7h8Ju1EN2tCgqmMnsB9MxKbaUR25u6dxxz66Edtu9zhxJWfl2axNw4dDltPQaVncTtqwvqGNLI15nsDKM0gpGDeyqEB8pO8FSEPv+xdpFH928vl32PljiinK09afwspiKlMAjigG0o1MTR2nnoR7Oxtlcv8+srPaklLgO2krNeRtapsZJBvrd8DmJ6WMmB/4tbm281vKwI91hiaxmSJAHiAnDvq+F1XrBtQz3PIcU= u0_a172@localhost"
