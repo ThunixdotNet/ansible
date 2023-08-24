@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Get the current user running the script
+current_user=$(whoami)
+
+echo "Resources used by user: $current_user"
+echo "------------------------------------"
+
+# Show CPU and Memory usage for the user
+echo "CPU and Memory Usage:"
+top -b -n 1 -U $current_user | grep $current_user
+
+# Show memory usage
+echo "Memory Usage:"
+free -h
+
+# Show user's processes
+echo "User Processes:"
+ps -u $current_user -o pid,user,%cpu,%mem,vsz,rss,tty,stat,start,time,command
+
+# Show disk usage for the user's home directory
+echo "Disk Usage in Home Directory:"
+du -sh /home/$current_user
+
+echo "------------------------------------"
+
+# Calculate and show summary of resources
+summary_cpu=$(ps -u $current_user -o %cpu | awk '{total+=$1}END{print int(total)}')
+summary_memory_kb=$(ps -u $current_user -o rss= | awk '{total+=$1}END{print total}')
+summary_disk_kb=$(du -s /home/$current_user | awk '{print $1}')
+
+# Convert memory usage to MBs
+memory_in_mb=$(echo "scale=2; $summary_memory_kb / 1024" | bc)
+
+# Convert disk usage to MBs
+disk_in_mb=$((summary_disk_kb / 1024))
+
+echo "Summary of Used Resources:"
+echo "Total CPU Usage: ${summary_cpu}%"
+echo "Total Memory Usage: ${memory_in_mb} MB"
+echo "Total Disk Usage: ${disk_in_mb} MB"
+
+# Set thresholds for Disk and Memory usage (1 GB and 1.5 GB in this example)
+disk_threshold_mb=1000
+memory_threshold_mb=1500
+cpu_threshold=1
+
+# Check if Disk usage exceeds the threshold
+if ((disk_in_mb > disk_threshold_mb)); then
+    echo -e "\e[31mWARNING: Disk usage exceeds ${disk_threshold_mb} MB!  There is no hard limit.  Be considerate of other users.\e[0m"
+fi
+
+# Check if Memory usage exceeds the threshold
+if ((summary_memory_kb > memory_threshold_mb * 1024)); then
+    echo -e "\e[31mWARNING: Memory usage exceeds ${memory_threshold_mb} MB! There is no hard limit.  Be considerate of other users.\e[0m"
+fi
+
+# Check if CPU usage exceeds the threshold
+if ((summary_cpu > cpu_threshold)); then
+    echo -e "\e[31mWARNING: CPU usage exceeds ${cpu_threshold}%! There is no hard limit.  Be considerate of other users.\e[0m"
+fi
