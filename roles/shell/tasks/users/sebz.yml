@@ -1,0 +1,15 @@
+---
+- name: Setting up sebz
+  user:
+    name: sebz
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/sebz
+- authorized_key:
+    user: sebz
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEQuprLlS/gtj67G4qMJs29VnURehGYZ8U48jX1EMbIc seb@x1"
