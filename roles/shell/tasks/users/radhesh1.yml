@@ -1,0 +1,15 @@
+---
+- name: Setting up radhesh1
+  user:
+    name: radhesh1
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/radhesh1
+- authorized_key:
+    user: radhesh1
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwgZckRAMCHRVsuCnkWxL7j0uv3gNXVie7YdqjPMLMJ"
