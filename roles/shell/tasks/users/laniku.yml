@@ -1,0 +1,15 @@
+---
+- name: Setting up laniku
+  user:
+    name: laniku
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/laniku
+- authorized_key:
+    user: laniku
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJOIEMkOtP9x503YbpIpwMl9LJAyk8liGfJOqR5pcPop7hr4ZPaT+r28j4hBbNvvduY4ztUuK+Jm9DmGY1tjY/tX9wyazICKIn+COwFdHo7Qojten8WwVol39s+LQcl7oQc26HP3Q2GFxqtm85GSq+ENIWuBvAMha9LVusqhhbskpg3PLUSqN9aQ3ilscKQTv8AICCEJOBqNYol8QN2SyJUn0rXgzIuEoyMKA/Y6JrVwOcUcROb61BZMOLaXJGfH6A2a00l58HULmvgBrDDPQoFlyGoz83GjAYQVgv6sMOaEeJqNH762Jc5j4I8Tgz0z+9b4tiStJR2gIWnUIQbBPl"
