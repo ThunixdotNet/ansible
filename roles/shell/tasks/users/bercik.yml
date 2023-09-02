@@ -1,0 +1,15 @@
+---
+- name: Setting up bercik
+  user:
+    name: bercik
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/bercik
+- authorized_key:
+    user: bercik
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrcdk2gzXkA6/PeK4saksdTLAmLGOcUhfBgTL7aBodlQBnZrRw7aIO9M0Ea4LNxEWoJtC9il6/QT4TOqWMY/Y/NVfZWYM8jmYuksm93NO8bCgF86ebdUGNNB7WxczHcjh5gMa3prEVvuxrM0+cwMSYAzkCpl3QrklyDHFNpt86slWE88oTIxkcUmNAd22TZolKmKQtSJDBzqNfpXYzqqBRV2s6cF/wj4FqH1mwafkCPObfbuF0JwfQT2LPhSl9Nt361AndbrokXgiuxWppWUqlROBtRs00EEoQ10osFP+u6NJtnjUcCEN+VltUW4Kg9sgf6E9wUvP7GvLBjC9xd2bz bercik@hercules"

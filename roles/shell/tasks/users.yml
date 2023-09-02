@@ -43,3 +43,4 @@
 - include: users/laniku.yml
 - include: users/sebz.yml
 - include: users/lowusage.yml
+- include: users/bercik.yml
