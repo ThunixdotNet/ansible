@@ -1,0 +1,15 @@
+---
+- name: Setting up lowusage
+  user:
+    name: lowusage
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/lowusage
+- authorized_key:
+    user: lowusage
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCf5fVB7By6vj2EScrojClwBpF0LSJvqiz9aFHC7lXppy4u9gDKxksJLe7epxzOgVHo0TfOpE9mcf5+p8s7hd0zVANeXj/I0UeBr7wTihg+rLjFi6xunx+903BauFNoXvFhQ3H6GrUPR7HL0ANsPqY0qnsnKbY4o8HaAK03OMkkmgDxJGDXlK/Jd76FOp+OIWFB8LEBYNkHFZhJCq/7Rb+4QhZfUv6G4xYqVjpbycuFTpwO+tJY7RDwGp8KSGgRHsNRUSiPGDmDrlyK/PMYX+X9Gzck0D0fote8IsnREJ3VrY7Z9Ej3asbbKbXBYUQ1AFMwoI2a5lskWKUqCNdsm/+2VVyXBzG2ZwWPjJIxDIhw8vORuNCJZ2G8mHWxjoF8GkqB36C/gSSjBwQ/evew25cBW+ChWJlGEQoMUAsvxXINXgeVaB01jXKXMt3jcs7ta8NzcMB2ssxax8liUtxuS/ta5s6ryWjYrAdHrYZ0ca+m5WTT6moGgMW28jvseKcL+k0= lumiere@ciel"
