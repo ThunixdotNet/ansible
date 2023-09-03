@@ -1,0 +1,15 @@
+---
+- name: Setting up txtcat
+  user:
+    name: txtcat
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/txtcat
+- authorized_key:
+    user: txtcat
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEjMOIBCJPTXXC4SCiuovwB+sX+MheDsOJcUHojFvLOt u0_a208@localhost"
