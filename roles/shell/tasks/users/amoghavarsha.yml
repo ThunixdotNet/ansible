@@ -1,0 +1,15 @@
+---
+- name: Setting up amoghavarsha
+  user:
+    name: amoghavarsha
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/amoghavarsha
+- authorized_key:
+    user: amoghavarsha
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCpv1vK9rzCmvAKMdm/b48AiLxi1gQCmCT3d9LgCp/HeXz5sVjqsoHuZedx50cv6R5yjfPt2IsSM4teGpkxKC2Kp5nFOkAxmTskf76zD93Xi8yaB2GFq5XWICW0TGGg4WLMj18VV4965EuPUrpGShjXEnUBWWKiofLTikskRAoC5RL7GPw7dAY0p79C6yoZdB5lrLcfPmJc5ql9Lf58GLz9+GcxLtI29gwTnz8NsFS71Frtk27srpg3WwHNKU2t5DZ6ZN5ZbHWoB5yj0FD8RaudfgFMu7+kCggj3LoAI0aLMe6PLJq2romGQhRhxbvEw04tesREIfgmlRC3flDHtjZqj2wnFHO3NBBLapc22rHlyBWxZKLszmBfgjUXJ6QuCURnHShFzpAk9LM/a4bsOzj7EVqrRKnp0HzWxQzNWqEkXSLOEy1vrKI4jb9yxPeeh+D96Lk3ZW6jMH+/J4csrivGzirK9usG7XYMEyefmhx6toFgZRB2MtCK5WwlzMsrg6/jA4B7mUdGyVA7rC2M+/UUPtrsqohBhQat8lbErPSijNQ/g/l1ItLkGarYIhun4HG69SZjhUhTfWkgzHb5SguMNguZw1Uwrbxzg/wygM31uoi5JoGLJntDZFIA7M2jbXDBTHE6ESICa2re5i5/NO7DUHFYVcWyejlhnBshQ8YZWw== thunix"
