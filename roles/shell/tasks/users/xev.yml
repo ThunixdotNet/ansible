@@ -1,0 +1,15 @@
+---
+- name: Setting up xev
+  user:
+    name: xev
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/xev
+- authorized_key:
+    user: xev
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCNIqXZFvIDIHbUDfonDiFIa/KzyMFEkYUt2a+VafXl+LmhM3S4AjXMk94AwVzQwXPav+YAcRDI2xjQl/9Lj8iU4FO/TbkKlq8KtHyqTELdxbBQNk3yQmpbO6qQLOkVdJ2AW+QmXLeBs7oKDoNm59hrCvtynuMu/9uA6ipNj+oUyVGTddKJA2ErnxMgPMcGDGBdQAVQukUAMTDHN+nRzkGXIrDYUpgI8j6JSn5SbyTsPogY80Kw8oAgfFHYYFxNBc15gtA4s6aFXHwY+DpQXzKAFUqN2fxti/y7pxGHu/LyF03MSU6EgNSzSna9Gg6ya4p5okDCjWz2e2xZFck69e0wSzL9tew18dZq48FyEMOdmXiDXTjGJdb1goUB9nIYo7rL2ixYg7SaCobxwbLcINcvZ1FlIwLLqjDUgH2mPzvEyXhak/Z1bj9WBQ+0Xpj5G6P5xgELah8JA4SW8d4hQKzz8A4+nVtetgfQfyQcpMCjlJPh0BnsXAoTCuXU4S9b0zE= xev@Latitude-E6230"
