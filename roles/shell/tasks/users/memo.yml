@@ -1,0 +1,15 @@
+---
+- name: Setting up memo
+  user:
+    name: memo
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/memo
+- authorized_key:
+    user: memo
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCa9y81LpSErEaJR1Yn/O+3GIvY1YzngKb/wDJB/yUbwx9ynFTFsENVi4apUVUxle1n7TkwKY/emg2MOoRa/ZtgO1j5PtF5RpcboUjyj52gwsC9eQEcUmBLJgh9SzUtf7m9+xa/VODFH68sBElVlhDVsBdm3+o74PwvD5m/PBN7pl57YXig9O6nyHNNpV9qtIVuGExLLlZgNdGiXeM2cEgRBksADr/Dn7Mwb1/1VUoElCwWhbwSClDFNmnKc5OAHUTvqMTgIj6WXg3XkT+3KOev2b483v5nfQiDJh3y3tpS8g9uw49LImIbXgFBwihj3IeU2mWfC1dr01Scuj2vKGyY1SCJdXMl9+FzzhgI0qLjq4eMKbFz3YG86KP4mcYjR4OYUQDNr8KvtSK/WMGN8cwLPNdbowUsl2//pN5xUM0Elw1SLqAQl5pIgDdbEi6FqpMG7SxeRNmn+P7ioN9rCUecsM0YJt5t4PxMAoIeTbnt+vCajHD7FphkHgOYQDlyF6O8Xav4+DIbhkG/auZ5BdgevxNDArJaTpSELzKSZlvF52rxyZftSxu/sHgYC4T/Z0Sxbh31FLl3XlzJcWo4+Ihgvsqnf/MDaYeYFK5sKRz08CbBBF9uODMqMAvCu0sTZ42GB6nxAEtnqPJiPDQTZwG/+wSJrmSn/N8VU5p7+h5Xpw== me@mypc"
