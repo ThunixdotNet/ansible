@@ -1,5 +1,5 @@
 ---
-- name: Setting up 11kb
+- name: Setting up elevenkb
   user:
     name: elevenkb
     groups: tilde
