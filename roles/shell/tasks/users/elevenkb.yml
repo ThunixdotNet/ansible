@@ -1,15 +1,15 @@
 ---
 - name: Setting up 11kb
   user:
-    name: 11kb
+    name: elevenkb
     groups: tilde
     state: present
     skeleton: /etc/skel
     shell: /bin/bash
     system: no
     createhome: yes
-    home: /home/11kb
+    home: /home/elevenkb
 - authorized_key:
-    user: 11kb
+    user: elevenkb
     state: present
     key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHRwxMpLuryZbPTFt6pkhPplfbJPqxTqrx87Ds6ouSCR"
