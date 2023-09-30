@@ -1,0 +1,15 @@
+---
+- name: Setting up gagrilli
+  user:
+    name: gagrilli
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/gagrilli
+- authorized_key:
+    user: gagrilli
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKmSiF1hG6uXSUQeIrwpuf0RIL8WUeg/Ue3vpg20wjt1yLPJkMRQibgYuF4KaKpt/SXTh0oMp0TUnSm/v8Z5baC00vTnsn+Ln5asuQB1jd3Sm9nbqVn5YUB4bQbvrl766WDCgj7COmreCnvRbpf0dMlnD9zES2SOzjL/KKjNxMzJOfz+hR8+1VzKpR/G/NAgcH/DX+sb42en1UU8qYgcO8k0zcSpsHX91mhu88GXo4eAljoiONFFpu2ytMO6xI6d8245jk/DDzVIfuFIJLLrt/7RMQxZKP5I7VMW5zxgK8oj1RB+FymCstvML2Kly9y5I7IE+6H94ilTLz+E2bejO8RXbUKVcvBy8nA10bwM4KBco+lLRgdAQhw4K1kr2dxD2E8aARgVOzNQh4TPD7dh2P0LqD0fPQjgWexSHAk4Rwg2pNkerc8Jz8scDe+fgdEaYXAZjVVPrrLtnGPJeD1JegkI8t+rgu0FdR5/XNkpi3JKUNh+o1x8kgc1tFfBkDIoj3bDzQviCAZQQvK9x+BsotQRpX2rrivFBq3IQv8JDr1PhcoQ6Zw5W8L17qEjOOMhDc/XbPFpKrq2I7OvQeUHjDufqGgs57ZWorFMIFLhpATQ03thxUBfY0pvGpMcUQF9tGkgxd9aRpHBsdvs7j4BJleV4xBdxsdBeWI5Kzi3PnFQ== gagrilli@CORE"
