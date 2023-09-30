@@ -1,0 +1,15 @@
+---
+- name: Setting up brokenix
+  user:
+    name: brokenix
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/brokenix
+- authorized_key:
+    user: brokenix
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+qGZt59RqOa08FpfiBygMJLfbR8wWYQ7OcPYJMTAmY jasitis@gmail.com"
