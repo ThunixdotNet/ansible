@@ -1,0 +1,15 @@
+---
+- name: Setting up tyy
+  user:
+    name: tyy
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/tyy
+- authorized_key:
+    user: tyy
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXKvMT7cm2KIh4Sy4Xh1cs+wUlltb/OelQzQgmW3rqp unyx@yalis.fr"
