@@ -1,0 +1,15 @@
+---
+- name: Setting up peshto
+  user:
+    name: peshto
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/peshto
+- authorized_key:
+    user: peshto
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC0xGHyiC2xprakEuiICywg3BfkR7sdSgByTC/0ytG6fIHxedB68O9Qbds60aNhkyJ7AMfQAe046GgcmvedExvz0AdVMc7D9LbBvfofbQK3d8KIxB/U8Z1KH0Wxmp2cMqpn5+i+qN7yJd7Xz2OeDQeqjBLlkm51AwCXzjglj2owtAKtbjxXoanNDkR/UrxGFlS+tBPkAziuqqYqpT8i3ZedqbmawCV5Mvl7znY/YBKLeo64WQ0Rr9RautPXrbq8sffCcuemVAVKeyva1aZP4ae4Vg7wxiNonurvOAB5vEOn0xG8HnVA9xANBa/PNABupv5np+J5Aj5CZtTLPCg0w11pweUpS0TWWOu31KTchgCg+CmdZM9FENdxHodFbczolhfYPZMma4Ix/em/1lyeLBFFVWshqtuLYupnIy4l7OpP8JgHFhtdm4nY1Z9Vg6SreJ/IAKIKuXFzqlnDql7XeqxTZ/01KxzwdJxtAEuNgEi98ZC4ukn4hoEP08am6/0UeRm6FIfIVP1yjOg0lXCIE9TKC7jPevpYXUs1b7tKjKp8WbQwnqS/qSLyf5ftBIUw0pkD0BtmRcuSn+Wt+SN+vcHlTjtQjmDJBDJcS+njWhe1zi3o7KZCFOZvIVEHuhFz7AAb8fyoS+cHNEusQ9e28rWro+5zj7S7dodVS0NKAuxFrw== levi@levipc"
