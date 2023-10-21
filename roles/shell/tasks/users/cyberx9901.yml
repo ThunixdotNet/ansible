@@ -1,0 +1,15 @@
+---
+- name: Setting up cyberx9901
+  user:
+    name: cyberx9901
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/cyberx9901
+- authorized_key:
+    user: cyberx9901
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3x2eIKXWIxzElC1yNt8tOWEcJ/C/WZSa/sVXP2OigBa/wyQDH7omxRFayL6YInWcBcLcjcIDcOXA8t5B0mvxeACcFA8nxD5hotaewK3LGu/HHZ8BRstjHf98Hlmk9FhnN0pUuJvrS6Z3D7Q0tMgt1jI4bggeqj8wREUP4H3z0sdE5LTFczz9U9xFP93f8cfJhoVg7jeh+gwyKyJ0c0tmpNt2MDi1JzwBV6bm2NJnkL65OOiq7nHCyS5ppL2FxTI/q8JGcKO7e3X7Y/vs6CotWb+/RwOBdprpF4lC0Iep8PbMTXTOrchOM+HAhw27QKEt18SNc+YNeRjqJL0qekxzl"
