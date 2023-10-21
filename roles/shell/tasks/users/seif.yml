@@ -1,0 +1,15 @@
+---
+- name: Setting up seif
+  user:
+    name: seif
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/seif
+- authorized_key:
+    user: seif
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQChpicJKe0KM+FhbP9j7OpUkbwr3dj9yLd6DINnbehjOYzF6m+ak1q6eWqboNWkXIxR+g+jAFM1S8TLEONZqe5D+4PnlKFkmQ+VTJJGFf+NeRNkb5Rhw9CzNm37GDWnfUIUL/B8JDRW0KKkhlpPZUVPeUNEb8QDkNiJIsAlVCHrFw6M5gUj0/JpcNJO99ZZU8d/YFC39/jk33vuwwd2S27n2Q0+1gjP7hEPhqOLxq75t6ey0doZsSW29CmDwweDRhAY2x/3+kE+BBz2ZwbeReWRzGDTKv7lISM9TCM67AAXq9F8esvn9YVFsZEJi6TAh5AH8z1ZGjAFyEyuaIkiuZF0dFxxnhklugpu2zQ0KVskntwY/+YpdvRnvJX8wPQxP999Ihdtu06fQAANpvwSEbbEPtW3cgcLbGCG53w8llu65p9jw48QvHQ2Bbva7Kz8PjMEmTkT+55n9r9Mp+kHiCwCBhMsmBQ6ncqjyr+jPQJ5lQ8a00uQUtPhheCCLYx3A+9HEWXIdTgXJTJTWxJQVxapuybAXfkvC9CzkmZNW49c1Fx7ix7vZOEHjiVXCYJp9MVOJt61Uy+WIVGbqF0k4+29+K5s25s5Vu+DZWkjQIjmITOFd9dDzxktAS/6K5GBHvu6b4ckLdDRVY+YEubyDZ2pKGDDCgC1WYAjy+r7Y6WQEQ== seif@sc"
