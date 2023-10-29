@@ -1,0 +1,15 @@
+---
+- name: Setting up gigmx
+  user:
+    name: gigmx
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/gigmx
+- authorized_key:
+    user: gigmx
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDcVrUjsuP+nqryXTzClkNOmNUte/YcaxD/cI7lzAFOuzxTdESXYTuSfXLkts9+/0keWQEI06D+c6LPFUGyJb7Ipx8n/yTU3jdXFoGPT/63NMzyJCVzi+eaYU6fB5jbB3Q/iu74f62/H7V/2oz5BSw07PEq9KOWiA83n44/T6mhtGr+tTpjQPFu0p72QLi7h96nApeZ1FfKo8l5y93g+UnfoIdM2tIV/wJZ+V0qrLigCJukWcEl/rZTpzWWPa9R8Q8G8O6ssPVOXkjxwvtGDIhj7HBYWhPhCJca5zuHli5U7U2ztSJAI8oj5x3yeU3LQmNu5weGYbZOV5KOUMgJoreCsPViz7LWwUw29m+kmYtNjFeyrSZ5MJWzMzHn7D9tiuoMFV30kUdQxQETtrkZowmPa5g5mq84DiqmS1/wtBrC8riV/QD+1OaRPaF2XsMI5hT+013Io5ysXKOfUbIzStC+v1rUFIsiK1BrdVXAlWQ491VzPBm3io0JOzpCoJ16uac= gigmx@bOnEs"
