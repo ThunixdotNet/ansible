@@ -1,0 +1,15 @@
+---
+- name: Setting up majidhameed
+  user:
+    name: majidhameed
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/majidhameed
+- authorized_key:
+    user: majidhameed
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCl9+9cC7DNBcKMZIOFhHLAnWFHqbbU+n88G7WJK7Od3YyYZNpqXJoaDKVkgN5Z5lVcZ3dAuDyJjJmeDFrVUrsuYRNlLZWAHsD8NiXw73Z8uS0HJeSsU/gmDqY/F4prlgD3mZc+k0jNLSWPkqOjyXYE1fnxeu9uw0X/RZFs5NQQ+3qYYv/wp2ix6/sKV1UR3EZCrMPt0Fl+p0z1KuHg+D3ASCAC0NK34koJexry5qAHdmtL+N4pZ18VWRLNwvu0V6NwRd0x+10O6OW6Bp5F61MGWeUyvpdza4bKjKeaETd5M8KqdJ2GIOUqsOhnVxpxpvjIAgBbOs1wsx9+EKv/cdiO8SxjX/oLWMPCvjVlXYv21YxrYUMgHxOlIPk2n4TneO/RxJDZmh05BiCV0ut6flgO+rx1w0uFp3hWeYlyRczLw2gjPl1xZz0I/+U76V771iOyafI6B2aZYr/58kg7EJ2fvGOuB/sU8cc9ru5AProjr7kMJpFcTjwjqZXUh/VrDFhS6FONT7YW92IPpfrt5SEolvNb2SgDjkEntPc6TWoulDZYkyvgO4JCxnTgQt4WC2MMsoBBOiniBOm+kjlL/lShj1BomRL78araXn4b/pG7RTdbtSj81hHbz0gLFgja13f/v9zSbXlqVmskHLv2sgL/EQeQHBl+FvYW7shrVcGPiQ== my14044176@PENN0097"
