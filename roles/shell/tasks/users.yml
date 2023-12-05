@@ -60,3 +60,4 @@
 - include: users/h.yml
 - include: users/amelia.yml
 - include: users/angeliamodem.yml
+- include: users/rune.yml

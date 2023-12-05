@@ -1,0 +1,15 @@
+---
+- name: Setting up rune
+  user:
+    name: rune
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/rune
+- authorized_key:
+    user: rune
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8/0xqye1Ht3u1FDSnR/ohR4aOlCrArD2Pm5CpjegHT1MT3kI7OeK7VvaWbofyAYMw1+rVEk4/YoLmGuDQgmJ4vxSK3WI19QJmZ/6JsWkmLaG5GkEGsI9HIQmulo5ehVectchZdEcTuet45CR0BE65nquo2J2s5s17GnlRTPRN++3Giz4RNK32nUdINDT1H+hWevSCQWCnP32fPbslgd5F87tp97X8/0UdraMQUFrLF+STNG2kJafjsTNfc6dt1VjlG5IYXuKxbORmPZZOBudOwz6IxZ5ESAqyo9/hL/tsP98zaU5sPte/ALQm4hhA++REKx+NhZCUuPSYxN2IcQq+EiF5uIj33g02pzjpEgMgdxjg088W8t9UcHDhRHt37LHCU4YFgkBjA1l/Skp7RO5bwk66giNeC/5YPjO0VyPW5pCBH0NkqubIeFF8OY3OovDGNqsrlwbIgYwOLY4+cQ7SW9nVgFN7iqrBZ4O01ycipJ5K8Mb1ly2C3iBCzCYkG5M= serap@Fujitsu"
