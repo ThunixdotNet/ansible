@@ -1,0 +1,15 @@
+---
+- name: Setting up amelia
+  user:
+    name: amelia
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/amelia
+- authorized_key:
+    user: amelia
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIo5HjxFsw/HLBn3Qxmmg3zqoOcFyr60wmxA4AmomO7N amelia@ctrl-c.club"
