@@ -1,0 +1,15 @@
+---
+- name: Setting up georgi
+  user:
+    name: georgi
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/georgi
+- authorized_key:
+    user: georgi
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDCcbWm0g3P9aGBWSWULI9wqmoZ3dw6jsV5WVJj+VizPhWMakSSRuxZ9O/3mhSqdcQ1DeM1RjQtwPNSliFYll08IGcpRf9IycHF31zBKaUMGt5LcAk3+gGlgktv0GALcj8CUD5Wm/jdcmljCgM5BsQBoi6BnTLnA5k68WP6S0F6aMLMlm5hVlXGoZEXyWXiiOMlKVx56wMXxw+AmCnir9wUHSHBLdORmJW0okkBHJ9u78302fRouW/KnpBNLtOVYpjuK+CHPojJP819QiY5xulNfPt3k4IYpxOErGwJ2dyH62kPi/q1FPr1DUyWZNAr4cT2bFZmq6IxKdcVcxFMseCKXYLYIfb4BOTpPkJsBR0MIqIDC5pq3J16yKeytrEj2oKQ7fzIErL/x8NKRC3jt7/xsBePFbFhF5aiy9c6pIwgtYWH0A5vcFJzSObeb001yJ8MkJjVvXFgVzHO2vQZAEJiHfO0KP1ISBgQCgyTGi19SLAqv2aE5Qb/RP+2KMKXhtSBMUe/Aq+KRV7zPeTyHTtb4nJtFDWUnjoYOm/H4JkCH198soUFhABLA6OnEu6LyPkKBiIXpLgQSyykKmHFWH0E7W+rubU9JpmwyMX2bO03OaxYbGR5i/tQgiXaXJPhGenTWz4h6lMzs7AKS6zoHuUUDOTuMgMOaOCpzn712Rfe7w== georgi@LAPTOP-KNTVK7I6"

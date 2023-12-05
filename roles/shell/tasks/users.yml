@@ -62,3 +62,4 @@
 - include: users/angeliamodem.yml
 - include: users/rune.yml
 - include: users/alt.yml
+- include: users/georgi.yml
