@@ -1,0 +1,15 @@
+---
+- name: Setting up angeliamodem
+  user:
+    name: angeliamodem
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/angeliamodem
+- authorized_key:
+    user: angeliamodem
+    state: present
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoMHAUnFvtwYaumIv9HrZuOG8JgfiK8+TjTcpkANPz3jgfHZ0GF9spyMabUJsMCRDkNrdPAjlco3+erW6vwrWvedk1vs+7AVMPrLNHEktbc+DOTCY43wTNaLXBMiHPx7TTM6Jvqp4z753R/wB6353KCSIj6QTEJ2E32KznwCtp0CgGOuel50rTgKmEfG4vUqOJWONpv/g7eIgwJ8CNlcWBaInkR02w1PEnDRYwuejhiyM6tVeeisT2GD8rTcPo0QJgon5uCiUQHoBrpIkG1i2E6DgtilwysBPXmXusbq+sdrLXzZi5A6AvJXtj9szL8pF2W9kxm+6h0K6BEfmB6kM7 rsa-key-20231108"
