@@ -1,0 +1,15 @@
+---
+- name: Setting up h
+  user:
+    name: h
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/h
+- authorized_key:
+    user: h
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINt2a90OR+l5EPbmzOvLScaN0BxOMnR28b5TRTfO0YBH h@firepi"
