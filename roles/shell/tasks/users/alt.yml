@@ -1,0 +1,15 @@
+---
+- name: Setting up alt
+  user:
+    name: alt
+    groups: tilde
+    state: present
+    skeleton: /etc/skel
+    shell: /bin/bash
+    system: no
+    createhome: yes
+    home: /home/alt
+- authorized_key:
+    user: alt
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOyRbb9L2bXzmMu13NewPzVWa7JYmvdCmnYrssc2ZY1k"
