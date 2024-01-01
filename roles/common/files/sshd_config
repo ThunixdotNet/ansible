@@ -1,4 +1,4 @@
-#	$OpenBSD: sshd_config,v 1.100 2016/08/15 12:32:04 naddy Exp $
+#       $OpenBSD: sshd_config,v 1.100 2016/08/15 12:32:04 naddy Exp $
 
 # This is the sshd server system-wide configuration file.  See
 # sshd_config(5) for more information.
@@ -24,7 +24,7 @@ Port 2222
 #RekeyLimit default none
 
 # Logging
-#SyslogFacility AUTH
+SyslogFacility AUTHPRIV
 #LogLevel INFO
 
 # Authentication:
@@ -38,7 +38,7 @@ PermitRootLogin without-password
 PubkeyAuthentication yes
 
 # Expect .ssh/authorized_keys2 to be disregarded by default in future.
-#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+AuthorizedKeysFile      .ssh/authorized_keys
 
 #AuthorizedPrincipalsFile none
 
@@ -55,6 +55,7 @@ PubkeyAuthentication yes
 
 # To disable tunneled clear text passwords, change to no here!
 #PermitEmptyPasswords no
+PasswordAuthentication no
 
 # Change to yes to enable challenge-response passwords (beware issues with
 # some PAM modules and threads)
@@ -67,8 +68,8 @@ ChallengeResponseAuthentication yes
 #KerberosGetAFSToken no
 
 # GSSAPI options
-#GSSAPIAuthentication no
-#GSSAPICleanupCredentials yes
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials no
 #GSSAPIStrictAcceptorCheck yes
 #GSSAPIKeyExchange no
 
@@ -88,7 +89,7 @@ UsePAM yes
 #AllowAgentForwarding yes
 AllowTcpForwarding yes
 #GatewayPorts no
-X11Forwarding no 
+X11Forwarding no
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
@@ -97,7 +98,7 @@ PrintMotd no
 #TCPKeepAlive yes
 #UseLogin no
 #UsePrivilegeSeparation sandbox
-#PermitUserEnvironment no
+PermitUserEnvironment yes
 #Compression delayed
 #ClientAliveInterval 0
 #ClientAliveCountMax 3
@@ -115,14 +116,13 @@ PrintMotd no
 AcceptEnv LANG LC_*
 
 # override default of no subsystems
-Subsystem sftp	/usr/lib/openssh/sftp-server
+Subsystem sftp  /usr/lib/openssh/sftp-server
 
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
-#	X11Forwarding no
-#	AllowTcpForwarding no
-#	PermitTTY no
-#	ForceCommand cvs server
+#       X11Forwarding no
+#       AllowTcpForwarding no
+#       PermitTTY no
+#       ForceCommand cvs server
 
 ClientAliveInterval 120
-PasswordAuthentication no
